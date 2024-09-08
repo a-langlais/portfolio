@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- Intégration de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <img src="images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
+            <h1>Alexandre LANGLAIS</h1> <!-- Titre centré -->
+            <h2>Data Scientist & IA</h2> <!-- Sous-titre centré -->
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
+                    <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn -->
+                </a>
+                <a href="https://www.huggingface.co/a-langlais" target="_blank">
+                    <i class="fas fa-smile"></i> <!-- Icône Hugging Face -->
+                </a>
+                <a href="https://www.github.com/a-langlais" target="_blank">
+                    <i class="fab fa-github"></i> <!-- Icône GitHub -->
+                </a>
+            </div>
+            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
+                <i class="fas fa-envelope"></i> <!-- Icône Email -->
+                Contactez-moi
+            </a>
+            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+        </div>
+        
+        <div class="keywords">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">DataViz</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="projets" class="section">
+            <h2><i class="fa-solid fa-lightbulb"></i> Projets remarquables</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <img src="images/projet-1-preview.png" alt="radio_covid" style="max-width: 100%; height: auto;">
+                    <h3>⚕️ Diagnostic automatique à partir de radiographies pulmonaires COVID-19</h3>
+                    <div class="keywords">
+                        <span class="tag">Python</span>
+                        <span class="tag">Deep Learning</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Tensorflow</span>
+                        <span class="tag">Keras</span>
+                    </div>
+                    <p>Afin de faire le diagnostic des patients au COVID-19, l’analyse de radiographies pulmonaires est une possibilité à explorer pour détecter plus facilement les cas positifs. Si la classification par le biais du deep learning de telles données se révèle efficace pour détecter les cas positifs, alors cette méthode peut être utilisée dans les hôpitaux et cliniques quand on ne peut pas faire de test classique.</p>
+                    <a class="more-link" href="pages/diag_covid.html">Voir plus &gt;</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/projet-2-preview.png" alt="toolbox_bat" style="max-width: 100%; height: auto;">
+                    <h3>🦇 Toolbox de fonctions d'analyse des données chiroptérologiques</h3>
+                    <div class="keywords">
+                        <span class="tag">R</span>
+                        <span class="tag">Biostatistics</span>
+                        <span class="tag">Open-source</span>
+                    </div>
+                    <p>Projet personnel pour la mise à disposition d’une boîte à outils pour les chiroptérologues : un ensemble de fonctions standardisées permettant de calculer les différents indices d’activités chiroptérologiques selon les protocoles passifs de Vigie-Chiro et les protocoles actifs définis par Michel BARATAUD, mais aussi des fonctions utiles pour faciliter l’analyse des données.</p>
+                    <a class="more-link" href="pages/bat_toolbox.html">Voir plus &gt;</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/projet-3-preview.png" alt="dashboard_cmr" style="max-width: 100%; height: auto;">
+                    <h3>📡 Etude de la phénologie temporelle et géospatiale des trajectoires de chauves-souris via Capture-Marquage-Recapture</h3>
+                    <div class="keywords">
+                        <span class="tag">Python</span>
+                        <span class="tag">DataViz</span>
+                        <span class="tag">Série temporelle</span>
+                        <span class="tag">Taipy</span>
+                        <span class="tag">Plotly</span>
+                    </div>
+                    <p>Le projet CCPNA, mené par France Nature Environnement Nouvelle-Aquitaine depuis 2016, étudie les chauves-souris sous quatre angles : génétique, écotoxicologie, épidémiologie et déplacements. Il emploie des techniques comme la génétique pour identifier les populations, l'écotoxicologie pour détecter les polluants, et le suivi des déplacements via des puces sous-cutanées. De nombreux sites équipés d'antennes automatiques recueillent des données sur les chauves-souris marquées. Un tableau de bord interactif aide les associations à explorer ces données pour faciliter leur prise de décision.</p>
+                    <a class="more-link" href="pages/dashboard_cmr.html">Voir plus &gt;</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/projet-4-preview.png" alt="opti_process" style="max-width: 100%; height: auto;">
+                    <h3>⏲️ Optimisation des process de terrain</h3>
+                    <div class="keywords">
+                        <span class="tag">R</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Distribution</span>
+                        <span class="tag">ggplot2</span>
+                    </div>
+                    <p>En écologie, optimiser le temps sur le terrain est essentiel pour maximiser la collecte de données de qualité, cibler les efforts là où ils sont nécessaires, minimiser les coûts et les impacts environnementaux, et élaborer des stratégies de conservation efficaces. En utilisant des méthodes efficaces d'échantillonnage et de collecte de données, les écologues peuvent gagner du temps tout en fournissant des données pertinentes et exhaustives.</p>
+                    <a class="more-link" href="pages/process_opti.html">Voir plus &gt;</a>
+                </div>
+                <div class="project-item">
+                    <img src="images/projet-5-preview.png" alt="seuils_eolien" style="max-width: 100%; height: auto;">
+                    <h3>🍃 Estimation optimisée des seuils de bridage éolien par rapport à l'activité en hauteur</h3>
+                    <div class="keywords">
+                        <span class="tag">R</span>
+                        <span class="tag">Statistics</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Série temporelle</span>
+                    </div>
+                    <p>Un des principaux enjeux dans le développement d’un parc éolien est les mesures liées à l’évitement de l’activité chiroptérologique. Après une collecte d’une année (couvrant le cycle entier de vie d’une chauve-souris), les données d’activité sur point fixe au sol et en hauteur sont étudiés pour estimer les seuils des données abiotiques à prendre en compte pour assurer un bridage permettant de conserver 95% de l’activité des chauves-souris hors risque de mortalité. Cette analyse utilise une régression logistique pour l’analyse multivariée et le calcul des percentiles pour la détermination des seuils.</p>
+                    <a class="more-link" href="pages/calcul_bridages.html">Voir plus &gt;</a>
+                </div>
+                <div class="project-item">
+                    <img src="project6.jpg" alt="Projet 6">
+                    <h3>Projet 6</h3>
+                    <div class="keywords">
+                        <span class="tag">Django</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <p>Un petit détail sur ce projet, ce qu'il fait, pourquoi il est intéressant.</p>
+                    <a class="more-link" href="project6-details.html">Voir plus &gt;</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="section">
+            <h2><i class="fa-solid fa-chart-pie"></i> Galerie de DataViz</h2>
+            <div class="image-grid">
+                <a href="images/chord-diagram.png" class="image-link" target="_blank">
+                    <img src="images/chord-diagram.png" alt="Image 1" class="image-thumbnail">
+                </a>
+                <a href="images/kernel-seuils.png" class="image-link" target="_blank">
+                    <img src="images/kernel-seuils.png" alt="Image 2" class="image-thumbnail">
+                </a>
+                <a href="images/ratio_surface_utile.png" class="image-link" target="_blank">
+                    <img src="images/ratio_surface_utile.png" alt="Image 3" class="image-thumbnail">
+                </a>
+                <!-- Ajoutez plus d'images ici -->
+            </div>
+        </div>
+
+        <div id="experiences" class="section">
+            <h2><i class="fa-solid fa-briefcase"></i> Expériences professionnelles</h2>
+            <div class="container">
+                <div class="vignette">
+                    <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="text">
+                        <h3>MASTER 2 Expertise Faune & Flore, inventaires et bioindicateurs de Biodiversité</h3>
+                        <i class="fa-solid fa-chevron-right"></i> Biostatistiques <br>
+                        <i class="fa-solid fa-chevron-right"></i> Ecologie fonctionnelle <br>
+                        <i class="fa-solid fa-chevron-right"></i> Ecologie fonctionnelle <br>
+                        <i class="fa-solid fa-chevron-right"></i> Ecologie fonctionnelle <br>
+                        <i class="fa-solid fa-chevron-right"></i> Ecologie fonctionnelle <br>
+                    </div>
+                </div>
+                <div class="vignette">
+                    <div class="icon">🌟</div>
+                    <div class="text">Texte de la deuxième vignette</div>
+                </div>
+                <div class="vignette">
+                    <div class="icon">🌟</div>
+                    <div class="text">Texte de la troisième vignette</div>
+                </div>
+                <div class="vignette">
+                    <div class="icon">🌟</div>
+                    <div class="text">Texte de la quatrième vignette</div>
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
