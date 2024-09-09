@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Intégration de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -14,21 +13,21 @@
     <div class="sidebar">
         <div>
             <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1> <!-- Titre centré -->
-            <h2>Data Scientist & IA</h2> <!-- Sous-titre centré -->
+            <h1>Alexandre LANGLAIS</h1>
+            <h2>Data Scientist & IA</h2>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn -->
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i> <!-- Icône Hugging Face (à vérifier) -->
+                    <i class="fas fa-smile"></i>
                 </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i> <!-- Icône GitHub -->
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i> <!-- Icône Email -->
+                <i class="fas fa-envelope"></i>
                 Contactez-moi
             </a>
             <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
@@ -44,30 +43,56 @@
         </div>
     </div>
 
+    
     <div class="content">
         <div class="section">
-            <img src="banniere.jpg" alt="Bannière" class="banner">
-            <h2>⚕️ Diagnostic automatique à partir de radiographies pulmonaires COVID-19</h2>
-            <h3>Computer Vision avec modèle de Deep Learning</h3>
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <center>
+                <h1>⚕️</h1>
+                <h2>Diagnostic automatique à partir de radiographies pulmonaires COVID-19</h2>
+                <h3>Computer Vision avec modèle de Deep Learning</h3>
+            </center>
             <div class="keywords">
                 <span class="tag">Python</span>
                 <span class="tag">Deep Learning</span>
+                <span class="tag">Computer Vision</span>
                 <span class="tag">Tensorflow</span>
+                <span class="tag">Keras</span>
             </div>
             <div class="text-box">
-                <p>Texte encadré avec du contenu adapté à la taille.</p>
+                <p>Résumé à faire</p>
             </div>
-            <div class="two-columns">
+            <div class="two-columns-flex">
                 <div class="column">
-                    <p>Texte de la première colonne.</p>
+                    <p>La radiographie est une technique d'imagerie médicale couramment utilisée pour visualiser les structures internes du corps. En particulier, les radiographies pulmonaires sont essentielles pour le diagnostic et la surveillance de diverses pathologies, y compris la COVID-19. Cette maladie, causée par le coronavirus SARS-CoV-2, peut induire des anomalies spécifiques dans les poumons visibles sur les radiographies, telles que les opacités en verre dépoli. Face à la pandémie mondiale, il est crucial de disposer d'outils permettant un diagnostic rapide et précis pour améliorer la prise en charge des patients.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/radio_samples.png" alt="radio samples" width="100%">
+                        <p class="caption">Echantillon de radiographies du dataset</p>
+                    </div>
+                    <p>La première étape a été de préparer un dataset de 21165 radiographies et masques issus de plusieurs sources. Ce travail préliminaire comprenait l'exploration des métadonnées, la normalisation des images, et leur redimensionnement pour uniformiser les entrées pour les modèles de convolution (CNN).</p>
+                    <p>Après avoir sélectionné les modèles les plus performants lors des phases de benchmarking, nous avons procédé à des ajustements fins. Ceci a inclus le dégèlement de couches spécifiques des modèles préentraînés et l'optimisation des hyperparamètres pour maximiser la précision et le F1 Score sur nos données de validation.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/conf_matrix.png" alt="radio samples" width="100%">
+                        <p class="caption">Matrice de confusion du modèle VGG16 finetuned et courbes d’apprentissage sur l’ensemble de validation</p>
+                    </div>
+                    <p>Les modèles finaux ont été évalués en termes de précision, sensibilité, spécificité, et d'autres métriques cliniquement pertinentes. L'interprétabilité des résultats a été améliorée grâce à des techniques comme les GRAD-CAM et l'analyse des caractéristiques les plus importantes influençant les prédictions des modèles.</p>
                 </div>
+    
                 <div class="column">
-                    <p>Texte de la deuxième colonne.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/grad_cam.png" alt="Grad-CAM" width="80%">
+                        <p class="caption">Illustration par GRAD-CAM des zones pertinentes ayant été exploitées par le réseau de neurones pour donner la prédiction</p>
+                    </div>
+                    <div class="text-box"><p>Sur la prédiction réussie (image de gauche), il est intéressant de constater que le modèle s’est largement appuyé sur une vision des poumons. Il est aussi constatable que sa vision semble avoir été un peu influencé par l’annotation ‘R’ présent sur la radiographie. Ceci est d’autant plus visible sur la prédiction faussée (image de droite), où le modèle a tout de même pris des informations sur les poumons, mais s’est surtout concentrée sur un artefact présent sur l’épaule gauche du patient.</p></div>
+                    <p>Le modèle VGG16 ajusté a atteint une précision de validation et un F1 Score impressionnants de 0.96 pour la détection de la COVID-19, et de 0.91 pour les cas normaux. Ces résultats démontrent l'efficacité des approches de Deep Learning dans le domaine de l'imagerie médicale et leur potentiel pour améliorer le diagnostic rapide et précis des pathologies pulmonaires. Le modèle a été déployé via une application web Streamlit afin de permettre une utilisation simple et intuitive.</p>
+                    <p>Cependant, aucun modèle n’est parfait et il est toujours possible de pousser les performances plus loin. En effet, il serait possible d’enrichir le dataset par des techniques d’augmentation de données pour améliorer la robustesse du modèle à des variations non vues pendant l’entraînement par exemple. De plus, approfondir l’optimisation des hyperparamètres pour maximiser les performances est toujours possible tout en explorant des architectures hybrides qui combinent les points forts de plusieurs modèles pré-entraînés pour améliorer la généralisation.</p>
                 </div>
             </div>
             <div class="image-container">
-                <img src="image.jpg" alt="Image" class="image">
-                <p class="caption">Légende de l'image</p>
+                <img src="../pages/images/covid_gif_screen.gif" alt="GIF preview" width="60%">
+                <p class="caption">Exemple d'utilisation du modèle déployé sur une application Streamlit via Hugging-Face</p>
             </div>
         </div>
 
