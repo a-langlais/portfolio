@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Intégration de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -14,26 +13,26 @@
     <div class="sidebar">
         <div>
             <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1> <!-- Titre centré -->
-            <h2>Data Scientist & IA</h2> <!-- Sous-titre centré -->
+            <h1>Alexandre LANGLAIS</h1>
+            <h2>Data Scientist & IA</h2>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn -->
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i> <!-- Icône Hugging Face -->
+                    <i class="fas fa-smile"></i>
                 </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i> <!-- Icône GitHub -->
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i> <!-- Icône Email -->
+                <i class="fas fa-envelope"></i>
                 Contactez-moi
             </a>
             <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
         </div>
-        
+
         <div class="keywords">
             <span class="tag">Python</span>
             <span class="tag">R</span>
@@ -44,9 +43,49 @@
         </div>
     </div>
 
+    
     <div class="content">
-
-    </div>
+        <div class="section">
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <center>
+                <h1>📡</h1>
+                <h2>Déploiement d’un tableau de bord pour un suivi Capture-Marquage-Recapture</h2>
+                <h3>Dashboard et statistiques descriptives</h3>
+            </center>
+            <div class="keywords">
+                <span class="tag">Python</span>
+                <span class="tag">Geospatial</span>
+                <span class="tag">Big Data</span>
+                <span class="tag">DataViz</span>
+                <span class="tag">Taipy</span>
+                <span class="tag">Docker</span>
+            </div>
+            <div class="text-box">
+                <p>Les associations ayant des moyens limités pour des causes justes, j'interviens bénévolement dans le déploiement d'une plateforme de visualisation de l'important jeu de données (>3M) généré par le programme Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine porté par France Nature Environnement Nouvelle-Aquitaine. Un défi alliant série temporelle, données géographiques et trajectoires d'individus déployé par containeurisation avec Docker sur la plateforme Hugging-Face.</p>
+            </div>
+            <div class="two-columns-flex">
+                <div class="column">
+                    <p>Porté par France Nature Environnement Nouvelle-Aquitaine, le projet <a href="https://vimeo.com/435059221/7a3f18d6ba">Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine</a> (CCPNA) est un programme à large échelle démarré en 2016 dans l’objectif d’étudier plusieurs espèces de chauves-souris afin d’aborder quatre thématiques : </p>
+                    <ul>
+                        <li>La génétique, afin de définir les contours des populations et mettre en évidence d’éventuelles frein aux échanges génétiques ;</li>
+                        <li>L’écotoxicologie, pour tenter d’aborder à quels polluants les espèces peuvent être exposées ;</li>
+                        <li>L’épidémiologie, ou l’étude de la circulation des virus, permet de mettre en lumière d’éventuels risques d’exposition pour ces dernières comme de comprendre des mécanismes de circulation couplés au paysage ou à leurs mœurs ;</li>
+                        <li>Les déplacements, avec la pose de puces sous cutanées, RFID ou Pit-tag, inertes avec un identifiant unique chez les Grands Rhinolophes, Murin à oreilles échancrées et le Minioptère de Schreibers. Les contrôles d’individus marqués permettent de retracer leurs déplacements. À terme, ces données pourraient permettre d’établir des taux de survie et de comprendre comment les individus utilisent les différents connus au cours de leur vie.</li>
+                    </ul>
+                    <p>Pour ce dernier point, plus d’une quarantaine de sites sur l’ensemble de la région est équipé d’une antenne automatique permettant de détecter 24/7 le passage d’un individu marqué, générant un nombre très important de données jusqu’à aujourd’hui (> 2M). Sans compter de nombreux sites supplémentaires qui sont suivis avec une antenne éphémère à différents moments de l’année.</p>
+                    <p>Les associations ayant des ressources limitées pour l’analyse de ces jeux de données complexes, je réalise bénévolement les études de ce projet afin de permettre aux associations protectrices de la nature et de l’environnement (APNE) d’améliorer leurs connaissances sur ces espèces protégées et permettre de prendre les meilleures décision pour leur conservation.</p>
+                    <p>Afin que les APNE puissent explorer leurs données pour communiquer, et prendre des décisions de conservation importantes, j’ai travaillé sur un tableau de bord interactif en ligne pour traiter géographiquement et statistiquement l’ensemble des données d’antennes, permettant de visualiser rapidement les métriques de monitoring des individus, les trajectoires entre les sites et les connexions entre les sites. </p>
+                </div>
+                <div class="column">
+                    <p>Pour ce faire, ce dashboard est composé de quatre onglets, avec une présentation du projet, une carte interactive permettant de visualiser les trajectoires avec de nombreux filtres, un diagramme de Gantt pour visualiser la phénologie temporelle des individus en fonction des sites et enfin un onglet avec un ensemble de métriques descriptives.</p>
+                    <p>Tous les graphiques sont composés avec <code>Plotly</code> afin de permettre une interactivité avec les utilisateurs. La plateforme est quant à elle conçue avec <code>Taipy</code> en gérant la multisession et est pour le moment déployée sur Hugging-Face via un container <code>Docker</code>.</p>
+                    <p>Pour le moment, les associations continuent d'utiliser des supports *.csv pour la gestion de leurs données, la plateforme permettra de communiquer avec une base de données qui améliorera la sécurité et le traitement des données. Le projet génère actuellement plus de 500 000 données par an et dépasse les 3M de données en 2024.</p>
+                    <p>Suite à une invitation du Plan Régional d'Action Chiroptères, ce projet bénévole ainsi que mes analyses statistiques ont fait l'objet d'une présentation aux Rencontres Chiroptères Régionales de 2024 à Limoges.</p>
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
