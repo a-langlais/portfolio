@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Intégration de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -14,26 +13,26 @@
     <div class="sidebar">
         <div>
             <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1> <!-- Titre centré -->
-            <h2>Data Scientist & IA</h2> <!-- Sous-titre centré -->
+            <h1>Alexandre LANGLAIS</h1>
+            <h2>Data Scientist & IA</h2>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn -->
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i> <!-- Icône Hugging Face -->
+                    <i class="fas fa-smile"></i>
                 </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i> <!-- Icône GitHub -->
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i> <!-- Icône Email -->
+                <i class="fas fa-envelope"></i>
                 Contactez-moi
             </a>
             <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
         </div>
-        
+
         <div class="keywords">
             <span class="tag">Python</span>
             <span class="tag">R</span>
@@ -44,9 +43,80 @@
         </div>
     </div>
 
+    
     <div class="content">
-
-    </div>
+        <div class="section">
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <center>
+                <h1>🦇</h1>
+                <h2>Toolbox de fonctions d'analyse des données chiroptérologiques</h2>
+                <h3>Package open-source pour les chiroptérologues</h3>
+            </center>
+            <div class="keywords">
+                <span class="tag">R</span>
+                <span class="tag">Biostatistiques</span>
+                <span class="tag">Open-Source</span>
+            </div>
+            <div class="text-box">
+                <p>Durant mes études sur les chauves-souris, j’ai toujours mis un point d’honneur à analyser rigoureusement mes données recueillies sur le terrain. Dès le début, j’avais commencé à faire des scripts ici et là pour m’aider à automatiser mes analyses et surtout standardiser la forme et les calculs. Avec le temps, j’ai pu améliorer mes fonctions selon mes besoins et les problèmes qui pouvaient subvenir. Aujourd’hui, je souhaite partager ce qui est maintenant devenu un projet personnel pour la standardisation et l'analyse des données d’activité chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
+            </div>
+            <div class="two-columns-flex">
+                <div class="column">
+                    <p>Ce projet regroupe un certain nombre de fonctions utiles pour l'analyse des données chiroptérologiques obtenues par protocole d'écoute active (hétérodyne) ou passive (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, c'est un projet 100% open-source.</p>
+                    <p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
+                    <p>Les fonctions calculent le nombre de contacts, le nombre de minutes positives, d'heures positives et les différents paramètres des contacts par heure (CPH) et contacts par nuit (CPN). Concernant les données actives, la fonction montre le nombre de CPH estimé (calculé sur une heure) et les proportions des trois comportements qualifiés ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
+                    <p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
+                    <p>Pour le moment, tous les titres sont en anglais mais bientôt les fonctions prendront en charge des titres de colonnes en français et en anglais.</p>
+                </div>
+    
+                <div class="column">
+                    <p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
+                    <table>
+                        <thread>
+                            <tr>
+                                <th>Fonctions</th>
+                                <th>Arguments</th>
+                                <th>Sorties</th>
+                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><code>TableFormatage()</code></td>
+                                    <td><code>table</code>, <code>sftw</code></td>
+                                    <td>Convertie un fichier de sortie logiciel Tadarida ou SonoChiro en un tableau standard d'analyse pour les autres fonctions.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>BatActive()</code></td>
+                                    <td><code>table</code>, <code>duration</code>, <code>npoint</code></td>
+                                    <td>Renvoie un tableau de résultats avec l'activité horaire estimée et la proportion de chaque comportement.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>SpeciesPlaceActivity()</code></td>
+                                    <td><code>data</code>, <code>nights</code>, <code>record_time</code></td>
+                                    <td>Renvoie un tableau détaillé de résultats avec les différentes métriques d'activité par espèce et par site.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>CalculateThreshold()</code></td>
+                                    <td><code>data</code>, <code>meteo</code>, <code>dates</code>, <code>var</code>, <code>percent</code>, <code>plot</code></td>
+                                    <td>Renvoie un tableau de résultat d'une régression logistique ainsi que les différents seuils pour conserver le pourcentage d'activité sélectionné. Peut aussi renvoyer les graphiques des régressions logistiques associées.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>list.renamer()</code></td>
+                                    <td><code>files</code></td>
+                                    <td>Renomme tous les fichiers sons sélectionnés avec leurs métadonnées.</td>
+                                </tr>
+                                <tr>
+                                    <td><code>print_Signal()</code></td>
+                                    <td><code>no argument</code></td>
+                                    <td>Ouvre une fenêtre de sélection de fichier pour afficher le graphique de réponse issue du fichier de test micro des TeensyRecorders.</td>
+                                </tr>
+                            </tbody>
+                        </thread>
+                    </table>
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
