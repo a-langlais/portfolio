@@ -1,8 +1,12 @@
+/* STYLES DU BODY */
+
 body {
     margin: 0;
     font-family: Montserrat, sans-serif;
     display: flex;
 }
+
+/* STYLES DE LA SIDEBAR */
 
 .sidebar {
     width: 250px;
@@ -94,6 +98,8 @@ body {
     font-size: 12px;
 }
 
+/* STYLES DU CONTAINER PRINCIPAL */
+
 .content {
     flex: 1;
     padding: 20px;
@@ -107,12 +113,7 @@ body {
     
 }
 
-.banner {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+/* STYLES CORPS DE TEXTE ET COLONNES */
 
 .section h2 {
     border-bottom: 2px solid #2980b9;
@@ -177,8 +178,10 @@ body {
 .caption {
     font-size: 14px;
     color: #7f8c8d;
+    text-align: center;
 }
 
+/* STYLES SECTION PROJETS */
 
 .projects {
     display: flex;
@@ -265,39 +268,7 @@ body {
     border: 2px solid #ccc;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-}
-
-.vignette {
-    display: flex;
-    align-items: center;
-    background-color: #ecf0f1;
-    border-radius: 10px;
-    padding: 10px;
-    width: calc(50% - 10px);
-    box-sizing: border-box;
-}
-
-.icon {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 48px;
-}
-
-.text {
-    flex: 5;
-    padding-left: 10px;
-}
+/* STYLES DE LA FLECHE RETOUR */
 
 .back-home {
     position: absolute;
@@ -321,4 +292,29 @@ body {
 .back-home:hover {
     background-color: #e0e0e0;
     color: #000;
+}
+
+/* STYLES DU TABLEAU */
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    border: 1px solid #dddddd;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 12px;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
