@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <!-- Intégration de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../assets/styles.css">
 </head>
@@ -14,26 +13,26 @@
     <div class="sidebar">
         <div>
             <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1> <!-- Titre centré -->
-            <h2>Data Scientist & IA</h2> <!-- Sous-titre centré -->
+            <h1>Alexandre LANGLAIS</h1>
+            <h2>Data Scientist & IA</h2>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn -->
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i> <!-- Icône Hugging Face -->
+                    <i class="fas fa-smile"></i>
                 </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i> <!-- Icône GitHub -->
+                    <i class="fab fa-github"></i>
                 </a>
             </div>
             <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i> <!-- Icône Email -->
+                <i class="fas fa-envelope"></i>
                 Contactez-moi
             </a>
             <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
         </div>
-        
+
         <div class="keywords">
             <span class="tag">Python</span>
             <span class="tag">R</span>
@@ -44,9 +43,58 @@
         </div>
     </div>
 
+    
     <div class="content">
-
-    </div>
+        <div class="section">
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <center>
+                <h1>⏲️</h1>
+                <h2>Optimisation des process d’inventaires chiroptérologiques</h2>
+                <h3>Analyse des processus et trade-off</h3>
+            </center>
+            <div class="keywords">
+                <span class="tag">R</span>
+                <span class="tag">Statistiques</span>
+                <span class="tag">Distribution</span>
+                <span class="tag">ggplot2</span>
+            </div>
+            <div class="text-box">
+                <p>En écologie, optimiser le temps sur le terrain est essentiel pour maximiser la collecte de données de qualité, cibler les efforts là où ils sont nécessaires, minimiser les coûts et les impacts environnementaux, et élaborer des stratégies de conservation efficaces. En utilisant des méthodes efficaces d'échantillonnage et de collecte de données, les écologues peuvent gagner du temps tout en fournissant des données pertinentes et exhaustives.</p>
+            </div>
+            <div class="two-columns-flex">
+                <div class="column">
+                    <p>En écologie, un sujet important est le trade-off (compromis) entre le temps passé à l’échantillonnage et l’exhaustivité des données recueillies. Dans le cas de l’inventaire des chauves-souris, il est intéressant de se demander combien de nuits d’enregistrement seraient nécessaires pour avoir une richesse spécifique satisfaisante (≥90% des espèces présentes), dans l’optique d’optimiser le temps passé sur le terrain et le temps d’analyse au bureau.</p>
+                    <p>Pour ce faire, en concaténant les données de multiples terrains suivant le même protocole d’enregistrement, il est simple de déterminer le nombre moyen de nuits minimales nécessaire pour réaliser un protocole d’inventaire satisfaisant, notamment via une courbe d’accumulation.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/Acc_curve.jpg" alt="Acc_curve" width="100%">
+                        <p class="caption">Courbe d’accumulation de la richesse spécifique (nombre d’espèces différentes identifiées) en fonction du nombre de nuits d’échantillonnage enregistrées dans des conditions météorologiques satisfaisantes.</p>
+                    </div>
+                    <div class="text-box">
+                        <p>Ainsi, il est observable qu’au delà d’une trentaine de nuits d’échantillonnage dans des conditions météorologiques satisfaisantes, près de 90% de la richesse spécifique (du nombre d’espèces) sont contactés. Bien sûr, ceci dépend de la saison des enregistrements et de l’écologie des espèces, mais ceci permet de poser la base d’une trentaine de jours d’enregistrements répartis sur les 3 principales saisons pouvant montrer des variations intra-annuelles : le printemps et l’automne lors des mouvement de transit semi-migratoire et l’été pendant la période de mise-bas.</p>
+                    </div>
+                </div>
+                <div class="column">
+                    <p>En montrant la distribution des contacts par tranche de pourcentage de nuit (afin de lisser la durée variable intra-annuelle de la nuit), on peut préciser d’autant plus la période de la nuit la plus propice à la récolte de données.</p>
+                    <div class="column">
+                        <div class="image-container">
+                            <img src="../pages/images/Pourcentage_nuit.jpg" alt="Percent_nuit" width="100%">
+                            <p class="caption">Nombre de contacts enregistrés en fonction du pourcentage de nuit. L’axe rouge montre le pourcentage de nuit pour avoir 50% des contacts</p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="image-container">
+                            <img src="../pages/images/Probability_contact_hour.jpg" alt="Proba_contact" width="100%">
+                            <p class="caption">Courbe de distribution des probabilités de contact des chauves-souris en fonction de l’heure de la nuit.</p>
+                        </div>
+                    </div>               
+                    <div class="text-box">
+                        <p>En effet, il est constatable que la moitié de l’activité des chauves-souris enregistrée est détectée dans le premier quart de nuit (~23% de nuit) et suit une tendance descendante sur les heures suivantes. Ceci s’explique par la sortie de gîte en soirée nécessitant d’aller chasser et se nourrir. Le pic d’activité se calme dans la durée car les individus sont repus où sont alors bien loin de leur gîte, voire, se sont déplacés dans un autre gîte de substitution. Cette interprétation se confirme en traçant la courbe de probabilité de contacts par heure. La probabilité est très proche de 100% autour du pic du début de nuit et, bien que descendante au fur et à mesure de la nuit, montre plusieurs pics secondaires correspondant à des périodes de renouvellement d’activité. Ces pics sont cependant moins importants car les individus des colonies proches se sont déjà bien dispersés au sein de leurs territoires de chasse respectifs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 </body>
 </html>
