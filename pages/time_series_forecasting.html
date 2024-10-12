@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
+            <h1>Alexandre LANGLAIS</h1>
+            <h2>Data Scientist & IA</h2>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.huggingface.co/a-langlais" target="_blank">
+                    <i class="fas fa-smile"></i>
+                </a>
+                <a href="https://www.github.com/a-langlais" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
+                <i class="fas fa-envelope"></i>
+                Contactez-moi
+            </a>
+            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+        </div>
+
+        <div class="keywords">
+            <span class="tag">Python</span>
+            <span class="tag">R</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">DataViz</span>
+        </div>
+    </div>
+
+    
+    <div class="content">
+        <div class="section">
+            <a href="../index.html" class="back-home">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <center>
+                <h1>🕑</h1>
+                <h2>Prédiction de ventes à partir d'une série temporelle</h2>
+                <h3>Usage du Machine Learning pour la prédiction d'évènements temporels</h3>
+            </center>
+            <div class="keywords">
+                <span class="tag">Python</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">SARIMA</span>
+                <span class="tag">Série temporelle</span>
+            </div>
+            <div class="text-box">
+                <p>L'analyse des séries temporelles comporte des méthodes de recherche de statistiques sur les séries temporelles afin d'extraire des caractéristiques pertinentes. La prévision des séries temporelles est utilisée dans la formation d'un modèle de machine learning pour prédire les valeurs futures à l'aide de l'historique. Dans cette étude de cas, une analyse des ventes de meubles est réalisée à partir d'un jeu de données provenant des ventes d'un magasin de meubles. L'objectif est de prévoir les ventes futures en utilisant des techniques de séries temporelles, notamment le modèle SARIMA (Seasonal AutoRegressive Integrated Moving Average).</p>
+            </div>
+            <div class="two-columns-flex">
+                <div class="column">
+                    <p>Le fichier est lu et les données sont filtrées pour ne conserver que les ventes de meubles. Les colonnes inutiles sont supprimées et les données sont triées par date de commande. Une vérification de la présence de valeurs manquantes est effectuée, puis les ventes sont regroupées par date de commande pour obtenir les ventes totales par jour.</p>
+                    <p>Les données sont ensuite converties en une série temporelle indexée par la date de commande et la moyenne mensuelle des ventes est calculée. Cette série temporelle est visualisée pour observer les tendances et les saisonnalités. Pour mieux comprendre la série temporelle, une décomposition saisonnière est effectuée en utilisant le modèle additif de <code>statsmodels</code>.</p>
+                    <p>Ensuite, différentes combinaisons de paramètres pour le modèle SARIMA sont explorées en utilisant des boucles imbriquées pour tester diverses configurations de paramètres (p, d, q) et de paramètres saisonniers. Quelques exemples de combinaisons de paramètres pour le modèle SARIMA saisonnier sont affichés.</p>
+                    <p>Après avoir testé plusieurs combinaisons, le modèle avec les paramètres <code>(1, 1, 1)</code> pour les composantes ARIMA et <code>(1, 1, 0, 12)</code> pour les composantes saisonnières est sélectionné. Ce modèle est ajusté aux données et un résumé des résultats est affiché. Les diagnostics du modèle sont également visualisés pour vérifier la qualité de l'ajustement.</p>
+                </div>
+                <div class="column">
+                    <p>Une prévision à un pas en avant à partir du 1er janvier 2017 est ensuite effectuée et les prévisions sont comparées aux valeurs observées. L'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) sont calculées pour évaluer la performance du modèle.</p>
+                    <p>Enfin, une prévision sur 100 périodes futures est réalisée et les résultats sont visualisés avec les intervalles de confiance. Cette étude de cas montre comment utiliser des techniques de séries temporelles pour analyser et prévoir les ventes de meubles, en tenant compte des tendances et des saisonnalités dans les données.</p>
+                    <div class="text-box">
+                        <p>Cette compréhension approfondie permet de prévoir les ventes futures avec précision, ce qui est crucial pour la planification des ressources et des stratégies marketing. De plus, l'évaluation de la performance du modèle à l'aide de métriques telles que l'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) assure une prise de décision éclairée et une amélioration continue des prévisions. En somme, cette étude de cas offre des outils précieux pour améliorer l'efficacité opérationnelle et maximiser les opportunités commerciales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
