@@ -19,9 +19,6 @@
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i>
-                </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
@@ -67,11 +64,19 @@
                 <div class="column">
                     <p>Le fichier est lu et les données sont filtrées pour ne conserver que les ventes de meubles. Les colonnes inutiles sont supprimées et les données sont triées par date de commande. Une vérification de la présence de valeurs manquantes est effectuée, puis les ventes sont regroupées par date de commande pour obtenir les ventes totales par jour.</p>
                     <p>Les données sont ensuite converties en une série temporelle indexée par la date de commande et la moyenne mensuelle des ventes est calculée. Cette série temporelle est visualisée pour observer les tendances et les saisonnalités. Pour mieux comprendre la série temporelle, une décomposition saisonnière est effectuée en utilisant le modèle additif de <code>statsmodels</code>.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/seasonal_decompose.png" alt="sd" width="100%">
+                        <p class="caption">Décomposition des schémas saisonniers</p>
+                    </div>
                     <p>Ensuite, différentes combinaisons de paramètres pour le modèle SARIMA sont explorées en utilisant des boucles imbriquées pour tester diverses configurations de paramètres (p, d, q) et de paramètres saisonniers. Quelques exemples de combinaisons de paramètres pour le modèle SARIMA saisonnier sont affichés.</p>
                     <p>Après avoir testé plusieurs combinaisons, le modèle avec les paramètres <code>(1, 1, 1)</code> pour les composantes ARIMA et <code>(1, 1, 0, 12)</code> pour les composantes saisonnières est sélectionné. Ce modèle est ajusté aux données et un résumé des résultats est affiché. Les diagnostics du modèle sont également visualisés pour vérifier la qualité de l'ajustement.</p>
                 </div>
                 <div class="column">
                     <p>Une prévision à un pas en avant à partir du 1er janvier 2017 est ensuite effectuée et les prévisions sont comparées aux valeurs observées. L'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) sont calculées pour évaluer la performance du modèle.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/one_year_prediction.png" alt="oyp" width="100%">
+                        <p class="caption">Série temporelle avec sa prédiction sur un an</p>
+                    </div>
                     <p>Enfin, une prévision sur 100 périodes futures est réalisée et les résultats sont visualisés avec les intervalles de confiance. Cette étude de cas montre comment utiliser des techniques de séries temporelles pour analyser et prévoir les ventes de meubles, en tenant compte des tendances et des saisonnalités dans les données.</p>
                     <div class="text-box">
                         <p>Cette compréhension approfondie permet de prévoir les ventes futures avec précision, ce qui est crucial pour la planification des ressources et des stratégies marketing. De plus, l'évaluation de la performance du modèle à l'aide de métriques telles que l'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) assure une prise de décision éclairée et une amélioration continue des prévisions. En somme, cette étude de cas offre des outils précieux pour améliorer l'efficacité opérationnelle et maximiser les opportunités commerciales.</p>
