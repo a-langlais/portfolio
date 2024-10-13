@@ -19,9 +19,6 @@
                 <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.huggingface.co/a-langlais" target="_blank">
-                    <i class="fas fa-smile"></i>
-                </a>
                 <a href="https://www.github.com/a-langlais" target="_blank">
                     <i class="fab fa-github"></i>
                 </a>
@@ -68,9 +65,13 @@
                     <p>Le pré-processing est une étape cruciale sur ce type de projet, car nous devons préparer les séquences génétiques à l'analyse. Pour cela, une fonction <code>getKmers</code> est définie dans l'objectif de convertir les chaines en mots de longueur fixe (les k-mers). Par défaut, ce sont des hexamères qui sont utilisés (longueur de 6 caractères). Cette transformation permet de représenter les séquences génétiques sous forme de mots, facilitant l'application des techniques de NLP.</p>
                     <P>Par la suite, cette fonction est appliquée aux données des trois espèces utilisées (humain, chimpanzé et chien) et les k-mers sont ensuite concaténés en une chaine de texte pour chaque séquence. Cette étape est indispensable pour assurer la compatibilité avec les alorithmes de Machine Learning.</P>
                     <p>Pour transformer les chaînes de texte en vecteurs de fréquence de mots, un <code>CountVectorizer</code> de la bibliothèque <code>scikit-learn</code> est employé. Cette étape permet de convertir les séquences de mots en une représentation numérique que les algorithmes de Machine Learning peuvent comprendre. Cette conversion est appliquée aux données de chaque espèce et les dimensions des vecteurs résultants sont vérifiées pour assurer que la transformation ait été effectuée correctement.</p>
-                    <p>De manière classique, les données sont séparées en ensembles d'entrainement et de test grâce à la fonction <code>train_test_split</code> en réservant 20% des données pour le test et utiliser les 80% restants pour l'entrainement. Ceci permet de garantir que le modèle est évalué de manière juste et objective.</p>
+                    <div class="image-container">
+                        <img src="../pages/images/Class_count.png" alt="class_count" width="70%">
+                        <p class="caption">Histogramme du nombre de séquences de chaque classe</p>
+                    </div>
                 </div>
                 <div class="column">
+                    <p>De manière classique, les données sont séparées en ensembles d'entrainement et de test grâce à la fonction <code>train_test_split</code> en réservant 20% des données pour le test et utiliser les 80% restants pour l'entrainement. Ceci permet de garantir que le modèle est évalué de manière juste et objective.</p>
                     <p>Pour optimiser les hyperparamètres de notre modèle de classification, <code>GridSearchCV</code> est utilisé. Cette technique permet de rechercher les meilleurs hyperparamètres en utilisant la validation croisée. Une grille de paramètres pour le modèle <code>MultinomialNB</code> est définie et une recherche exhaustive est effectuée pour trouver la combinaison de paramètres qui maximise la précision du modèle. Cette étape est considérée comme essentielle pour améliorer la performance du modèle et garantir qu'il généralise bien aux nouvelles données.</p>
                     <p>Une fois les hyperparamètres optimisés, le modèle de classification <code>MultinomialNB</code> est entraîné sur les données d'entraînement. Ce modèle est bien adapté aux données textuelles et aux problèmes de classification multiclasse. Le meilleur paramètre <code>alpha</code> trouvé lors de la recherche par grille est utilisé pour entraîner le modèle.</p>
                     <p>Pour évaluer la performance de notre modèle, plusieurs métriques de performance sont utilisées, notamment l'accuracy, la précision, le recall et le score F1. La matrice de confusion est également calculée pour visualiser les performances du modèle de manière détaillée. La matrice de confusion permet de voir combien de prédictions correctes et incorrectes ont été faites pour chaque classe et les résultats sont plus que satisfaisants avec une précision générale de 0.98.</p>
