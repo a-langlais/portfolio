@@ -1,75 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">	
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../assets/styles.css">
+	</head>
 
 <body>
-
-    <div class="sidebar">
-        <div>
-            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1>
-            <h2>Data Scientist & IA</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contactez-moi
-            </a>
-            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
         </div>
+    </header>
 
-        <div class="keywords">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">DataViz</span>
-        </div>
-    </div>
+<main id="main">
 
-    
-    <div class="content">
-        <div class="section">
-            <a href="../index.html" class="back-home">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <center>
-                <h1>🦇</h1>
-                <h2>Toolbox de fonctions d'analyse des données chiroptérologiques</h2>
-                <h3>Package open-source pour les chiroptérologues</h3>
-            </center>
-            <div class="keywords">
-                <span class="tag">R</span>
-                <span class="tag">Biostatistiques</span>
-                <span class="tag">Open-Source</span>
-            </div>
-            <div class="text-box">
-                <p>Durant mes études sur les chauves-souris, j’ai toujours mis un point d’honneur à analyser rigoureusement mes données recueillies sur le terrain. Dès le début, j’avais commencé à faire des scripts ici et là pour m’aider à automatiser mes analyses et surtout standardiser la forme et les calculs. Avec le temps, j’ai pu améliorer mes fonctions selon mes besoins et les problèmes qui pouvaient subvenir. Aujourd’hui, je souhaite partager ce qui est maintenant devenu un projet personnel pour la standardisation et l'analyse des données d’activité chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <p>Ce projet regroupe un certain nombre de fonctions utiles pour l'analyse des données chiroptérologiques obtenues par protocole d'écoute active (hétérodyne) ou passive (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, c'est un projet 100% open-source.</p>
-                    <p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
-                    <p>Les fonctions calculent le nombre de contacts, le nombre de minutes positives, d'heures positives et les différents paramètres des contacts par heure (CPH) et contacts par nuit (CPN). Concernant les données actives, la fonction montre le nombre de CPH estimé (calculé sur une heure) et les proportions des trois comportements qualifiés ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
-                    <p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
-                    <p>Pour le moment, tous les titres sont en anglais mais bientôt les fonctions prendront en charge des titres de colonnes en français et en anglais.</p>
-                </div>
-    
-                <div class="column">
-                    <p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
+	<div class="container">
+
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">R</span>
+							<span class="tag">Biostatistiques</span>
+							<span class="tag">Open-Source</span>
+						</div>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/bat_activity">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+							<a href="https://github.com/a-langlais/bat_activity/blob/main/README.md">
+								<i class="fa-solid fa-book"></i> Documentation
+							</a>
+						</p>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Screenshots</h4>
+						<p><img src="assets/images/s1.jpg" alt=""></p>
+					</div>
+				</div>
+
+			</aside>			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">BatActivity : pour l'analyse des données chiroptérologiques</h1>
+				</header>
+				<p>Durant mes études sur les chauves-souris, j’ai toujours mis un point d’honneur à analyser rigoureusement mes données recueillies sur le terrain. Dès le début, j’avais commencé à faire des scripts ici et là pour m’aider à automatiser mes analyses et surtout standardiser la forme et les calculs. Avec le temps, j’ai pu améliorer mes fonctions selon mes besoins et les problèmes qui pouvaient subvenir. Aujourd’hui, je souhaite partager ce qui est maintenant devenu un projet personnel pour la standardisation et l'analyse des données d’activité chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
+				<h3>Objectifs</h3>
+				<p>Ce projet regroupe un certain nombre de fonctions utiles pour l'analyse des données chiroptérologiques obtenues par protocole d'écoute active (hétérodyne) ou passive (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, c'est un projet 100% open-source.</p>
+				<p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
+				<p>Les fonctions calculent le nombre de contacts, le nombre de minutes positives, d'heures positives et les différents paramètres des contacts par heure (CPH) et contacts par nuit (CPN). Concernant les données actives, la fonction montre le nombre de CPH estimé (calculé sur une heure) et les proportions des trois comportements qualifiés ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
+				<p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
+				<p>Pour le moment, tous les titres sont en anglais mais bientôt les fonctions prendront en charge des titres de colonnes en français et en anglais.</p>				
+				<h3>Fonctions proposées</h3>
+				<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de pouvoir traiter avec exactitude les différentes métriques de leurs relevés. A ce jour, six fonctions assurent chacune un rôle particulier.</p>
+				<p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
                     <table>
                         <thread>
                             <tr>
@@ -110,10 +120,68 @@
                                 </tr>
                             </tbody>
                         </thread>
-                    </table>
-                </div>
-            </div>
-        </div>
+                    </table><br>
+			</article>
+			<!-- /Article -->
 
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						<br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href=""><i class="fab fa-linkedin fa-2"></i></a>
+						<a href=""><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Text widget</h3>
+				<div class="widget-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nihil natus explicabo ipsum quia iste aliquid repellat eveniet velit ipsa sunt libero sed aperiam id soluta officia asperiores adipisci maxime!</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
 </body>
 </html>
