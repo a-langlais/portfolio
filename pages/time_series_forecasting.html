@@ -1,88 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">	
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../assets/styles.css">
+	</head>
 
 <body>
-
-    <div class="sidebar">
-        <div>
-            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1>
-            <h2>Data Scientist & IA</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contactez-moi
-            </a>
-            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
         </div>
+    </header>
 
-        <div class="keywords">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">DataViz</span>
-        </div>
-    </div>
+<main id="main">
 
-    
-    <div class="content">
-        <div class="section">
-            <a href="../index.html" class="back-home">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <center>
-                <h1>🕑</h1>
-                <h2>Prédiction de ventes à partir d'une série temporelle</h2>
-                <h3>Usage du Machine Learning pour la prédiction d'évènements temporels</h3>
-            </center>
-            <div class="keywords">
-                <span class="tag">Python</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">SARIMA</span>
-                <span class="tag">Série temporelle</span>
-            </div>
-            <div class="text-box">
+	<div class="container">
+
+		<div class="row topspace">
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">Machine Learning</span>
+							<span class="tag">SARIMA</span>
+							<span class="tag">Série temporelle</span>
+						</div>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/case_studies/tree/main/time_series_analysis_forecasting">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+							</a>
+						</p>
+					</div>
+				</div>
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Prédiction de ventes à partir d'une série temporelle</h1>
+				</header>
                 <p>L'analyse des séries temporelles comporte des méthodes de recherche de statistiques sur les séries temporelles afin d'extraire des caractéristiques pertinentes. La prévision des séries temporelles est utilisée dans la formation d'un modèle de machine learning pour prédire les valeurs futures à l'aide de l'historique. Dans cette étude de cas, une analyse des ventes de meubles est réalisée à partir d'un jeu de données provenant des ventes d'un magasin de meubles. L'objectif est de prévoir les ventes futures en utilisant des techniques de séries temporelles, notamment le modèle SARIMA (Seasonal AutoRegressive Integrated Moving Average).</p>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <p>Le fichier est lu et les données sont filtrées pour ne conserver que les ventes de meubles. Les colonnes inutiles sont supprimées et les données sont triées par date de commande. Une vérification de la présence de valeurs manquantes est effectuée, puis les ventes sont regroupées par date de commande pour obtenir les ventes totales par jour.</p>
-                    <p>Les données sont ensuite converties en une série temporelle indexée par la date de commande et la moyenne mensuelle des ventes est calculée. Cette série temporelle est visualisée pour observer les tendances et les saisonnalités. Pour mieux comprendre la série temporelle, une décomposition saisonnière est effectuée en utilisant le modèle additif de <code>statsmodels</code>.</p>
-                    <div class="image-container">
-                        <img src="../pages/images/seasonal_decompose.png" alt="sd" width="100%">
-                        <p class="caption">Décomposition des schémas saisonniers</p>
-                    </div>
-                    <p>Ensuite, différentes combinaisons de paramètres pour le modèle SARIMA sont explorées en utilisant des boucles imbriquées pour tester diverses configurations de paramètres (p, d, q) et de paramètres saisonniers. Quelques exemples de combinaisons de paramètres pour le modèle SARIMA saisonnier sont affichés.</p>
-                    <p>Après avoir testé plusieurs combinaisons, le modèle avec les paramètres <code>(1, 1, 1)</code> pour les composantes ARIMA et <code>(1, 1, 0, 12)</code> pour les composantes saisonnières est sélectionné. Ce modèle est ajusté aux données et un résumé des résultats est affiché. Les diagnostics du modèle sont également visualisés pour vérifier la qualité de l'ajustement.</p>
-                </div>
-                <div class="column">
-                    <p>Une prévision à un pas en avant à partir du 1er janvier 2017 est ensuite effectuée et les prévisions sont comparées aux valeurs observées. L'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) sont calculées pour évaluer la performance du modèle.</p>
-                    <div class="image-container">
-                        <img src="../pages/images/one_year_prediction.png" alt="oyp" width="100%">
-                        <p class="caption">Série temporelle avec sa prédiction sur un an</p>
-                    </div>
-                    <p>Enfin, une prévision sur 100 périodes futures est réalisée et les résultats sont visualisés avec les intervalles de confiance. Cette étude de cas montre comment utiliser des techniques de séries temporelles pour analyser et prévoir les ventes de meubles, en tenant compte des tendances et des saisonnalités dans les données.</p>
-                    <div class="text-box">
-                        <p>Cette compréhension approfondie permet de prévoir les ventes futures avec précision, ce qui est crucial pour la planification des ressources et des stratégies marketing. De plus, l'évaluation de la performance du modèle à l'aide de métriques telles que l'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) assure une prise de décision éclairée et une amélioration continue des prévisions. En somme, cette étude de cas offre des outils précieux pour améliorer l'efficacité opérationnelle et maximiser les opportunités commerciales.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+				<h3>Processing et modélisation</h3>
+				<p>Le fichier est lu et les données sont filtrées pour ne conserver que les ventes de meubles. Les colonnes inutiles sont supprimées et les données sont triées par date de commande. Une vérification de la présence de valeurs manquantes est effectuée, puis les ventes sont regroupées par date de commande pour obtenir les ventes totales par jour.</p>
+                <p>Les données sont ensuite converties en une série temporelle indexée par la date de commande et la moyenne mensuelle des ventes est calculée. Cette série temporelle est visualisée pour observer les tendances et les saisonnalités. Pour mieux comprendre la série temporelle, une décomposition saisonnière est effectuée en utilisant le modèle additif de <code>statsmodels</code>.</p>
+                <img src="../pages/images/seasonal_decompose.png" alt="sd" width="100%">
+                <p class="caption">Décomposition des schémas saisonniers</p>
+                <p>Ensuite, différentes combinaisons de paramètres pour le modèle SARIMA sont explorées en utilisant des boucles imbriquées pour tester diverses configurations de paramètres (p, d, q) et de paramètres saisonniers. Quelques exemples de combinaisons de paramètres pour le modèle SARIMA saisonnier sont affichés.</p>
+				<p>Après avoir testé plusieurs combinaisons, le modèle avec les paramètres <code>(1, 1, 1)</code> pour les composantes ARIMA et <code>(1, 1, 0, 12)</code> pour les composantes saisonnières est sélectionné. Ce modèle est ajusté aux données et un résumé des résultats est affiché. Les diagnostics du modèle sont également visualisés pour vérifier la qualité de l'ajustement.</p>
+                <p>Une prévision à un pas en avant à partir du 1er janvier 2017 est ensuite effectuée et les prévisions sont comparées aux valeurs observées. L'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) sont calculées pour évaluer la performance du modèle.</p>
+                <img src="../pages/images/one_year_prediction.png" alt="oyp" width="100%">
+                <p class="caption">Série temporelle avec sa prédiction sur un an</p>
+				<p>Enfin, une prévision sur 100 périodes futures est réalisée et les résultats sont visualisés avec les intervalles de confiance. Cette étude de cas montre comment utiliser des techniques de séries temporelles pour analyser et prévoir les ventes de meubles, en tenant compte des tendances et des saisonnalités dans les données.</p>
+				<h3>Conclusion</h3>
+				<p>Cette compréhension approfondie permet de prévoir les ventes futures avec précision, ce qui est crucial pour la planification des ressources et des stratégies marketing. De plus, l'évaluation de la performance du modèle à l'aide de métriques telles que l'erreur quadratique moyenne (MSE) et l'erreur quadratique moyenne racine (RMSE) assure une prise de décision éclairée et une amélioration continue des prévisions. En somme, cette étude de cas offre des outils précieux pour améliorer l'efficacité opérationnelle et maximiser les opportunités commerciales.</p>
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
 </body>
 </html>

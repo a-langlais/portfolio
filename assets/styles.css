@@ -1,339 +1,681 @@
-/* STYLES DU BODY */
+/*********************************************************************
+                                GLOBAL STYLES
+**********************************************************************/
 
+/* Définir la taille de base de la police pour le document */
+html {
+  font-size: 100%;
+}
+
+/* Styles de base pour le corps du document */
 body {
-    margin: 0;
-    font-family: Montserrat, sans-serif;
-    display: flex;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  color: #666666;
+  padding: 0;
 }
 
-/* STYLES DE LA SIDEBAR */
+/*********************************************************************
+                                CITATION CONTAINER
+**********************************************************************/
 
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: space-between;
-    height: 100vh;
-    border-radius: 20px;
+/* Conteneur pour les citations */
+.citation-container {
+  position: relative;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
 }
 
-.sidebar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+/* Styles pour les paragraphes dans le conteneur de citation */
+.citation-container p {
+  font-size: 24px;
+  line-height: 1;
+  font-style: italic;
+  color: #333;
 }
 
-.sidebar h1 {
-    margin: 0;
-    font-size: 20px;
+/* Styles pour les icônes en haut à gauche et en bas à droite */
+.top-left-icon,
+.bottom-right-icon {
+  position: absolute;
+  font-size: 40px;
+  color: #ccc;
 }
 
-.sidebar h2 {
-    margin: 5px 0 20px;
-    font-size: 16px;
-    color: #bdc3c7;
+/* Position de l'icône en haut à gauche */
+.top-left-icon {
+  top: 10px;
+  left: 10px;
 }
 
-.sidebar .social-icons {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
+/* Position de l'icône en bas à droite */
+.bottom-right-icon {
+  bottom: 10px;
+  right: 10px;
 }
 
-.sidebar .social-icons a {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #2980b9;
-    border-radius: 50%;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    margin: 10px
+/* Marge supérieure pour l'espacement */
+.topspace {
+  margin-top: 40px;
 }
 
-.sidebar .email-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 20px;
-    color: white;
-    background-color: #e74c3c;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    margin-top: 10px;
-    width: auto;
+/*********************************************************************
+                                TYPOGRAPHY
+**********************************************************************/
+
+/* Styles pour les paragraphes */
+p {
+  line-height: 1.6em;
+  margin: 0 0 15px 0;
 }
 
-.sidebar .email-button i {
-    margin-right: 8px;
+/* Styles pour les listes non ordonnées et ordonnées */
+ul,
+ol {
+  line-height: 1.6em;
+  margin: 0 0 30px 0;
 }
 
-.sidebar p {
-    margin-top: 20px;
-    font-size: 14px;
+/* Styles pour les citations en bloc */
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 30px;
+  border-left: 5px solid #eee;
 }
 
-.sidebar .keywords {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+/* Styles pour les titres de niveau 1 à 5 */
+h1 {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+h3 {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+h4 {
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-.sidebar .keywords .tag {
-    background-color: #34495e;
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: white;
-    font-size: 12px;
+/* Styles pour les liens */
+a {
+  color: #6c15bd;
+}
+a:hover {
+  color: #9936e9;
 }
 
-/* STYLES DU CONTAINER PRINCIPAL */
-
-.content {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom:20px;
-    text-align: justify
-    
-}
-
-/* STYLES CORPS DE TEXTE ET COLONNES */
-
-.section h2 {
-    border-bottom: 2px solid #2980b9;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
-.section h3 {
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
-
+/* Styles pour les mots-clés */
 .keywords {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
+/* Styles pour les tags dans les mots-clés */
 .keywords .tag {
-    background-color: #34495e;
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: white;
-    font-size: 12px;
+  background-color: #34495e;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-size: 12px;
 }
 
-.text-box {
-    background-color: #ecf0f1;
-    padding: 20px 30px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+/*********************************************************************
+                                HEADER
+**********************************************************************/
+
+/* Styles pour l'en-tête */
+#head {
+  background: #f4f4f4 url(../images/bg_head.jpg) top center;
+  background-size: cover;
+  color: #7c7c7c;
+  padding: 30px 0 35px 0;
 }
 
+/* Styles pour l'image circulaire dans l'en-tête */
+#head img.img-circle {
+  display: block;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 9px solid rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+/* Styles pour le titre dans l'en-tête */
+#head .title {
+  font-family: Alice, Georgia, serif;
+  color: #333333;
+  font-size: 49px;
+  font-size: 3.0625rem;
+}
+
+/* Styles pour les liens dans le titre de l'en-tête */
+#head .title a {
+  text-decoration: none;
+  color: #333333;
+}
+
+/* Styles pour la ligne de tag dans l'en-tête */
+#head .tagline {
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.2em;
+  color: #7C7C7C;
+  margin: 5px 0 0;
+}
+
+/* Styles pour le texte en gras dans la ligne de tag */
+#head .tagline b {
+  font-weight: normal;
+}
+
+/* Styles pour les liens dans la ligne de tag */
+#head .tagline a {
+  color: #5E5E5E;
+}
+
+/* Styles pour l'en-tête sur la page d'accueil */
+.home #head {
+  padding: 40px 0;
+}
+
+/* Styles pour le titre sur la page d'accueil */
+.home #head .title {
+  font-size: 49px;
+  font-size: 3.0625rem;
+}
+
+/* Styles pour la ligne de tag sur la page d'accueil */
+.home #head .tagline {
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 15px 0 0;
+}
+
+/*********************************************************************
+                                CONTENT
+**********************************************************************/
+
+/* Disposition en deux colonnes avec Flexbox */
 .two-columns-flex {
-    display: flex;
-    gap: 20px;
-    margin-top: 40px;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 50px;
+  display: flex;
+  gap: 20px;
 }
 
+/* Styles pour chaque colonne */
 .column {
-    flex: 2;
-    min-height: 400px; 
-    padding: 10px;
+  flex: 2;
+  min-height: 400px;
+  padding: 5px;
 }
 
-.image-container {
-    text-align: center;
-}
-
-.image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.caption {
-    font-size: 14px;
-    color: #7f8c8d;
-    text-align: center;
-}
-
-/* STYLES SECTION PROJETS */
-
-.projects {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.project-item {
-    flex: 1 1 calc(33.33% - 20px);
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-radius: 5px;
-    box-sizing: border-box;
-    position: relative;
-}
-
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.project-item h3 {
-    margin: 10px 0;
-    color: #2c3e50;
-}
-
-.project-item p {
-    font-size: 14px;
-    color: #7f8c8d;
-}
-
-.project-item .keywords {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    margin-top: 10px;
-}
-
-.project-item .keywords .tag {
-    background-color: #3498db;
-    color: white;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-size: 12px;
-}
-
-.project-item .more-link {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    font-size: 14px;
-    color: #2980b9;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project-item .more-link:hover {
-    text-decoration: underline;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 80%;
-    max-width: 100%;
-}
-
-.image-link {
-    text-decoration: none;
-    color: inherit;
-    position: relative;
-    /* overflow: hidden; */
-}
-
-.image-thumbnail {
-    width: 300px;
-    height: 250px;
-    border-radius: 10px;
-    object-fit: contain;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
-}
-
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: #007BFF;
-    text-decoration: none;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-    background-color: #0056b3;
-}
-
-/* STYLES DE LA FLECHE RETOUR */
-
-.back-home {
-    position: absolute;
-    top: 20px;
-    left: 325px;
-    width: 50px;
-    height: 50px;
-    background-color: #2c3e50;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-}
-
-.back-home i {
-    font-size: 24px;
-}
-
-.back-home:hover {
-    background-color: #e0e0e0;
-    color: #000;
-}
-
-/* STYLES DU TABLEAU */
-
+/* Contours du tableau */
 table {
-    width: auto;
-    border-collapse: collapse;
-    margin: 20px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Pour s'assurer que le tableau occupe toute la largeur disponible */
+  border-collapse: collapse; /* Fusionne les bordures des cellules */
+  border: 1px solid #ddd; /* Bordure autour du tableau */
 }
-th, td {
-    border: 1px solid #dddddd;
-    padding: 12px 15px;
-    text-align: left;
-    font-size: 12px;
-}
+
+/* Contours des en-têtes */
 th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+  border: 1px solid #ddd; /* Bordure autour des en-têtes */
+  padding: 8px; /* Espacement interne */
+  background-color: #f2f2f2; /* Fond gris clair pour les en-têtes */
+  text-align: left; /* Alignement du texte à gauche */
 }
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+
+/* Contours des cellules */
+td {
+  border: 1px solid #ddd; /* Bordure autour des cellules */
+  padding: 8px; /* Espacement interne */
+  text-align: left; /* Alignement du texte à gauche */
 }
-tbody tr:hover {
-    background-color: #f1f1f1;
+
+/* Contours des cellules lorsque survolées */
+td:hover, th:hover {
+  background-color: #f9f9f9; /* Fond légèrement gris quand la cellule est survolée */
+}
+
+/* Styles pour les légendes */
+.caption {
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+/* Styles pour les images */
+img {
+  max-width: 100%;
+}
+
+/* Styles pour les boutons */
+.btn {
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  -webkit-border-radius: 0px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border: 0 none;
+  margin: 5px;
+  padding: 12px 35px;
+  text-shadow: 0 1px 0px #7a1ab1;
+}
+
+/* Styles pour les boutons primaires */
+.btn-primary {
+  color: #fff;
+  background-color: #7a1ab1;
+}
+
+/* Styles pour les grands boutons */
+.btn-lg {
+  padding: 15px 60px;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: bold;
+}
+
+/* Styles pour le panneau d'appel à l'action */
+.panel-cta {
+  box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1;
+  background: #f3f3f3;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+}
+
+/* Styles pour les éléments dans le panneau d'appel à l'action */
+.panel-cta p,
+.panel-cta h3,
+.panel-cta h4,
+.panel-cta h5,
+.panel-cta h6 {
+  margin: 0;
+}
+
+/* Styles pour le corps du panneau d'appel à l'action */
+.panel-cta .panel-body {
+  padding: 35px;
+}
+
+/*********************************************************************
+                                SECTION TITLE
+**********************************************************************/
+
+/* Applique les mêmes styles aux éléments .section-title et .entry-title */
+.section-title,
+.entry-title {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px 0 25px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+
+/* Stylise les liens à l'intérieur des titres .section-title et .entry-title */
+.section-title a,
+.entry-title a {
+  color: #333333; 
+}
+
+/* Applique un style aux éléments <span> à l'intérieur des titres .section-title et .entry-title */
+.section-title span,
+.entry-title span {
+  display: inline-block;
+  position: relative;
+}
+
+/* Effet avant (avant de l'élément <span>) dans les titres .section-title et .entry-title */
+.section-title span:before,
+.entry-title span:before,
+.section-title span:after,
+.entry-title span:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: .53em;
+  width: 400%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+/* Ajuste la position de l'élément avant dans le span des titres .section-title et .entry-title */
+.section-title span:before,
+.entry-title span:before {
+  right: 100%;
+  margin-right: 45px;
+}
+
+/* Ajuste la position de l'élément après dans le span des titres .section-title et .entry-title */
+.section-title span:after,
+.entry-title span:after {
+  left: 100%;
+  margin-left: 45px;
+}
+
+/*********************************************************************
+                                MASTERY SECTION
+**********************************************************************/
+
+.featured {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+/* Styles pour les titres dans la section featured */
+.featured h3 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  line-height: 1.4em;
+  vertical-align: middle;
+  margin: 0 0 25px 0;
+}
+
+/*********************************************************************
+                                PERSONAL PROJECTS SECTION
+**********************************************************************/
+
+.thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 0; /* 10px d'espacement vertical entre les lignes, 0 horizontal */
+  padding: 0;
+}
+
+/* Styles pour les éléments de la liste des vignettes */
+.thumbnails li {
+  margin-bottom: 5px;
+}
+
+/* Styles pour les vignettes */
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5f5f5; /* Couleur de fond gris clair */
+  border-radius: 10px; /* Arrondir les coins */
+  background-clip: padding-box;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+  padding: 0px;
+  padding-bottom: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styles pour les images dans les vignettes */
+.thumbnail .img {
+  display: block;
+  flex-grow: 1;
+  border-top-left-radius: 10px; /* Arrondi du coin supérieur gauche */
+  border-top-right-radius: 10px; /* Arrondi du coin supérieur droit */
+  width: 100%;
+  overflow: hidden;
+  height: 180px;
+  margin: 0 0 20px;
+  position: relative;
+  z-index: 1; /* Positionne l'image au second plan */
+}
+
+/* Styles pour les titres dans les vignettes */
+.thumbnail .title {
+  text-transform: uppercase;
+  margin: 0 2em;
+  display: block;
+  text-indent: 0;
+}
+
+/* Styles pour les emojis dans les vignettes */
+.thumbnail .emoji {
+  margin-top: -35px; /* Marge négative pour remonter l'emoji */
+  font-size: 2rem; /* Optionnel : ajustez la taille si nécessaire */
+  text-align: center; /* Assurez un alignement centré si applicable */
+  position: relative; /* Nécessaire pour z-index */
+  z-index: 2; /* Assure que l'emoji est au-dessus de l'image */
+}
+
+/* Styles pour le couvercle dans les vignettes */
+.thumbnail .cover {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  width: 100%;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 550ms;
+  -moz-transition-duration: 550ms;
+  -o-transition-duration: 550ms;
+  transition-duration: 550ms;
+}
+
+/* Styles pour le bouton "plus" dans le couvercle */
+.thumbnail .cover .more {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 20px;
+  -webkit-border-radius: 1px 0 0 1px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 1px 0 0 1px;
+  -moz-background-clip: padding;
+  border-radius: 1px 0 0 1px;
+  background-clip: padding-box;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0px #3b0d78;
+  background: #8d15bd;
+  color: white;
+}
+
+/* Styles pour les images dans les vignettes */
+.thumbnail img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Styles pour les vignettes au survol */
+.thumbnail:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Styles pour le couvercle au survol */
+.thumbnail:hover .cover {
+  opacity: 1;
+}
+
+/* Disposition en colonnes avec Flexbox */
+.flex-columns .row {
+  display: flex; /* Activer Flexbox */
+  flex-wrap: wrap; /* Permet de gérer les retours à la ligne */
+}
+
+/* Styles pour les colonnes dans la disposition Flexbox */
+.flex-columns .col-sm-6,
+.flex-columns .col-md-3 {
+  display: flex; /* Flexbox pour les colonnes */
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: stretch; /* Étire les colonnes pour la même hauteur */
+}
+
+/*********************************************************************
+                                POST NAVIGATION
+**********************************************************************/
+
+/* Navigation des articles */
+#nav-below {
+  position: fixed;
+  top: 48%;
+}
+
+/* Styles pour le texte en gras dans la navigation des articles */
+#nav-below b {
+  display: none;
+}
+
+/* Styles pour l'en-tête de la page */
+.page-header {
+  padding-bottom: 0;
+  margin: 0;
+  border-bottom: none;
+  text-align: left;
+}
+
+/* Styles pour le titre de la page */
+.page-header .page-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/*********************************************************************
+                                FOOTER
+**********************************************************************/
+
+/* Styles pour le pied de page */
+#footer {
+  background: #232323;
+  padding: 30px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Styles pour les liens dans le pied de page */
+#footer a {
+  color: #ccc;
+}
+
+/* Styles pour les liens au survol dans le pied de page */
+#footer a:hover {
+  color: #fff;
+}
+
+/* Styles pour les titres des widgets dans le pied de page */
+#footer h3.widget-title {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+  color: #ccc;
+  margin: 0 0 20px;
+}
+
+/* Styles pour le sous-pied de page */
+#underfooter {
+  background: #191919;
+  padding: 15px 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* Styles pour les liens dans le sous-pied de page */
+#underfooter a {
+  color: #aaa;
+}
+
+/* Styles pour les liens au survol dans le sous-pied de page */
+#underfooter a:hover {
+  color: #fff;
+}
+
+/* Styles pour les paragraphes dans le sous-pied de page */
+#underfooter p {
+  margin: 0;
+}
+
+/* Styles pour les icônes de dépôt */
+.repo-icons a {
+  text-decoration: none; /* Supprimer le soulignement */
+  font-family: 'Roboto Mono', sans-serif; /* Police pour le texte */
+  font-size: 18px; /* Taille du texte */
+  display: inline-flex; /* Pour aligner icône et texte */
+  align-items: center; /* Centrer verticalement */
+  margin-bottom: 10px; /* Espacement vertical entre les liens */
+}
+
+/* Styles pour les icônes */
+.repo-icons i {
+  font-weight: 900; /* Obligatoire pour Font Awesome dans certaines configurations */
+  margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+
+/* Changer la couleur de survol pour les icônes de dépôt */
+.repo-icons a:hover {
+  color: #0056b3;
+}
+
+/* Styles pour les icônes de suivi */
+.follow-me-icons {
+  font-size: 30px;
+}
+
+/* Styles pour les icônes dans les icônes de suivi */
+.follow-me-icons i {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+/*********************************************************************
+                                MAX PAGE WIDTH FIX
+**********************************************************************/
+
+/* Largeur maximale de la page */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1080px;
+  }
 }

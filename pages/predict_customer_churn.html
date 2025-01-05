@@ -1,88 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">	
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../assets/styles.css">
+	</head>
 
 <body>
-
-    <div class="sidebar">
-        <div>
-            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1>
-            <h2>Data Scientist & IA</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contactez-moi
-            </a>
-            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
         </div>
+    </header>
 
-        <div class="keywords">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">DataViz</span>
-        </div>
-    </div>
+<main id="main">
 
-    
-    <div class="content">
-        <div class="section">
-            <a href="../index.html" class="back-home">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <center>
-                <h1>❌</h1>
-                <h2>Prédiction du churn client en entreprise</h2>
-                <h3>Définition des risques de désengagement client</h3>
-            </center>
-            <div class="keywords">
-                <span class="tag">Python</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Régression Logistique</span>
-                <span class="tag">Optimisation de modèle</span>
-            </div>
-            <div class="text-box">
+	<div class="container">
+
+		<div class="row topspace">
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">Machine Learning</span>
+							<span class="tag">Régression Logistique</span>
+							<span class="tag">Optimisation de modèle</span>
+						</div>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/case_studies/tree/main/predict_customer_churn">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+							</a>
+						</p>
+					</div>
+				</div>
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Prédiction du churn client en entreprise</h1>
+				</header>
                 <p>Le churn client est défini comme le moment où les clients ou les abonnés cessent de faire affaire avec une entreprise ou un service. Si une entreprise pouvait prédire quels clients sont susceptibles de partir à l'avance, elle pourrait concentrer ses efforts de rétention des clients uniquement sur ces clients "à haut risque". L'objectif ultime est d'étendre sa zone de couverture et de récupérer plus de fidélité des clients. La clé du succès dans ce marché réside dans le client lui-même.</p>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <p>Dans un premier temps, sur ce genre de problématique, il est important de comprendre la distribution des clients qui restent et qui partent pour s'imprégner d'une potentielle logique. Les pourcentages de clients retenus et de clients ayant churné sont calculés et affichés. Des histogrammes sont également tracés pour visualiser les distributions des caractéristiques numériques telles que la durée de l'abonnement <code>tenure</code> et les charges mensuelles <code>MonthlyCHarges</code>.</p>
-                    <div class="image-container">
-                        <img src="../pages/images/Churn_dualplot.png" alt="churn_dualplot" width="100%">
-                        <p class="caption">Histogrammes du Churn en fonction du genre et du service internet utilisé</p>
-                    </div>
-                    <p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non-numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
-                    <p>Comme les données traitées sont des données confidentielles, il est indispensable de les anonymiser afin de garder toute objectivité et sécuriser leur utilisation, de cette manière, toutes les informations nominatives non-pertinentes sont supprimées.</p>
-                    <p>Pour normaliser les données, un <code>StandardScaler</code> est appliqué sur les caractéristiques. Les ensembles de données sont ensuite divisés en ensembles d'entraînement et de test en utilisant <code>train_test_split</code>.</p>
-                    <p>Comme le Machine Learning est une science itérative, il est important de tester plusieurs solutions pour comparer les résultats. Ainsi, plusieurs modèles de classification sont initialisés et entraînés, notamment la régression logistique (<code>LogisticRegression</code>), les k-plus proches voisins (<code>KNeighborsClassifier</code>), les machines à vecteurs de support (<code>SVC</code>), et les forêts aléatoires (<code>RandomForestClassifier</code>). Chaque modèle est entraîné sur les données d'entraînement et des prédictions sont faites sur les données de test.</p>
-                </div>
-                <div class="column">
-                    <p>Classiquement, l'optimisation des hyperparamètres du modèle de régression logistique est opérée via une grille de paramètres définie et une recherche par grille (<code>GridSearchCV</code>). Les meilleurs paramètres trouvés sont affichés et le modèle optimisé est évalué sur les données de test. Le meilleur modèle offre une précision de 0.81, ce qui est particulièrement satisfaisant pour ce genre de contexte d'étude.</p>
-                    <div class="image-container">
-                        <img src="../pages/images/lr_best_model_cm.png" alt="lr_best_model" width="70%">
-                        <p class="caption">Matrice de confusion du meilleur modèle de <code>LinearRegression</code></p>
-                    </div>
-                    <div class="text-box">
-                        <p>Cette étude de cas montre comment les techniques de Machine Learning peuvent être appliquées pour prédire le churn client. Ensuite, l'utilisation de <code>GridSearchCV</code> permet d'optimiser les hyperparamètres du modèle, améliorant ainsi sa performance. L'évaluation rigoureuse du modèle à l'aide de diverses métriques et d'une matrice de confusion assure une compréhension complète de ses performances. Enfin, il est noté que la méthode utilisée peut être généralisée à d'autres types de données de churn ou à d'autres secteurs, offrant ainsi une approche flexible et robuste.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+				<h3>Processing et modélisation</h3>
+				<p>Dans un premier temps, sur ce genre de problématique, il est important de comprendre la distribution des clients qui restent et qui partent pour s'imprégner d'une potentielle logique. Les pourcentages de clients retenus et de clients ayant churné sont calculés et affichés. Des histogrammes sont également tracés pour visualiser les distributions des caractéristiques numériques telles que la durée de l'abonnement <code>tenure</code> et les charges mensuelles <code>MonthlyCHarges</code>.</p>
+                <img src="../pages/images/Churn_dualplot.png" alt="churn_dualplot" width="100%">
+                <p class="caption">Histogrammes du Churn en fonction du genre et du service internet utilisé</p>
+                <p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non-numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
+                <p>Comme les données traitées sont des données confidentielles, il est indispensable de les anonymiser afin de garder toute objectivité et sécuriser leur utilisation, de cette manière, toutes les informations nominatives non-pertinentes sont supprimées.</p>
+                <p>Pour normaliser les données, un <code>StandardScaler</code> est appliqué sur les caractéristiques. Les ensembles de données sont ensuite divisés en ensembles d'entraînement et de test en utilisant <code>train_test_split</code>.</p>
+                <p>Comme le Machine Learning est une science itérative, il est important de tester plusieurs solutions pour comparer les résultats. Ainsi, plusieurs modèles de classification sont initialisés et entraînés, notamment la régression logistique (<code>LogisticRegression</code>), les k-plus proches voisins (<code>KNeighborsClassifier</code>), les machines à vecteurs de support (<code>SVC</code>), et les forêts aléatoires (<code>RandomForestClassifier</code>). Chaque modèle est entraîné sur les données d'entraînement et des prédictions sont faites sur les données de test.</p>
+                <h3>Optimisation du modèle</h3>
+				<p>Classiquement, l'optimisation des hyperparamètres du modèle de régression logistique est opérée via une grille de paramètres définie et une recherche par grille (<code>GridSearchCV</code>). Les meilleurs paramètres trouvés sont affichés et le modèle optimisé est évalué sur les données de test. Le meilleur modèle offre une précision de 0.81, ce qui est particulièrement satisfaisant pour ce genre de contexte d'étude.</p>
+                <img src="../pages/images/lr_best_model_cm.png" alt="lr_best_model" width="50%">
+                <p class="caption">Matrice de confusion du meilleur modèle de <code>LinearRegression</code></p>
+                <h3>Conclusion</h3>
+				<p>Cette étude de cas montre comment les techniques de Machine Learning peuvent être appliquées pour prédire le churn client. Ensuite, l'utilisation de <code>GridSearchCV</code> permet d'optimiser les hyperparamètres du modèle, améliorant ainsi sa performance. L'évaluation rigoureuse du modèle à l'aide de diverses métriques et d'une matrice de confusion assure une compréhension complète de ses performances. Enfin, il est noté que la méthode utilisée peut être généralisée à d'autres types de données de churn ou à d'autres secteurs, offrant ainsi une approche flexible et robuste.</p>
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
 </body>
 </html>

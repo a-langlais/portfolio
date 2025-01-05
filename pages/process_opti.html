@@ -1,97 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">	
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../assets/styles.css">
+	</head>
 
 <body>
-
-    <div class="sidebar">
-        <div>
-            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1>
-            <h2>Data Scientist & IA</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contactez-moi
-            </a>
-            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
         </div>
+    </header>
 
-        <div class="keywords">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">DataViz</span>
-        </div>
-    </div>
+<main id="main">
 
-    
-    <div class="content">
-        <div class="section">
-            <a href="../index.html" class="back-home">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <center>
-                <h1>⏲️</h1>
-                <h2>Optimisation des process d’inventaires chiroptérologiques</h2>
-                <h3>Analyse des processus et trade-off</h3>
-            </center>
-            <div class="keywords">
-                <span class="tag">R</span>
-                <span class="tag">Statistiques</span>
-                <span class="tag">Distribution</span>
-                <span class="tag">ggplot2</span>
-            </div>
-            <div class="text-box">
+	<div class="container">
+
+		<div class="row topspace">
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">R</span>
+							<span class="tag">Statistiques</span>
+							<span class="tag">Distribution</span>
+							<span class="tag">ggplot2</span>
+						</div>
+					</div>
+				</div>
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Optimisation des process d’inventaires chiroptérologiques</h1>
+				</header>
                 <p>En écologie, optimiser le temps sur le terrain est essentiel pour maximiser la collecte de données de qualité, cibler les efforts là où ils sont nécessaires, minimiser les coûts et les impacts environnementaux, et élaborer des stratégies de conservation efficaces. En utilisant des méthodes efficaces d'échantillonnage et de collecte de données, les écologues peuvent gagner du temps tout en fournissant des données pertinentes et exhaustives.</p>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <p>En écologie, un sujet important est le trade-off (compromis) entre le temps passé à l’échantillonnage et l’exhaustivité des données recueillies. Dans le cas de l’inventaire des chauves-souris, il est intéressant de se demander combien de nuits d’enregistrement seraient nécessaires pour avoir une richesse spécifique satisfaisante (≥90% des espèces présentes), dans l’optique d’optimiser le temps passé sur le terrain et le temps d’analyse au bureau.</p>
-                    <p>Pour ce faire, en concaténant les données de multiples terrains suivant le même protocole d’enregistrement, il est simple de déterminer le nombre moyen de nuits minimales nécessaire pour réaliser un protocole d’inventaire satisfaisant, notamment via une courbe d’accumulation.</p>
-                    <div class="image-container">
-                        <img src="../pages/images/Acc_curve.jpg" alt="Acc_curve" width="100%">
-                        <p class="caption">Courbe d’accumulation de la richesse spécifique (nombre d’espèces différentes identifiées) en fonction du nombre de nuits d’échantillonnage enregistrées dans des conditions météorologiques satisfaisantes.</p>
-                    </div>
-                    <div class="text-box">
-                        <p>Ainsi, il est observable qu’au delà d’une trentaine de nuits d’échantillonnage dans des conditions météorologiques satisfaisantes, près de 90% de la richesse spécifique (du nombre d’espèces) sont contactés. Bien sûr, ceci dépend de la saison des enregistrements et de l’écologie des espèces, mais ceci permet de poser la base d’une trentaine de jours d’enregistrements répartis sur les 3 principales saisons pouvant montrer des variations intra-annuelles : le printemps et l’automne lors des mouvement de transit semi-migratoire et l’été pendant la période de mise-bas.</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <p>En montrant la distribution des contacts par tranche de pourcentage de nuit (afin de lisser la durée variable intra-annuelle de la nuit), on peut préciser d’autant plus la période de la nuit la plus propice à la récolte de données.</p>
-                    <div class="column">
-                        <div class="image-container">
-                            <img src="../pages/images/Pourcentage_nuit.jpg" alt="Percent_nuit" width="100%">
-                            <p class="caption">Nombre de contacts enregistrés en fonction du pourcentage de nuit. L’axe rouge montre le pourcentage de nuit pour avoir 50% des contacts</p>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="image-container">
-                            <img src="../pages/images/Probability_contact_hour.jpg" alt="Proba_contact" width="100%">
-                            <p class="caption">Courbe de distribution des probabilités de contact des chauves-souris en fonction de l’heure de la nuit.</p>
-                        </div>
-                    </div>               
-                    <div class="text-box">
-                        <p>En effet, il est constatable que la moitié de l’activité des chauves-souris enregistrée est détectée dans le premier quart de nuit (~23% de nuit) et suit une tendance descendante sur les heures suivantes. Ceci s’explique par la sortie de gîte en soirée nécessitant d’aller chasser et se nourrir. Le pic d’activité se calme dans la durée car les individus sont repus où sont alors bien loin de leur gîte, voire, se sont déplacés dans un autre gîte de substitution. Cette interprétation se confirme en traçant la courbe de probabilité de contacts par heure. La probabilité est très proche de 100% autour du pic du début de nuit et, bien que descendante au fur et à mesure de la nuit, montre plusieurs pics secondaires correspondant à des périodes de renouvellement d’activité. Ces pics sont cependant moins importants car les individus des colonies proches se sont déjà bien dispersés au sein de leurs territoires de chasse respectifs.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+				<h3>Contexte et objectifs</h3>
+				<p>En écologie, un sujet important est le trade-off (compromis) entre le temps passé à l’échantillonnage et l’exhaustivité des données recueillies. Dans le cas de l’inventaire des chauves-souris, il est intéressant de se demander combien de nuits d’enregistrement seraient nécessaires pour avoir une richesse spécifique satisfaisante (≥90% des espèces présentes), dans l’optique d’optimiser le temps passé sur le terrain et le temps d’analyse au bureau.</p>
+                <p>Pour ce faire, en concaténant les données de multiples terrains suivant le même protocole d’enregistrement, il est simple de déterminer le nombre moyen de nuits minimales nécessaire pour réaliser un protocole d’inventaire satisfaisant, notamment via une courbe d’accumulation.</p>
+                <img src="../pages/images/Acc_curve.jpg" alt="Acc_curve" width="100%">
+                <p class="caption">Courbe d’accumulation de la richesse spécifique (nombre d’espèces différentes identifiées) en fonction du nombre de nuits d’échantillonnage enregistrées dans des conditions météorologiques satisfaisantes.</p>
+                <p>Ainsi, il est observable qu’au delà d’une trentaine de nuits d’échantillonnage dans des conditions météorologiques satisfaisantes, près de 90% de la richesse spécifique (du nombre d’espèces) sont contactés. Bien sûr, ceci dépend de la saison des enregistrements et de l’écologie des espèces, mais ceci permet de poser la base d’une trentaine de jours d’enregistrements répartis sur les 3 principales saisons pouvant montrer des variations intra-annuelles : le printemps et l’automne lors des mouvement de transit semi-migratoire et l’été pendant la période de mise-bas.</p>
+				<h3>Interprétation</h3>
+				<p>En montrant la distribution des contacts par tranche de pourcentage de nuit (afin de lisser la durée variable intra-annuelle de la nuit), on peut préciser d’autant plus la période de la nuit la plus propice à la récolte de données.</p>
+                <img src="../pages/images/Pourcentage_nuit.jpg" alt="Percent_nuit" width="100%">
+                <p class="caption">Nombre de contacts enregistrés en fonction du pourcentage de nuit. L’axe rouge montre le pourcentage de nuit pour avoir 50% des contacts</p>
+                <img src="../pages/images/Probability_contact_hour.jpg" alt="Proba_contact" width="100%">
+                <p class="caption">Courbe de distribution des probabilités de contact des chauves-souris en fonction de l’heure de la nuit.</p>
+                <p>En effet, il est constatable que la moitié de l’activité des chauves-souris enregistrée est détectée dans le premier quart de nuit (~23% de nuit) et suit une tendance descendante sur les heures suivantes. Ceci s’explique par la sortie de gîte en soirée nécessitant d’aller chasser et se nourrir. Le pic d’activité se calme dans la durée car les individus sont repus où sont alors bien loin de leur gîte, voire, se sont déplacés dans un autre gîte de substitution. Cette interprétation se confirme en traçant la courbe de probabilité de contacts par heure. La probabilité est très proche de 100% autour du pic du début de nuit et, bien que descendante au fur et à mesure de la nuit, montre plusieurs pics secondaires correspondant à des périodes de renouvellement d’activité. Ces pics sont cependant moins importants car les individus des colonies proches se sont déjà bien dispersés au sein de leurs territoires de chasse respectifs.</p>
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
 
 </body>
 </html>

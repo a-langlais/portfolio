@@ -1,70 +1,88 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../assets/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">	
+		<!-- Bootstrap -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+		<!-- Icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<!-- Fonts -->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+		<!-- Custom styles -->
+		<link rel="stylesheet" href="../assets/styles.css">
+	</head>
 
 <body>
-
-    <div class="sidebar">
-        <div>
-            <img src="../images/profile-pic.png" alt="Portrait" style="width: 256px; height: auto">
-            <h1>Alexandre LANGLAIS</h1>
-            <h2>Data Scientist & IA</h2>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/alexlanglais" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://www.github.com/a-langlais" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <a class="email-button" href="mailto:langlais.alexandre03@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contactez-moi
-            </a>
-            <p>Avec une solide expérience dans l'analyse de divers types de données, y compris les données géospatiales, les images et les sons, j'utilise des algorithmes de Machine Learning et de Deep Learning pour aborder les problématiques rencontrées. Je présente mes résultats à l'aide de graphiques et de métriques clairs et pertinents.</p>
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
         </div>
+    </header>
 
-        <div class="keywords">
-            <span class="tag">Python</span>
-            <span class="tag">R</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">DataViz</span>
-        </div>
-    </div>
+<main id="main">
 
-    
-    <div class="content">
-        <div class="section">
-            <a href="../index.html" class="back-home">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <center>
-                <h1>📡</h1>
-                <h2>Déploiement d’un tableau de bord pour un suivi Capture-Marquage-Recapture</h2>
-                <h3>Dashboard et statistiques descriptives</h3>
-            </center>
-            <div class="keywords">
-                <span class="tag">Python</span>
-                <span class="tag">Geospatial</span>
-                <span class="tag">Big Data</span>
-                <span class="tag">DataViz</span>
-                <span class="tag">Taipy</span>
-                <span class="tag">Docker</span>
-            </div>
-            <div class="text-box">
+	<div class="container">
+
+		<div class="row topspace">
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">Geospatial</span>
+							<span class="tag">Big Data</span>
+							<span class="tag">DataViz</span>
+							<span class="tag">Taipy</span>
+							<span class="tag">Docker</span>
+						</div>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/dashboard-bat-CMR">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+							<a href="https://github.com/a-langlais/dashboard-bat-CMR/blob/main/README.md">
+								<i class="fa-solid fa-book"></i> Documentation
+							</a><br>
+							<a href="https://huggingface.co/spaces/a-langlais/ccpna-taipy-dashboard">
+								<i class="fa-solid fa-gear"></i> Application web
+							</a><br>
+							<a href="../files/ALanglais_CMR_RCNA_2024_v3.pdf">
+								<i class="fa-solid fa-file-powerpoint"></i> Présentation RCNA 2024
+							</a>
+						</p>
+					</div>
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Screenshots</h4>
+						<img src="../pages/images/dashboard_screen1.png" alt="Screen1" width="100%">
+						<p class="caption">Onglet de visualisation des trajectoires</p>
+						<img src="../pages/images/dashboard_screen2.png" alt="Screen2" width="100%">
+						<p class="caption">Onglet des statistiques descriptives interactives</p>
+					</div>
+				</div>
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- Article main content -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Déploiement d’un tableau de bord pour un suivi Capture-Marquage-Recapture</h1>
+				</header>
                 <p>Les associations ayant des moyens limités pour des causes justes, j'interviens bénévolement dans le déploiement d'une plateforme de visualisation de l'important jeu de données (>3M) généré par le programme Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine porté par France Nature Environnement Nouvelle-Aquitaine. Un défi alliant série temporelle, données géographiques et trajectoires d'individus déployé par containeurisation avec Docker sur la plateforme Hugging-Face.</p>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <p>Porté par France Nature Environnement Nouvelle-Aquitaine, le projet <a href="https://vimeo.com/435059221/7a3f18d6ba">Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine</a> (CCPNA) est un programme à large échelle démarré en 2016 dans l’objectif d’étudier plusieurs espèces de chauves-souris afin d’aborder quatre thématiques : </p>
+				<h3>Génèse du projet</h3>
+				<p>Porté par France Nature Environnement Nouvelle-Aquitaine, le projet <a href="https://vimeo.com/435059221/7a3f18d6ba">Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine</a> (CCPNA) est un programme à large échelle démarré en 2016 dans l’objectif d’étudier plusieurs espèces de chauves-souris afin d’aborder quatre thématiques : </p>
                     <ul>
                         <li>La génétique, afin de définir les contours des populations et mettre en évidence d’éventuelles frein aux échanges génétiques ;</li>
                         <li>L’écotoxicologie, pour tenter d’aborder à quels polluants les espèces peuvent être exposées ;</li>
@@ -73,32 +91,75 @@
                     </ul>
                     <p>Pour ce dernier point, plus d’une quarantaine de sites sur l’ensemble de la région est équipé d’une antenne automatique permettant de détecter 24/7 le passage d’un individu marqué, générant un nombre très important de données jusqu’à aujourd’hui (> 2M). Sans compter de nombreux sites supplémentaires qui sont suivis avec une antenne éphémère à différents moments de l’année.</p>
                     <p>Les associations ayant des ressources limitées pour l’analyse de ces jeux de données complexes, je réalise bénévolement les études de ce projet afin de permettre aux associations protectrices de la nature et de l’environnement (APNE) d’améliorer leurs connaissances sur ces espèces protégées et permettre de prendre les meilleures décision pour leur conservation.</p>
-                </div>
-                <div class="column">
-                    <p>Afin que les APNE puissent explorer leurs données pour communiquer, et prendre des décisions de conservation importantes, j’ai travaillé sur un tableau de bord interactif en ligne pour traiter géographiquement et statistiquement l’ensemble des données d’antennes, permettant de visualiser rapidement les métriques de monitoring des individus, les trajectoires entre les sites et les connexions entre les sites. </p>
-                    <p>Pour ce faire, ce dashboard est composé de quatre onglets, avec une présentation du projet, une carte interactive permettant de visualiser les trajectoires avec de nombreux filtres, un diagramme de Gantt pour visualiser la phénologie temporelle des individus en fonction des sites et enfin un onglet avec un ensemble de métriques descriptives.</p>
-                    <p>Tous les graphiques sont composés avec <code>Plotly</code> afin de permettre une interactivité avec les utilisateurs. La plateforme est quant à elle conçue avec <code>Taipy</code> en gérant la multisession et est pour le moment déployée sur <a href="https://huggingface.co/spaces/a-langlais/ccpna-taipy-dashboard">Hugging-Face</a> via un container <code>Docker</code>.</p>
-                    <p>Pour le moment, les associations continuent d'utiliser des supports *.csv pour la gestion de leurs données, la plateforme permettra de communiquer avec une base de données qui améliorera la sécurité et le traitement des données. Le projet génère actuellement plus de 500 000 données par an et dépasse les 3M de données en 2024.</p>
-                    <p>Suite à une invitation du Plan Régional d'Action Chiroptères, ce projet bénévole ainsi que mes analyses statistiques ont fait l'objet d'une présentation aux Rencontres Chiroptères Régionales de 2024 à Limoges.</p>
-                    <h3>Télécharger la présentation :</h3>
-                    <a href="../files/ALanglais_CMR_RCNA_2024_v3.pdf" download class="download-button">Télécharger la présentation</a>
-                </div>
-            </div>
-            <div class="two-columns-flex">
-                <div class="column">
-                    <div class="image-container">
-                        <img src="../pages/images/dashboard_screen1.png" alt="Screen1" width="100%">
-                        <p class="caption">Onglet de visualisation des trajectoires</p>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="image-container">
-                        <img src="../pages/images/dashboard_screen2.png" alt="Screen2" width="100%">
-                        <p class="caption">Onglet des statistiques descriptives interactives</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+				<h3>Une analyse accessible aux acteurs-décideurs</h3>
+				<p>Afin que les APNE puissent explorer leurs données pour communiquer, et prendre des décisions de conservation importantes, j’ai travaillé sur un tableau de bord interactif en ligne pour traiter géographiquement et statistiquement l’ensemble des données d’antennes, permettant de visualiser rapidement les métriques de monitoring des individus, les trajectoires entre les sites et les connexions entre les sites. </p>
+				<p>Pour ce faire, ce dashboard est composé de quatre onglets, avec une présentation du projet, une carte interactive permettant de visualiser les trajectoires avec de nombreux filtres, un diagramme de Gantt pour visualiser la phénologie temporelle des individus en fonction des sites et enfin un onglet avec un ensemble de métriques descriptives.</p>
+				<p>Tous les graphiques sont composés avec <code>Plotly</code> afin de permettre une interactivité avec les utilisateurs. La plateforme est quant à elle conçue avec <code>Taipy</code> en gérant la multisession et est pour le moment déployée sur <a href="https://huggingface.co/spaces/a-langlais/ccpna-taipy-dashboard">Hugging-Face</a> via un container <code>Docker</code>.</p>
+				<p>Pour le moment, les associations continuent d'utiliser des supports *.csv pour la gestion de leurs données, la plateforme permettra de communiquer avec une base de données qui améliorera la sécurité et le traitement des données. Le projet génère actuellement plus de 500 000 données par an et dépasse les 3M de données en 2024.</p>
+				<p>Suite à une invitation du Plan Régional d'Action Chiroptères, ce projet bénévole ainsi que mes analyses statistiques ont fait l'objet d'une présentation aux Rencontres Chiroptères Régionales de 2024 à Limoges.</p>				
+			</article>
+			<!-- /Article -->
+
+		</div>
+	</div>	<!-- /container -->
+	
+</main>
+
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
 
 </body>
 </html>
