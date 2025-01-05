@@ -1,0 +1,162 @@
+/****************************************************************************************
+                                     NAVBAR (UNUSED ATM)
+*****************************************************************************************/
+
+/* Styles pour la barre de navigation */
+.navbar {
+  border-width: 1px 0;
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  width: 100%;
+}
+
+/* Styles pour la barre de navigation fixe */
+.navbar.stick {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: .85;
+}
+
+/* Styles pour le contenu de la barre de navigation lorsqu'elle est repliée */
+.navbar-collapse {
+  -webkit-border-radius: 0;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 0;
+  -moz-background-clip: padding;
+  border-radius: 0;
+  background-clip: padding-box;
+  font-family: "Open sans", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* Styles pour les éléments de navigation dans la barre de navigation repliée */
+.navbar-collapse .navbar-nav {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Styles pour les éléments de liste dans la barre de navigation repliée */
+.navbar-collapse .navbar-nav > li {
+  float: none;
+  display: inline-block;
+}
+
+/* Styles pour les liens dans les éléments de liste de la barre de navigation repliée */
+.navbar-collapse .navbar-nav > li > a {
+  padding: 20px 30px;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown ul.dropdown-menu {
+  top: 85%;
+  text-align: left;
+}
+
+/* Styles pour les liens dans le menu déroulant */
+.dropdown ul.dropdown-menu > li > a {
+  padding: 5px 30px;
+}
+
+/* Styles pour la barre de navigation par défaut */
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+/* Styles pour les liens dans la barre de navigation par défaut */
+.navbar-default .navbar-nav > li > a {
+  color: #454545;
+}
+
+/* Styles pour les liens au survol et au focus dans la barre de navigation par défaut */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Styles pour les liens actifs dans la barre de navigation par défaut */
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+/* Styles pour les liens dans le menu déroulant de la barre de navigation par défaut */
+.navbar-default .dropdown ul.dropdown-menu > li > a {
+  color: #454545;
+}
+
+/* Styles pour les liens au survol dans le menu déroulant de la barre de navigation par défaut */
+.navbar-default .dropdown ul.dropdown-menu > li > a:hover {
+  background-color: #eeeeee;
+  color: #000000;
+}
+
+/* Styles pour le bouton de basculement de la barre de navigation par défaut */
+.navbar-default .navbar-toggle {
+  border-color: #666666;
+}
+
+/* Styles pour le bouton de basculement au survol et au focus dans la barre de navigation par défaut */
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ffffff;
+}
+
+/* Styles pour l'icône du bouton de basculement dans la barre de navigation par défaut */
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #333333;
+}
+
+/* Styles pour le contenu replié et le formulaire de la barre de navigation par défaut */
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #cccccc;
+}
+
+/* Styles pour les liens ouverts dans la barre de navigation par défaut */
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/****************************************************************************************
+                                     SIDEBAR SPECIAL NAV
+*****************************************************************************************/
+
+/* Styles pour la navigation spéciale de la barre latérale */
+.nav-side {
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: -0.37em;
+}
+
+/* Styles pour les liens dans la navigation spéciale de la barre latérale */
+.nav-side > li > a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #dc92f3;
+}
+
+/* Styles pour les liens au survol dans la navigation spéciale de la barre latérale */
+.nav-side > li > a:hover {
+  color: #bd1550;
+  background: none;
+}
+
+/* Styles pour les liens actifs dans la navigation spéciale de la barre latérale */
+.nav-side > li.active > a {
+  color: #bd1550;
+}
