@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <!-- Header -->
     <head>
         <meta charset="utf-8">	
         <!-- Bootstrap v3 -->
@@ -13,7 +14,7 @@
         <link rel="stylesheet" href="../assets/styles.css">
     </head>
 
-<body>
+<body class="home">
     <header id="header">
         <div id="head" class="parallax" parallax-speed="2">
             <h1 id="logo" class="text-center">
@@ -24,15 +25,16 @@
             </h1>
         </div>
     </header>
+    <!-- /Header -->
 
 <main id="main">
-
 	<div class="container">
-
 		<div class="row topspace">
+
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-left">
 				<div class="row widget">
+					<!-- Keywords -->
 					<div class="col-xs-12">
 						<h4>Mots clés</h4>
 						<div class="keywords">
@@ -42,6 +44,9 @@
 							<span class="tag">Optimisation de modèle</span>
 						</div>
 					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->	
 				</div>
 				<div class="row widget">
 					<div class="col-xs-12">
@@ -54,37 +59,46 @@
 						</p>
 					</div>
 				</div>
+				<!-- /Links -->	
+
 			</aside>
 			<!-- /Sidebar -->
 
-			<!-- Article main content -->
+			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Prédiction du churn client en entreprise</h1>
 				</header>
                 <p>Le churn client est défini comme le moment où les clients ou les abonnés cessent de faire affaire avec une entreprise ou un service. Si une entreprise pouvait prédire quels clients sont susceptibles de partir à l'avance, elle pourrait concentrer ses efforts de rétention des clients uniquement sur ces clients "à haut risque". L'objectif ultime est d'étendre sa zone de couverture et de récupérer plus de fidélité des clients. La clé du succès dans ce marché réside dans le client lui-même.</p>
+				
 				<h3>Processing et modélisation</h3>
 				<p>Dans un premier temps, sur ce genre de problématique, il est important de comprendre la distribution des clients qui restent et qui partent pour s'imprégner d'une potentielle logique. Les pourcentages de clients retenus et de clients ayant churné sont calculés et affichés. Des histogrammes sont également tracés pour visualiser les distributions des caractéristiques numériques telles que la durée de l'abonnement <code>tenure</code> et les charges mensuelles <code>MonthlyCHarges</code>.</p>
-                <img src="../pages/images/Churn_dualplot.png" alt="churn_dualplot" width="100%">
-                <p class="caption">Histogrammes du Churn en fonction du genre et du service internet utilisé</p>
-                <p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
+                <center>
+					<img src="../pages/images/Churn_dualplot.png" alt="churn_dualplot" width="100%">
+                	<p class="caption">Histogrammes du Churn en fonction du genre et du service internet utilisé</p>
+                </center>
+				<p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
                 <p>Comme les données traitées sont des données confidentielles, il est indispensable de les anonymiser afin de garder toute objectivité et de sécuriser leur utilisation. De cette manière, toutes les informations nominatives non pertinentes sont supprimées.</p>
                 <p>Pour normaliser les données, un <code>StandardScaler</code> est appliqué sur les caractéristiques. Les ensembles de données sont ensuite divisés en ensembles d'entraînement et de test en utilisant <code>train_test_split</code>.</p>
                 <p>Comme le Machine Learning est une science itérative, il est important de tester plusieurs solutions pour comparer les résultats. Ainsi, plusieurs modèles de classification sont initialisés et entraînés, notamment la régression logistique (<code>LogisticRegression</code>), les k-plus proches voisins (<code>KNeighborsClassifier</code>), les machines à vecteurs de support (<code>SVC</code>), et les forêts aléatoires (<code>RandomForestClassifier</code>). Chaque modèle est entraîné sur les données d'entraînement et des prédictions sont faites sur les données de test.</p>
-                <h3>Optimisation du modèle</h3>
+                
+				<h3>Optimisation du modèle</h3>
 				<p>Classiquement, l'optimisation des hyperparamètres du modèle de régression logistique est opérée via une grille de paramètres définie et une recherche par grille (<code>GridSearchCV</code>). Les meilleurs paramètres trouvés sont affichés et le modèle optimisé est évalué sur les données de test. Le meilleur modèle offre une précision de 0.81, ce qui est particulièrement satisfaisant pour ce genre de contexte d'étude.</p>
-                <img src="../pages/images/lr_best_model_cm.png" alt="lr_best_model" width="50%">
-                <p class="caption">Matrice de confusion du meilleur modèle de <code>LinearRegression</code></p>
-                <h3>Conclusion</h3>
+                <center>
+					<img src="../pages/images/lr_best_model_cm.png" alt="lr_best_model" width="50%">
+                	<p class="caption">Matrice de confusion du meilleur modèle de <code>LinearRegression</code></p>
+				</center>
+
+				<h3>Conclusion</h3>
 				<p>Cette étude de cas montre comment les techniques de Machine Learning peuvent être appliquées pour prédire le churn client. Ensuite, l'utilisation de <code>GridSearchCV</code> permet d'optimiser les hyperparamètres du modèle, améliorant ainsi sa performance. L'évaluation rigoureuse du modèle à l'aide de diverses métriques et d'une matrice de confusion assure une compréhension complète de ses performances. Enfin, il est noté que la méthode utilisée peut être généralisée à d'autres types de données de churn ou à d'autres secteurs, offrant ainsi une approche flexible et robuste.</p>
 			</article>
-			<!-- /Article -->
+			<!-- /PageContent -->
 
 		</div>
-	</div>	<!-- /container -->
-	
+	</div>
 </main>
 
+<!-- Footer -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -116,7 +130,7 @@
 				</div>
 			</div>
 
-		</div> <!-- /row of widgets -->
+		</div>
 	</div>
 </footer>
 
@@ -137,9 +151,10 @@
 				</div>
 			</div>
 
-		</div> <!-- /row of widgets -->
+		</div>
 	</div>
 </footer>
+<!-- /Footer -->
 
 </body>
 </html>

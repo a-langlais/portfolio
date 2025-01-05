@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <!-- Header -->
     <head>
         <meta charset="utf-8">	
         <!-- Bootstrap v3 -->
@@ -13,7 +14,7 @@
         <link rel="stylesheet" href="../assets/styles.css">
     </head>
 
-<body>
+<body class="home">
     <header id="header">
         <div id="head" class="parallax" parallax-speed="2">
             <h1 id="logo" class="text-center">
@@ -24,14 +25,15 @@
             </h1>
         </div>
     </header>
+    <!-- /Header -->
 
 <main id="main">
-
 	<div class="container">
-
 		<div class="row topspace">
+
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-left">
+				<!-- Keywords -->
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Mots clés</h4>
@@ -43,36 +45,44 @@
 						</div>
 					</div>
 				</div>
+				<!-- /Keywords -->
+
 			</aside>
 			<!-- /Sidebar -->
 
-			<!-- Article main content -->
+			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Optimisation des process d’inventaires chiroptérologiques</h1>
 				</header>
                 <p>En écologie, optimiser le temps sur le terrain est essentiel pour maximiser la collecte de données de qualité, cibler les efforts là où ils sont nécessaires, minimiser les coûts et les impacts environnementaux, et élaborer des stratégies de conservation efficaces. En utilisant des méthodes efficaces d'échantillonnage et de collecte de données, les écologues peuvent gagner du temps tout en fournissant des données pertinentes et exhaustives.</p>
+				
 				<h3>Contexte et objectifs</h3>
 				<p>En écologie, un sujet important est le trade-off (compromis) entre le temps passé à l’échantillonnage et l’exhaustivité des données recueillies. Dans le cas de l’inventaire des chauves-souris, il est intéressant de se demander combien de nuits d’enregistrement seraient nécessaires pour avoir une richesse spécifique satisfaisante (≥90% des espèces présentes), dans l’optique d’optimiser le temps passé sur le terrain et le temps d’analyse au bureau.</p>
                 <p>Pour ce faire, en concaténant les données de multiples terrains suivant le même protocole d’enregistrement, il est simple de déterminer le nombre moyen de nuits minimales nécessaire pour réaliser un protocole d’inventaire satisfaisant, notamment via une courbe d’accumulation.</p>
-                <img src="../pages/images/Acc_curve.jpg" alt="Acc_curve" width="100%">
-                <p class="caption">Courbe d’accumulation de la richesse spécifique (nombre d’espèces différentes identifiées) en fonction du nombre de nuits d’échantillonnage enregistrées dans des conditions météorologiques satisfaisantes.</p>
-                <p>Ainsi, il est observable qu’au-delà d’une trentaine de nuits d’échantillonnage dans des conditions météorologiques satisfaisantes, près de 90% de la richesse spécifique (du nombre d’espèces) sont contactés. Bien sûr, ceci dépend de la saison des enregistrements et de l’écologie des espèces, mais ceci permet de poser la base d’une trentaine de jours d’enregistrements répartis sur les 3 principales saisons pouvant montrer des variations intra-annuelles : le printemps et l’automne lors des mouvements de transit semi-migratoire et l’été pendant la période de mise-bas.</p>
+                <center>
+					<img src="../pages/images/Acc_curve.jpg" alt="Acc_curve" width="100%">
+                	<p class="caption">Courbe d’accumulation de la richesse spécifique (nombre d’espèces différentes identifiées) en fonction du nombre de nuits d’échantillonnage enregistrées dans des conditions météorologiques satisfaisantes.</p>
+				</center>
+				<p>Ainsi, il est observable qu’au-delà d’une trentaine de nuits d’échantillonnage dans des conditions météorologiques satisfaisantes, près de 90% de la richesse spécifique (du nombre d’espèces) sont contactés. Bien sûr, ceci dépend de la saison des enregistrements et de l’écologie des espèces, mais ceci permet de poser la base d’une trentaine de jours d’enregistrements répartis sur les 3 principales saisons pouvant montrer des variations intra-annuelles : le printemps et l’automne lors des mouvements de transit semi-migratoire et l’été pendant la période de mise-bas.</p>
+				
 				<h3>Interprétation</h3>
 				<p>En montrant la distribution des contacts par tranche de pourcentage de nuit (afin de lisser la durée variable intra-annuelle de la nuit), on peut préciser d’autant plus la période de la nuit la plus propice à la récolte de données.</p>
-                <img src="../pages/images/Pourcentage_nuit.jpg" alt="Percent_nuit" width="100%">
-                <p class="caption">Nombre de contacts enregistrés en fonction du pourcentage de nuit. L’axe rouge montre le pourcentage de nuit pour avoir 50% des contacts</p>
-                <img src="../pages/images/Probability_contact_hour.jpg" alt="Proba_contact" width="100%">
-                <p class="caption">Courbe de distribution des probabilités de contact des chauves-souris en fonction de l’heure de la nuit.</p>
-                <p>En effet, il est constatable que la moitié de l’activité des chauves-souris enregistrée est détectée dans le premier quart de nuit (~23% de nuit) et suit une tendance descendante sur les heures suivantes. Ceci s’explique par la sortie de gîte en soirée nécessitant d’aller chasser et se nourrir. Le pic d’activité se calme dans la durée, car les individus sont repus ou sont alors bien loin de leur gîte, voire se sont déplacés dans un autre gîte de substitution. Cette interprétation se confirme en traçant la courbe de probabilité de contacts par heure. La probabilité est très proche de 100% autour du pic du début de nuit et, bien que descendante au fur et à mesure de la nuit, montre plusieurs pics secondaires correspondant à des périodes de renouvellement d’activité. Ces pics sont cependant moins importants, car les individus des colonies proches se sont déjà bien dispersés au sein de leurs territoires de chasse respectifs.</p>
+                <center>
+					<img src="../pages/images/Pourcentage_nuit.jpg" alt="Percent_nuit" width="100%">
+                	<p class="caption">Nombre de contacts enregistrés en fonction du pourcentage de nuit. L’axe rouge montre le pourcentage de nuit pour avoir 50% des contacts</p>
+                	<img src="../pages/images/Probability_contact_hour.jpg" alt="Proba_contact" width="100%">
+                	<p class="caption">Courbe de distribution des probabilités de contact des chauves-souris en fonction de l’heure de la nuit.</p>
+                </center>
+				<p>En effet, il est constatable que la moitié de l’activité des chauves-souris enregistrée est détectée dans le premier quart de nuit (~23% de nuit) et suit une tendance descendante sur les heures suivantes. Ceci s’explique par la sortie de gîte en soirée nécessitant d’aller chasser et se nourrir. Le pic d’activité se calme dans la durée, car les individus sont repus ou sont alors bien loin de leur gîte, voire se sont déplacés dans un autre gîte de substitution. Cette interprétation se confirme en traçant la courbe de probabilité de contacts par heure. La probabilité est très proche de 100% autour du pic du début de nuit et, bien que descendante au fur et à mesure de la nuit, montre plusieurs pics secondaires correspondant à des périodes de renouvellement d’activité. Ces pics sont cependant moins importants, car les individus des colonies proches se sont déjà bien dispersés au sein de leurs territoires de chasse respectifs.</p>
 			</article>
-			<!-- /Article -->
+			<!-- /PageContent -->
 
 		</div>
-	</div>	<!-- /container -->
-	
+	</div>
 </main>
 
+<!-- Footer -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -104,7 +114,7 @@
 				</div>
 			</div>
 
-		</div> <!-- /row of widgets -->
+		</div>
 	</div>
 </footer>
 
@@ -125,9 +135,10 @@
 				</div>
 			</div>
 
-		</div> <!-- /row of widgets -->
+		</div>
 	</div>
 </footer>
+<!-- /Footer -->
 
 </body>
 </html>

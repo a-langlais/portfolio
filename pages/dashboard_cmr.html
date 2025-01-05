@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <!-- Header -->
     <head>
         <meta charset="utf-8">	
         <!-- Bootstrap v3 -->
@@ -13,7 +14,7 @@
         <link rel="stylesheet" href="../assets/styles.css">
     </head>
 
-<body>
+<body class="home">
     <header id="header">
         <div id="head" class="parallax" parallax-speed="2">
             <h1 id="logo" class="text-center">
@@ -24,15 +25,16 @@
             </h1>
         </div>
     </header>
+    <!-- /Header -->
 
 <main id="main">
-
 	<div class="container">
-
 		<div class="row topspace">
+			
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-left">
 				<div class="row widget">
+					<!-- Keywords -->
 					<div class="col-xs-12">
 						<h4>Mots clés</h4>
 						<div class="keywords">
@@ -44,6 +46,9 @@
 							<span class="tag">Docker</span>
 						</div>
 					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->
 				</div>
 				<div class="row widget">
 					<div class="col-xs-12">
@@ -64,6 +69,9 @@
 						</p>
 					</div>
 				</div>
+				<!-- /Links -->
+
+				<!-- Screenshots -->
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Screenshots</h4>
@@ -73,15 +81,18 @@
 						<p class="caption">Onglet des statistiques descriptives interactives</p>
 					</div>
 				</div>
+				<!-- /Screenshots -->
+
 			</aside>
 			<!-- /Sidebar -->
 
-			<!-- Article main content -->
+			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Déploiement d’un tableau de bord pour un suivi Capture-Marquage-Recapture</h1>
 				</header>
                 <p>Les associations ayant des moyens limités pour des causes justes, j'interviens bénévolement dans le déploiement d'une plateforme de visualisation de l'important jeu de données (>3M) généré par le programme Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine porté par France Nature Environnement Nouvelle-Aquitaine. Un défi alliant série temporelle, données géographiques et trajectoires d'individus déployé par conteneurisation avec Docker sur la plateforme Hugging-Face.</p>
+				
 				<h3>Génèse du projet</h3>
 				<p>Porté par France Nature Environnement Nouvelle-Aquitaine, le projet <a href="https://vimeo.com/435059221/7a3f18d6ba">Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine</a> (CCPNA) est un programme à large échelle démarré en 2016 dans l’objectif d’étudier plusieurs espèces de chauves-souris afin d’aborder quatre thématiques : </p>
                     <ul>
@@ -92,6 +103,7 @@
                     </ul>
                     <p>Pour ce dernier point, plus d’une quarantaine de sites sur l’ensemble de la région est équipé d’une antenne automatique permettant de détecter 24/7 le passage d’un individu marqué, générant un nombre très important de données jusqu’à aujourd’hui (> 2M). Sans compter de nombreux sites supplémentaires qui sont suivis avec une antenne éphémère à différents moments de l’année.</p>
                     <p>Les associations ayant des ressources limitées pour l’analyse de ces jeux de données complexes, je réalise bénévolement les études de ce projet afin de permettre aux associations protectrices de la nature et de l’environnement (APNE) d’améliorer leurs connaissances sur ces espèces protégées et permettre de prendre les meilleures décision pour leur conservation.</p>
+				
 				<h3>Une analyse accessible aux acteurs-décideurs</h3>
 				<p>Afin que les APNE puissent explorer leurs données pour communiquer, et prendre des décisions de conservation importantes, j’ai travaillé sur un tableau de bord interactif en ligne pour traiter géographiquement et statistiquement l’ensemble des données d’antennes, permettant de visualiser rapidement les métriques de monitoring des individus, les trajectoires entre les sites et les connexions entre les sites. </p>
 				<p>Pour ce faire, ce dashboard est composé de quatre onglets, avec une présentation du projet, une carte interactive permettant de visualiser les trajectoires avec de nombreux filtres, un diagramme de Gantt pour visualiser la phénologie temporelle des individus en fonction des sites et enfin un onglet avec un ensemble de métriques descriptives.</p>
@@ -99,13 +111,13 @@
 				<p>Pour le moment, les associations continuent d'utiliser des supports *.csv pour la gestion de leurs données, la plateforme permettra de communiquer avec une base de données qui améliorera la sécurité et le traitement des données. Le projet génère actuellement plus de 500 000 données par an et dépasse les 3M de données en 2024.</p>
 				<p>Suite à une invitation du Plan Régional d'Action Chiroptères, ce projet bénévole ainsi que mes analyses statistiques ont fait l'objet d'une présentation aux Rencontres Chiroptères Régionales de 2024 à Limoges.</p>				
 			</article>
-			<!-- /Article -->
+			<!-- /PageContent -->
 
 		</div>
-	</div>	<!-- /container -->
-	
+	</div>
 </main>
 
+<!-- Footer -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -161,6 +173,7 @@
 		</div> <!-- /row of widgets -->
 	</div>
 </footer>
+<!-- /Footer -->
 
 </body>
 </html>

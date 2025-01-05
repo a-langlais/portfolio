@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <!-- Header -->
     <head>
         <meta charset="utf-8">	
         <!-- Bootstrap v3 -->
@@ -13,7 +14,7 @@
         <link rel="stylesheet" href="../assets/styles.css">
     </head>
 
-<body>
+<body class="home">
     <header id="header">
         <div id="head" class="parallax" parallax-speed="2">
             <h1 id="logo" class="text-center">
@@ -24,14 +25,15 @@
             </h1>
         </div>
     </header>
+    <!-- /Header -->
 
 <main id="main">
-
 	<div class="container">
-
 		<div class="row topspace">
+
 			<!-- Sidebar -->
 			<aside class="col-md-4 sidebar sidebar-left">
+				<!-- Keywords -->
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Mots clés</h4>
@@ -41,6 +43,9 @@
 						</div>
 					</div>
 				</div>
+				<!-- /Keywords -->
+
+				<!-- Links -->
 				<div class="row widget">
 					<div class="col-xs-12">
 						<h4>Liens</h4>
@@ -52,31 +57,35 @@
 						</p>
 					</div>
 				</div>
+				<!-- /Links -->
+
 			</aside>
 			<!-- /Sidebar -->
 
-			<!-- Article main content -->
+			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
 					<h1 class="page-title">Analyse des mots-clés les plus utilisés avec la théorie des graphes</h1>
 				</header>
                 <p>La théorie des graphes est un puissant outil pour modéliser et analyser les relations entre différents objets, tels que les mots-clés de recherche sur un site web. L'application de cette théorie à l'analyse des mots-clés peut offrir plusieurs avantages pour mieux comprendre les comportements des utilisateurs, optimiser le référencement (SEO) et améliorer l'expérience utilisateur. </p>
+				
 				<h3>Processing et modélisation</h3>
 				<p>Pour commencer, les bibliothèques nécessaires pour la manipulation des données et la visualisation sont importées. Les bibliothèques utilisées incluent <code>networkx</code> pour la création et la manipulation du graph, <code>matplotlib</code> pour la visualisation, et pandas pour la manipulation des données. Les avertissements sont également filtrés pour éviter les messages d'avertissement non pertinents.</p>
                 <p>Pour initialiser le graph, un objet <code>Graph</code> de la bibliothèque <code>networkx</code> est créé. Ensuite, les nœuds sont ajoutés au graph en utilisant les informations du fichier *.csv des nœuds. Chaque nœud est ajouté avec des attributs tels que le groupe et la taille du nœud.</p>
                 <p>Les liens sont ajoutés au graph en utilisant les informations du fichier *.csv des liens. Chaque lien est ajouté avec un poids défini par la valeur du lien.</p>
                 <p>Pour définir les couleurs et les tailles des nœuds, une carte de couleurs est créée. Cette carte associe chaque groupe de nœuds à une couleur spécifique. Les couleurs et les tailles des nœuds sont ensuite déterminées en fonction des attributs des nœuds dans le graph.</p>
 				<p>Pour visualiser le réseau, la fonction <code>draw</code> de <code>networkx</code> est utilisée. Les options de visualisation incluent la couleur des bords, la largeur des bords, l'affichage des étiquettes, et le poids de la police. Les nœuds sont dessinés avec les couleurs et les tailles définies précédemment, et la disposition des nœuds est déterminée en utilisant l'algorithme <code>spring_layout</code>.</p>
+				
 				<h3>Conclusion</h3>
 				<p>Cette étude de cas démontre l'efficacité des techniques de visualisation de réseau pour représenter des données complexes. En utilisant les bibliothèques <code>networkx</code> et <code>matplotlib</code>, nous pouvons créer des visualisations interactives et informatives qui permettent de mieux comprendre les relations entre les nœuds et les liens dans un réseau. Cette approche peut être étendue à d'autres domaines et à d'autres types de données de réseau, offrant de nouvelles perspectives pour l'analyse et la visualisation des données.</p>
 			</article>
-			<!-- /Article -->
+			<!-- /PageContent -->
 
 		</div>
-	</div>	<!-- /container -->
-	
+	</div>
 </main>
 
+<!-- Footer -->
 <footer id="footer">
 	<div class="container">
 		<div class="row">
@@ -132,6 +141,7 @@
 		</div> <!-- /row of widgets -->
 	</div>
 </footer>
+<!-- /Footer -->
 
 </body>
 </html>
