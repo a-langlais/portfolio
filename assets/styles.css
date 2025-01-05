@@ -20,7 +20,7 @@ body {
 
 .citation-container p {
   font-size: 24px;
-  line-height: 1.5;
+  line-height: 1;
   font-style: italic;
   color: #333;
 }
@@ -176,7 +176,7 @@ body {
 **********************************************************************/
 p {
   line-height: 1.6em;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
 }
 ul,
 ol {
@@ -309,7 +309,7 @@ a:hover {
   color: #5E5E5E;
 }
 .home #head {
-  padding: 90px 0;
+  padding: 40px 0;
 }
 .home #head .title {
   font-size: 49px;
@@ -574,6 +574,17 @@ img {
   opacity: 1;
 }
 
+.flex-columns .row {
+  display: flex; /* Activer Flexbox */
+  flex-wrap: wrap; /* Permet de gérer les retours à la ligne */
+}
+
+.flex-columns .col-sm-6, 
+.flex-columns .col-md-3 {
+  display: flex; /* Flexbox pour les colonnes */
+  flex-direction: column; /* Empile les éléments verticalement */
+  align-items: stretch; /* Étire les colonnes pour la même hauteur */
+}
 /* Pagination */
 .pagination > li > a {
   color: #808080;
