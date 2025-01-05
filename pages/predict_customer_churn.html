@@ -67,8 +67,8 @@
 				<p>Dans un premier temps, sur ce genre de problématique, il est important de comprendre la distribution des clients qui restent et qui partent pour s'imprégner d'une potentielle logique. Les pourcentages de clients retenus et de clients ayant churné sont calculés et affichés. Des histogrammes sont également tracés pour visualiser les distributions des caractéristiques numériques telles que la durée de l'abonnement <code>tenure</code> et les charges mensuelles <code>MonthlyCHarges</code>.</p>
                 <img src="../pages/images/Churn_dualplot.png" alt="churn_dualplot" width="100%">
                 <p class="caption">Histogrammes du Churn en fonction du genre et du service internet utilisé</p>
-                <p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non-numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
-                <p>Comme les données traitées sont des données confidentielles, il est indispensable de les anonymiser afin de garder toute objectivité et sécuriser leur utilisation, de cette manière, toutes les informations nominatives non-pertinentes sont supprimées.</p>
+                <p>Pour préparer les données à l'analyse, les identifiants des clients sont supprimés pour anonymiser les données. Ensuite, un <code>LabelEncoder</code> est appliqué sur les variables non numériques pour les convertir en valeurs numériques. Une matrice de corrélation est également calculée et visualisée pour comprendre les relations entre les différentes variables.</p>
+                <p>Comme les données traitées sont des données confidentielles, il est indispensable de les anonymiser afin de garder toute objectivité et de sécuriser leur utilisation. De cette manière, toutes les informations nominatives non pertinentes sont supprimées.</p>
                 <p>Pour normaliser les données, un <code>StandardScaler</code> est appliqué sur les caractéristiques. Les ensembles de données sont ensuite divisés en ensembles d'entraînement et de test en utilisant <code>train_test_split</code>.</p>
                 <p>Comme le Machine Learning est une science itérative, il est important de tester plusieurs solutions pour comparer les résultats. Ainsi, plusieurs modèles de classification sont initialisés et entraînés, notamment la régression logistique (<code>LogisticRegression</code>), les k-plus proches voisins (<code>KNeighborsClassifier</code>), les machines à vecteurs de support (<code>SVC</code>), et les forêts aléatoires (<code>RandomForestClassifier</code>). Chaque modèle est entraîné sur les données d'entraînement et des prédictions sont faites sur les données de test.</p>
                 <h3>Optimisation du modèle</h3>
@@ -91,7 +91,7 @@
 			<div class="col-md-3 widget">
 				<h3 class="widget-title">Contact</h3>
 				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+					<p><a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a><br>
 						Niort, France
 					</p>	
 				</div>
@@ -111,7 +111,7 @@
 				<h3 class="widget-title">A propos du site</h3>
 				<div class="widget-body">
                     <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
                     <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
 				</div>
 			</div>
