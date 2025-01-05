@@ -335,6 +335,66 @@ img {
 }
 
 /*********************************************************************
+                                SECTION TITLE
+**********************************************************************/
+
+/* Applique les mêmes styles aux éléments .section-title et .entry-title */
+.section-title,
+.entry-title {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px 0 25px;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+
+/* Stylise les liens à l'intérieur des titres .section-title et .entry-title */
+.section-title a,
+.entry-title a {
+  color: #333333; 
+}
+
+/* Applique un style aux éléments <span> à l'intérieur des titres .section-title et .entry-title */
+.section-title span,
+.entry-title span {
+  display: inline-block;
+  position: relative;
+}
+
+/* Effet avant (avant de l'élément <span>) dans les titres .section-title et .entry-title */
+.section-title span:before,
+.entry-title span:before,
+.section-title span:after,
+.entry-title span:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: .53em;
+  width: 400%;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+
+/* Ajuste la position de l'élément avant dans le span des titres .section-title et .entry-title */
+.section-title span:before,
+.entry-title span:before {
+  right: 100%;
+  margin-right: 45px;
+}
+
+/* Ajuste la position de l'élément après dans le span des titres .section-title et .entry-title */
+.section-title span:after,
+.entry-title span:after {
+  left: 100%;
+  margin-left: 45px;
+}
+
+/*********************************************************************
                                 MASTERY SECTION
 **********************************************************************/
 
