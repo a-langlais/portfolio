@@ -49,6 +49,17 @@ Pour cloner et exécuter ce projet en local sur votre machine, suivez les étape
 
 3. Ouvrez le fichier `index.html` dans votre navigateur préféré pour voir le site en local.
 
+
+## Remerciements
+
+Un grand merci à Sergey 'pozh' Pozhilov pour son excellent travail sur le template [Initio](https://github.com/pozh/Initio) qu'il a créé en 2014. Ce template m'a servi de base pour développer ce portfolio, et je l'ai simplifié, modifié et optimisé pour un usage strictement personnel et adapté à mes besoins.
+
+Le code original a été une inspiration précieuse et a permis de gagner énormément de temps dans le développement de ce projet (et oui, le développement web n'est pas ma spécialité). 
+Merci à Sergey pour son travail et vive l'open-source !
+
+Si vous êtes intéressé par l'original, vous pouvez consulter son dépôt GitHub ici : [Initio Template by Sergey 'pozh' Pozhilov](https://github.com/pozh/Initio).
+
+
 ## Licence
 
 Ce projet est sous la licence [MIT License](https://opensource.org/licenses/MIT), ce qui signifie que vous êtes libre de le copier, modifier et l'utiliser pour un usage personnel, sans aucune restriction. Cependant, l'usage commercial ou la distribution du code dans d'autres projets publics n'est pas autorisé sans une licence appropriée.
