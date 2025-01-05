@@ -1,6 +1,13 @@
+/*********************************************************************
+                                GLOBAL STYLES
+**********************************************************************/
+
+/* Définir la taille de base de la police pour le document */
 html {
   font-size: 100%;
 }
+
+/* Styles de base pour le corps du document */
 body {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -8,6 +15,12 @@ body {
   color: #666666;
   padding: 0;
 }
+
+/*********************************************************************
+                                CITATION CONTAINER
+**********************************************************************/
+
+/* Conteneur pour les citations */
 .citation-container {
   position: relative;
   margin-left: 80px;
@@ -18,6 +31,7 @@ body {
   text-align: center;
 }
 
+/* Styles pour les paragraphes dans le conteneur de citation */
 .citation-container p {
   font-size: 24px;
   line-height: 1;
@@ -25,6 +39,7 @@ body {
   color: #333;
 }
 
+/* Styles pour les icônes en haut à gauche et en bas à droite */
 .top-left-icon,
 .bottom-right-icon {
   position: absolute;
@@ -32,178 +47,48 @@ body {
   color: #ccc;
 }
 
+/* Position de l'icône en haut à gauche */
 .top-left-icon {
   top: 10px;
   left: 10px;
 }
 
+/* Position de l'icône en bas à droite */
 .bottom-right-icon {
   bottom: 10px;
   right: 10px;
 }
+
+/* Marge supérieure pour l'espacement */
 .topspace {
   margin-top: 40px;
 }
+
 /*********************************************************************
-
-
-                            Navigation in header
-
-
-**********************************************************************/
-.navbar {
-  border-width: 1px 0;
-  -webkit-border-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0;
-  -moz-background-clip: padding;
-  border-radius: 0;
-  background-clip: padding-box;
-  width: 100%;
-}
-.navbar.stick {
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity: .85;
-}
-.navbar-collapse {
-  -webkit-border-radius: 0;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 0;
-  -moz-background-clip: padding;
-  border-radius: 0;
-  background-clip: padding-box;
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.navbar-collapse .navbar-nav {
-  float: none;
-  margin: 0 auto;
-  text-align: center;
-}
-.navbar-collapse .navbar-nav > li {
-  float: none;
-  display: inline-block;
-}
-.navbar-collapse .navbar-nav > li > a {
-  padding: 20px 30px;
-}
-.dropdown ul.dropdown-menu {
-  top: 85%;
-  text-align: left;
-}
-.dropdown ul.dropdown-menu > li > a {
-  padding: 5px 30px;
-}
-.navbar-default {
-  background-color: #ffffff;
-  border-color: #cccccc;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #454545;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
-  background-color: #ffffff;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #000000;
-  background-color: #ffffff;
-}
-.navbar-default .dropdown ul.dropdown-menu > li > a {
-  color: #454545;
-}
-.navbar-default .dropdown ul.dropdown-menu > li > a:hover {
-  background-color: #eeeeee;
-  color: #000000;
-}
-.navbar-default .navbar-toggle {
-  border-color: #666666;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #ffffff;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #333333;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #cccccc;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  background-color: #ffffff;
-  color: #000000;
-}
-/****************************************************************************************
-
-
-                                     Sidebar special Nav
-
-
-*****************************************************************************************/
-.nav-side {
-  font-size: 24px;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-top: -0.37em;
-}
-.nav-side > li > a {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  color: #dc92f3;
-}
-.nav-side > li > a:hover {
-  color: #bd1550;
-  background: none;
-}
-.nav-side > li.active > a {
-  color: #bd1550;
-}
-/*********************************************************************
-
-
                                 TYPOGRAPHY
-
-
 **********************************************************************/
+
+/* Styles pour les paragraphes */
 p {
   line-height: 1.6em;
   margin: 0 0 15px 0;
 }
+
+/* Styles pour les listes non ordonnées et ordonnées */
 ul,
 ol {
   line-height: 1.6em;
   margin: 0 0 30px 0;
 }
+
+/* Styles pour les citations en bloc */
 blockquote {
   padding: 10px 20px;
   margin: 0 0 30px;
   border-left: 5px solid #eee;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  color: #333333;
-}
+
+/* Styles pour les titres de niveau 1 à 5 */
 h1 {
   font-size: 40px;
   font-size: 2.5rem;
@@ -224,32 +109,16 @@ h5 {
   font-size: 20px;
   font-size: 1.25rem;
 }
+
+/* Styles pour les liens */
 a {
   color: #6c15bd;
 }
 a:hover {
   color: #9936e9;
 }
-.lead {
-  font-weight: 300;
-  font-size: 21px;
-  font-size: 1.3125rem;
-}
-.text-msg {
-  line-height: 1.7em;
-  color: #b3b3b3;
-  font-weight: 300;
-  text-transform: capitalize;
-  margin-top: -0.23em;
-}
-.size-auto,
-.size-full,
-.size-large,
-.size-medium,
-.size-thumbnail {
-  max-width: 100%;
-  height: auto;
-}
+
+/* Styles pour les mots-clés */
 .keywords {
   display: flex;
   flex-wrap: wrap;
@@ -257,6 +126,7 @@ a:hover {
   margin-bottom: 20px;
 }
 
+/* Styles pour les tags dans les mots-clés */
 .keywords .tag {
   background-color: #34495e;
   padding: 5px 10px;
@@ -264,19 +134,20 @@ a:hover {
   color: white;
   font-size: 12px;
 }
+
 /*********************************************************************
-
-
                                 HEADER
-
-
 **********************************************************************/
+
+/* Styles pour l'en-tête */
 #head {
   background: #f4f4f4 url(../images/bg_head.jpg) top center;
   background-size: cover;
   color: #7c7c7c;
   padding: 30px 0 35px 0;
 }
+
+/* Styles pour l'image circulaire dans l'en-tête */
 #head img.img-circle {
   display: block;
   width: 250px;
@@ -285,15 +156,22 @@ a:hover {
   border: 9px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto;
 }
+
+/* Styles pour le titre dans l'en-tête */
 #head .title {
   font-family: Alice, Georgia, serif;
+  color: #333333;
   font-size: 49px;
   font-size: 3.0625rem;
 }
+
+/* Styles pour les liens dans le titre de l'en-tête */
 #head .title a {
   text-decoration: none;
   color: #333333;
 }
+
+/* Styles pour la ligne de tag dans l'en-tête */
 #head .tagline {
   display: block;
   font-size: 14px;
@@ -302,41 +180,52 @@ a:hover {
   color: #7C7C7C;
   margin: 5px 0 0;
 }
+
+/* Styles pour le texte en gras dans la ligne de tag */
 #head .tagline b {
   font-weight: normal;
 }
+
+/* Styles pour les liens dans la ligne de tag */
 #head .tagline a {
   color: #5E5E5E;
 }
+
+/* Styles pour l'en-tête sur la page d'accueil */
 .home #head {
   padding: 40px 0;
 }
+
+/* Styles pour le titre sur la page d'accueil */
 .home #head .title {
   font-size: 49px;
   font-size: 3.0625rem;
 }
+
+/* Styles pour la ligne de tag sur la page d'accueil */
 .home #head .tagline {
   font-size: 16px;
   font-size: 1rem;
   margin: 15px 0 0;
 }
+
 /*********************************************************************
-
-
                                 CONTENT
-
-
 **********************************************************************/
+
+/* Disposition en deux colonnes avec Flexbox */
 .two-columns-flex {
   display: flex;
   gap: 20px;
 }
 
+/* Styles pour chaque colonne */
 .column {
   flex: 2;
-  min-height: 400px; 
+  min-height: 400px;
   padding: 5px;
 }
+
 /* Contours du tableau */
 table {
   width: 100%; /* Pour s'assurer que le tableau occupe toute la largeur disponible */
@@ -363,14 +252,20 @@ td {
 td:hover, th:hover {
   background-color: #f9f9f9; /* Fond légèrement gris quand la cellule est survolée */
 }
+
+/* Styles pour les légendes */
 .caption {
   font-size: 14px;
   color: #7f8c8d;
   text-align: center;
 }
+
+/* Styles pour les images */
 img {
   max-width: 100%;
 }
+
+/* Styles pour les boutons */
 .btn {
   font-size: 12px;
   font-size: 0.75rem;
@@ -398,36 +293,22 @@ img {
   padding: 12px 35px;
   text-shadow: 0 1px 0px #7a1ab1;
 }
+
+/* Styles pour les boutons primaires */
 .btn-primary {
   color: #fff;
   background-color: #7a1ab1;
 }
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active {
-  color: #fff;
-  background-color: #8a2be2;
-}
-.btn-action {
-  font-weight: bold;
-  background: transparent!important;
-  border: 1px solid #333;
-  text-shadow: none;
-}
-.btn-action:hover,
-.btn-action:focus,
-.btn-action:active,
-.btn-action.active {
-  color: #7a1ab1;
-  border-color: #8a2be2;
-}
+
+/* Styles pour les grands boutons */
 .btn-lg {
   padding: 15px 60px;
   font-size: 12px;
   line-height: 1.33;
   font-weight: bold;
 }
+
+/* Styles pour le panneau d'appel à l'action */
 .panel-cta {
   box-shadow: 0 0 0 1px #e1e1e1, 0 0 0 3px #fff, 0 0 0 4px #e1e1e1;
   background: #f3f3f3;
@@ -438,6 +319,8 @@ img {
   border-radius: 0;
   background-clip: padding-box;
 }
+
+/* Styles pour les éléments dans le panneau d'appel à l'action */
 .panel-cta p,
 .panel-cta h3,
 .panel-cta h4,
@@ -445,14 +328,22 @@ img {
 .panel-cta h6 {
   margin: 0;
 }
+
+/* Styles pour le corps du panneau d'appel à l'action */
 .panel-cta .panel-body {
   padding: 35px;
 }
-/* Section - Featured */
+
+/*********************************************************************
+                                MASTERY SECTION
+**********************************************************************/
+
 .featured {
   font-size: 13px;
   font-size: 0.8125rem;
 }
+
+/* Styles pour les titres dans la section featured */
 .featured h3 {
   font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -463,22 +354,24 @@ img {
   vertical-align: middle;
   margin: 0 0 25px 0;
 }
-/* Section - Recent works */
+
+/*********************************************************************
+                                PERSONAL PROJECTS SECTION
+**********************************************************************/
+
 .thumbnails {
   display: flex;
   flex-wrap: wrap;
   gap: 15px 0; /* 10px d'espacement vertical entre les lignes, 0 horizontal */
   padding: 0;
 }
+
+/* Styles pour les éléments de la liste des vignettes */
 .thumbnails li {
   margin-bottom: 5px;
 }
-.thumbnails .details {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
+
+/* Styles pour les vignettes */
 .thumbnail {
   display: flex;
   flex-direction: column;
@@ -495,6 +388,8 @@ img {
   color: #333;
   margin-bottom: 10px;
 }
+
+/* Styles pour les images dans les vignettes */
 .thumbnail .img {
   display: block;
   flex-grow: 1;
@@ -507,12 +402,16 @@ img {
   position: relative;
   z-index: 1; /* Positionne l'image au second plan */
 }
+
+/* Styles pour les titres dans les vignettes */
 .thumbnail .title {
   text-transform: uppercase;
   margin: 0 2em;
   display: block;
   text-indent: 0;
 }
+
+/* Styles pour les emojis dans les vignettes */
 .thumbnail .emoji {
   margin-top: -35px; /* Marge négative pour remonter l'emoji */
   font-size: 2rem; /* Optionnel : ajustez la taille si nécessaire */
@@ -520,6 +419,8 @@ img {
   position: relative; /* Nécessaire pour z-index */
   z-index: 2; /* Assure que l'emoji est au-dessus de l'image */
 }
+
+/* Styles pour le couvercle dans les vignettes */
 .thumbnail .cover {
   position: absolute;
   display: block;
@@ -537,6 +438,8 @@ img {
   -o-transition-duration: 550ms;
   transition-duration: 550ms;
 }
+
+/* Styles pour le bouton "plus" dans le couvercle */
 .thumbnail .cover .more {
   position: absolute;
   bottom: 15px;
@@ -557,231 +460,92 @@ img {
   background: #8d15bd;
   color: white;
 }
+
+/* Styles pour les images dans les vignettes */
 .thumbnail img {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
+
+/* Styles pour les vignettes au survol */
 .thumbnail:hover {
   color: #333;
   text-decoration: none;
 }
-.thumbnail:hover img {
-  -webkit-filter: saturate(0%);
-}
+
+/* Styles pour le couvercle au survol */
 .thumbnail:hover .cover {
   opacity: 1;
 }
 
+/* Disposition en colonnes avec Flexbox */
 .flex-columns .row {
   display: flex; /* Activer Flexbox */
   flex-wrap: wrap; /* Permet de gérer les retours à la ligne */
 }
 
-.flex-columns .col-sm-6, 
+/* Styles pour les colonnes dans la disposition Flexbox */
+.flex-columns .col-sm-6,
 .flex-columns .col-md-3 {
   display: flex; /* Flexbox pour les colonnes */
   flex-direction: column; /* Empile les éléments verticalement */
   align-items: stretch; /* Étire les colonnes pour la même hauteur */
 }
-/* Pagination */
-.pagination > li > a {
-  color: #808080;
-  border: 0 none;
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-family: Georgia, serif;
-}
-.pagination > li > a:hover {
-  color: #000000;
-  background: none;
-}
-.pagination > li.active > a {
-  color: #333333;
-  background: none;
-}
-.pagination > li.active > a:hover {
-  color: #000000;
-  background: none;
-}
-
 
 /*********************************************************************
-
-
-                                 BLOG
-
-
+                                POST NAVIGATION
 **********************************************************************/
-.section-title,
-.entry-title {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  margin: 0px 0 25px;
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  font-size: 36px;
-  font-size: 2.25rem;
-  letter-spacing: 1px;
-}
-.section-title a,
-.entry-title a {
-  color: #333333;
-}
-.section-title span,
-.entry-title span {
-  display: inline-block;
-  position: relative;
-}
-.section-title span:before,
-.entry-title span:before,
-.section-title span:after,
-.entry-title span:after {
-  content: "";
-  position: absolute;
-  height: 4px;
-  top: .53em;
-  width: 400%;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
-}
-.section-title span:before,
-.entry-title span:before {
-  right: 100%;
-  margin-right: 45px;
-}
-.section-title span:after,
-.entry-title span:after {
-  left: 100%;
-  margin-left: 45px;
-}
-.entry-header .entry-meta {
-  text-align: center;
-  font-family: Georgia, serif;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-style: italic;
-  font-weight: normal;
-  color: #a5a5a5;
-  margin: 0 0 15px 0;
-}
-.entry-header .entry-meta a {
-  color: #a5a5a5;
-}
-.entry-content {
-  margin: 0 0 60px 0;
-}
-.entry-content h2 {
-  line-height: 1.2;
-  font-size: 30px;
-  font-size: 1.875rem;
-  padding-top: 20px;
-  margin-bottom: 20px;
-}
-.meta-nav,
-.more-link {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-weight: bold;
-  color: #666666;
-  text-decoration: none;
-}
-.meta-nav:hover,
-.more-link:hover {
-  color: #333333;
-  text-decoration: underline;
-}
-.more-link {
-  display: block;
-  width: 100%;
-  text-align: right;
-}
-/* Posts navigation */
+
+/* Navigation des articles */
 #nav-below {
   position: fixed;
   top: 48%;
 }
-#nav-below .meta-nav {
-  display: block;
-  padding: 27px 7px;
-  background: #444;
-  color: #fff;
-  -webkit-border-radius: 3px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 3px;
-  -moz-background-clip: padding;
-  border-radius: 3px;
-  background-clip: padding-box;
-  font-family: "Open sans", Helvetica, Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: none;
-  opacity: 0.2;
-}
-#nav-below .meta-nav:hover {
-  text-decoration: none;
-  color: #333;
-}
-#nav-below .nav-next {
-  position: fixed;
-  right: -3px;
-}
-#nav-below .nav-previous {
-  position: fixed;
-  left: -3px;
-}
+
+/* Styles pour le texte en gras dans la navigation des articles */
 #nav-below b {
   display: none;
 }
-footer.entry-meta {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin: 0 0 35px 0;
-  padding: 2px 0;
-  color: #888888;
-  font-size: 12px;
-  font-size: 0.75rem;
-}
-footer.entry-meta a {
-  color: #333333;
-}
-footer.entry-meta .meta-in {
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-}
+
+/* Styles pour l'en-tête de la page */
 .page-header {
   padding-bottom: 0;
   margin: 0;
   border-bottom: none;
   text-align: left;
 }
+
+/* Styles pour le titre de la page */
 .page-header .page-title {
   margin-top: 0;
   margin-bottom: 30px;
 }
+
 /*********************************************************************
-
-
                                 FOOTER
-
-
 **********************************************************************/
+
+/* Styles pour le pied de page */
 #footer {
   background: #232323;
   padding: 30px 0 0 0;
   font-size: 12px;
   color: #999;
 }
+
+/* Styles pour les liens dans le pied de page */
 #footer a {
   color: #ccc;
 }
+
+/* Styles pour les liens au survol dans le pied de page */
 #footer a:hover {
   color: #fff;
 }
+
+/* Styles pour les titres des widgets dans le pied de page */
 #footer h3.widget-title {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -789,21 +553,31 @@ footer.entry-meta .meta-in {
   color: #ccc;
   margin: 0 0 20px;
 }
+
+/* Styles pour le sous-pied de page */
 #underfooter {
   background: #191919;
   padding: 15px 0;
   color: #777;
   font-size: 12px;
 }
+
+/* Styles pour les liens dans le sous-pied de page */
 #underfooter a {
   color: #aaa;
 }
+
+/* Styles pour les liens au survol dans le sous-pied de page */
 #underfooter a:hover {
   color: #fff;
 }
+
+/* Styles pour les paragraphes dans le sous-pied de page */
 #underfooter p {
   margin: 0;
 }
+
+/* Styles pour les icônes de dépôt */
 .repo-icons a {
   text-decoration: none; /* Supprimer le soulignement */
   font-family: 'Roboto Mono', sans-serif; /* Police pour le texte */
@@ -813,25 +587,33 @@ footer.entry-meta .meta-in {
   margin-bottom: 10px; /* Espacement vertical entre les liens */
 }
 
-/* Style des icônes */
+/* Styles pour les icônes */
 .repo-icons i {
   font-weight: 900; /* Obligatoire pour Font Awesome dans certaines configurations */
   margin-right: 8px; /* Espacement entre l'icône et le texte */
 }
 
-/* Changer la couleur de survol */
+/* Changer la couleur de survol pour les icônes de dépôt */
 .repo-icons a:hover {
   color: #0056b3;
 }
+
+/* Styles pour les icônes de suivi */
 .follow-me-icons {
   font-size: 30px;
 }
+
+/* Styles pour les icônes dans les icônes de suivi */
 .follow-me-icons i {
   float: left;
   margin: 0 10px 0 0;
 }
-/* Max page width
-/////////////////////////////////////////////////////////////////////*/
+
+/*********************************************************************
+                                MAX PAGE WIDTH FIX
+**********************************************************************/
+
+/* Largeur maximale de la page */
 @media (min-width: 1200px) {
   .container {
     max-width: 1080px;
