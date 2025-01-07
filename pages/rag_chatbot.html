@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+                <!-- Keywords -->
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">Langchain</span>
+                            <span class="tag">RAG</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Streamlit</span>
+						</div>
+					</div>
+				</div>
+                <!-- /Keywords -->
+
+                <!-- Links -->
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/RAG-ChatBot">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+                            <a href="https://github.com/a-langlais/RAG-ChatBot/blob/main/README.md">
+								<i class="fa-solid fa-book"></i> Documentation
+							</a><br>
+							</a>
+						</p>
+					</div>
+				</div>
+                <!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Chatbot RAG Langchain pour l'exploration de PDF</h1>
+				</header>
+                <p>La puissance de l'IA permet d'apporter un soutien considérable dans l'exploration de la bibliographie. Lorsque l'on commence à avoir une collection très étoffée, il peut être très éprouvant de rechercher une information. Ce projet vise à fournir un assistant virtuel capable d'explorer et d'extraire des informations à partir de documents PDF en utilisant un chatbot intégré avec la technologie RAG (Retrieval-Augmented Generation). Le chatbot répond aux questions de l'utilisateur en s'appuyant sur un VectorStore créé à partir des documents PDF chargés, tout en utilisant un modèle de langage de Hugging Face pour générer des réponses.</p>
+				
+                <h3>Processing des données</h3>
+                <p>La première étape de ce projet consiste à charger et transformer les documents en inputs en un format standard et exploitable pour l'IA. De ce fait, les documents *.pdf sont récupérés depuis le répertoire spécifié <code>/data</code> à l'aide de <code>Langchain</code>. Elle permet d'extraire tous les fichiers *.pdf présents dans le dossier puis le contenu est ensuite chargé dans une liste de documents.</p>
+                <p>Une fois tous les documents extraits, le texte doit être découpé en morceaux de taille appropriée pour pouvoir garder le contexte des informations. Le texte est segmentée en morceaux de 500 caractères avec une chevaucement de 50 caractères pour garantir des informations cohérentes et pertinentes. On peut imaginer jouer sur ces valeurs pour gagner en robustesse au détriment de la mémoire.</p>
+                <p>Une fois ces étapes réalisées, le texte doit être transformé en un format compréhensible pour les modèles LLM. Chaque morceau de texte est alors converti en un embedding via le modèle pré-entrainé <code>sentence-transformers/all-MiniLM-L6-v2</code> de Hugging-Face. Cela permet de représenter chaque document par un vecteur de caractéristiques dans un espace multidimensionnel.</p>
+                <p>Enfin, les embeddings sont stockés dans un <b>VectoreStore</b> (via FAISS), qui est une structure de données permettant une recherche rapide et efficace dans de grands ensembles de documents. Le <b>VectorStore</b> est ensuite suavegardé localement pour poivoir être réutilisé sans avoir à recomposer l'ensemble des embeddings à chaque fois.</p>
+                <center>
+                    <img src="../pages/images/dfd_chatbot.png" alt="dfd_workflow" width="100%">
+                    <p class="caption">Data Flow Diagram du raisonnement du projet</p>
+				</center>
+
+                <h3>Interaction et réponse</h3>
+                <p>Maintenant que les données sont exploitables, le projet peut déjà être utilisé comme tel. Cependant, il est plus confortable de pouvoir intéragir avec le modèle à travers une interface graphique interactive. Une UI est donc réalisée avec <b>Streamlit</b> permettant à l'utilisateur de poser des questions via un champ de saisie interactif. Les messages échangés sont stockés temporairement dans la session en cours pour maintenir une mémoire à la conversation. Aucun donnée n'est cependant conservée de manière durable et l'historique disparait à l'arrêt de l'application.</p>
+                <p>Une fois les données pertinentes récupérées du <b>VectoreStore</b>, le modèle LLM <code>mistralai/Mistral-7B-Instruct-v0.3</code> est chargé depuis Hugging-Face via son endpoint afin de construire une réponse contextuelle et naturelle aux questionnements de l'utilisateur à partir des données des *.pdf.</p>
+                <p>Lorsqu'une question est posée, un processus de Retrieval-based Question Answering (QA) est déclenché, c'est-à-dire que le modèle va chercher les informations pertinentes dans le <b>VectoreStore</b> en interrogeant les documents via leur représentation en embeddings. Un <b>PromptTemplate</b> personnalisé est utilisé pour cadrer la requête de manière efficace et pour répondre en détaillant les points importants extraits du contexte disponible.</p>
+                <p>Une fois la réponse générée, elle est affichée dans l'interface utilisateur, accompagnée des sources extraites (les fichiers *.pdf) et des pages spécifiques où l'information a été trouvée. Cela permet de donner un maxium de transparence à l'utilisateur concernant l'origine des réponses fournies.</p>
+                <center>
+                    <img src="../pages/images/chatbot_preview.png" alt="chatbot" width="80%">
+                    <p class="caption">Interface simple du Chatbot sur Streamlit</p>
+				</center>
+
+                <h3>Conclusion</h3>
+                <p>Ce projet utilise une approche hybride de récupération d'information et de génération de texte pour fournir une expérience utilisateur interactive et intelligente. Grâce à l'intégration de technologies comme Langchain, Hugging Face, et FAISS, il est capable de traiter de grands volumes de données PDF et de répondre de manière précise et détaillée aux questions des utilisateurs, tout en offrant une transparence sur les sources utilisées.</p>
+                <p>Du fait de l'utilisation de petits modèles, l'application est performante surtout en anglais. Il suffit de passer sur des modèles multilangues plus puissants pour améliorer la qualité des réponses dans d'autres langues.</p>
+
+            </article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
