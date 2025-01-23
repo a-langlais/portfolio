@@ -77,19 +77,19 @@
 			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
-					<h1 class="page-title">BatActivity : pour l'analyse des données chiroptérologiques</h1>
+					<h1 class="page-title">BatActivity : un package R pour l'analyse des données chiroptérologiques</h1>
 				</header>
 				<p>Durant mes études sur les chauves-souris, j’ai toujours mis un point d’honneur à analyser rigoureusement mes données recueillies sur le terrain. Dès le début, j’avais commencé à faire des scripts ici et là pour m’aider à automatiser mes analyses et surtout standardiser la forme et les calculs. Avec le temps, j’ai pu améliorer mes fonctions selon mes besoins et les problèmes qui pouvaient subvenir. Aujourd’hui, je souhaite partager ce qui est maintenant devenu un projet personnel pour la standardisation et l'analyse des données d’activité chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
 				
 				<h3>Objectifs</h3>
-				<p>Ce projet regroupe un certain nombre de fonctions utiles pour l'analyse des données chiroptérologiques obtenues par protocole d'écoute active (hétérodyne) ou passive (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, c'est un projet 100% open-source.</p>
+				<p>Ce projet regroupe un certain nombre de fonctions utiles pour <b>l'analyse des données chiroptérologiques obtenues par protocole d'écoute active</b> (hétérodyne) ou <b>passive</b> (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, <b>c'est un projet 100% open-source</b>.</p>
 				<p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
-				<p>Les fonctions calculent le nombre de contacts, le nombre de minutes positives, d'heures positives et les différents paramètres des contacts par heure (CPH) et contacts par nuit (CPN). Concernant les données actives, la fonction montre le nombre de CPH estimé (calculé sur une heure) et les proportions des trois comportements qualifiés ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
+				<p>Les fonctions calculent le <b>nombre de contacts</b>, le <b>nombre de minutes positives</b>, d'<b>heures positives</b> et les différents paramètres des <b>contacts par heure</b> (CPH) et <b>contacts par nuit</b> (CPN). Concernant les données actives, la fonction montre le <b>nombre de CPH estimé</b> (calculé sur une heure) et les <b>proportions des trois comportements qualifiés</b> ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
 				<p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
 				<p>Pour le moment, tous les titres sont en anglais mais bientôt les fonctions prendront en charge des titres de colonnes en français et en anglais.</p>				
 				
 				<h3>Fonctions proposées</h3>
-				<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de pouvoir traiter avec exactitude les différentes métriques de leurs relevés. À ce jour, six fonctions assurent chacune un rôle particulier.</p>
+				<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de pouvoir <b>traiter avec exactitude les différentes métriques de leurs relevés</b>. À ce jour, six fonctions assurent chacune un rôle particulier.</p>
 				<p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
                     <table>
                         <thread>
