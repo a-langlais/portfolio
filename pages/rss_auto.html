@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <img class="img-circle" src="../images/profile-pic.png" alt="">
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+                <!-- Keywords -->
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">WebScraping</span>
+                            <span class="tag">Transformers</span>
+                            <span class="tag">LLM</span>
+                            <span class="tag">Mailing</span>
+						</div>
+					</div>
+				</div>
+                <!-- /Keywords -->
+
+                <!-- Links -->
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://github.com/a-langlais/rss_summarizer">
+								<i class="fab fa-github fa-2"></i> GitHub
+							</a><br>
+                            <a href="https://github.com/a-langlais/rss_summarizer/blob/main/README.md">
+								<i class="fa-solid fa-book"></i> Documentation
+							</a><br>
+							</a>
+						</p>
+					</div>
+				</div>
+                <!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Veille informative automatique via scraping de flux RSS</h1>
+				</header>
+                <p>Se tenir informer est un enjeu crucial à notre époque. Avec la multitude de sources d'information et la rapidité d'évolution des technologies, il est facile de passer à côté d'une nouveauté importante. Chacun à sa propre stratégie concernant la veille informative. Pour ma part, j'ai souhaité automatisé de manière hebdomadaire la récupération des articles des différents sites ou réseaux sociaux que je suis activement, en complément de ma veille active au quotidien. On retrouve beaucoup de solutions à base d'automatisation no-code ou low-code, mais je ne retrouvais pas la souplesse et la finesse que je recherche dans ce genre d'outil, c'est pourquoi j'ai voulu concevoir mon propre programme.</p>
+				
+                <h3>Récupération des données</h3>
+                <p>Dans un premier temps, le programme récupère les derniers articles des différents flux RSS qui ont été saisis dans le fichier de configuration (il ne s'agit que d'une simple liste facile à modifier sur la durée). Le programme récupère ainsi les derniers articles des 7 derniers jours. le titre de l'article, sa date de publication et son URL sont récupérés par la même occasion grâce au package <code>feedparser</code>.</p>
+                <p>Pour que la veille soit efficace, il est souhaitable d'avoir un petit résumé court et journalistique associé à l'article, afin de pouvoir savoir rapidement s'il sera intéressant ou non. Pour cela, le programme va scraper les articles à partir de l'URL récupérée précédemment. Le scraping des articles est ainsi rendu possible grâce aux packages <code>requests</code> et <code>BeautifulSoup</code>.</p>
+
+                <h3>Résumé et reporting</h3>
+                <p>Les données ainsi scrapées et agrégées des différents articles nécessitent alors une phase de nettoyage pour être pleinement exploitées, notamment en retirant les différentes balises HTML non nécessaires issues du scraping. Suite à cela, le programme utilise un modèle de langage open-source spécialisé dans les courts résumés journalistiques (<code>facebook/bart-large-cnn</code>) disponible sur Hugging-Face via le package <code>transformers</code> (de plus, il fonctionne particulièrement bien pour les articles en français comme en anglais). Ainsi, les données agrégées maintenant propres sont passées au modèle qui va, pour chaque article, réaliser un court résumé d'environ 60-100 mots.</p>
+                <p>Maintenant que tous les éléments sont propres et formatés pour chaque article, les éléments sont mis en forme selon un modèle Markdown. Une fois chaque article traité, le document Markdown est exporté afin d'avoir une trace du contenu créé suite à la veille informative.</p>
+                <center>
+                    <img src="../pages/images/rss_preview.png" alt="report_veille" width="80%">
+                    <p class="caption">Rendu final du rapport de veille</p>
+				</center>
+
+                <h3>Envoi hebdomadaire</h3>
+                <p>Le programme pourrait s'arrêter là, avec un rapport clair et standard issu des 7 derniers jours d'information. Cependant, l'idéal serait d'avoir cette veille qui se réalise automatiquement chaque semaine pour ensuite envoyer le rapport sur sa boite mail avant 8h par exemple.</p>
+                <p>Dans un premier temps, il convient de bien paramétrer son adresse mail et la configuration des paramètres SMTP (Server et Port) afin d'officialiser le lien entre l'adresse mail et le programme. Pour certaines plateformes comme Gmail, il peut être nécessaire de générer un token applicatif pour autoriser l'accès. Tout ceci est assez simple à l'aide du pacage <code>smtplib</code> de Python.</p>
+                <p>Suite à cela, il suffit simplement de déployer ce programme sur un service Cloud comme GitHub, Databricks, AWS voire même son propre NAS via une image Docker (c'est cette dernière option que j'ai personnellement choisie). Une fois déployé, un petit cronjob pour lancer le programme chaque mardi à 6h et le rapport arrive bien au chaud dans sa boite mail chaque semaine, faisant économiser beaucoup de temps pôur optimiser sa veille informative !</p>
+                <p>En raison du nombre important d'étapes critiques, le programme enregistre chaque étape dans un fichier log pour retracer les évènements de manière claire. De plus, toutes les données importantes sont stockées dans un fichier <code>.env</code> pour assurer une protection supplémentaire.</p>
+                <center>
+                    <img src="../pages/images/rss_logger.png" alt="rss_log" width="100%">
+                    <p class="caption">Exrtait du début du logger</p>
+				</center>
+
+                <h3>Conclusion</h3>
+                <p>Ce projet est un exemple typique d'automatisation d'une tâche répétitive à l'aide d'outils appropriés, sans partir dans l'excès de modèles disproportionnés et tout en gardant une souplesse et une personnalisation propre aux désirs de chacun.</p>
+                <p>Ce projet fait appel à une logique de collecte, de nettoyage, de scraping de données, de formatage et de reporting automatisé.</p>
+            </article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergetique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
