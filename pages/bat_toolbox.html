@@ -86,8 +86,13 @@
 				<p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
 				<p>Les fonctions calculent le <b>nombre de contacts</b>, le <b>nombre de minutes positives</b>, d'<b>heures positives</b> et les différents paramètres des <b>contacts par heure</b> (CPH) et <b>contacts par nuit</b> (CPN). Concernant les données actives, la fonction montre le <b>nombre de CPH estimé</b> (calculé sur une heure) et les <b>proportions des trois comportements qualifiés</b> ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
 				<p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
-				<p>Pour le moment, tous les titres sont en anglais mais bientôt les fonctions prendront en charge des titres de colonnes en français et en anglais.</p>				
-				
+				<p> Une application <code>shiny</code> permet d'exploiter facilement les données aux noms de colonnes atypiques, et rend accessibles les fonctions d'analyse pour les utilisateurs les moins expérimentés ou familiers avec R. Cette application se lance en un script et permet directement d'interagir de manière conviviale avec ses données. Les résultats apparaissent très rapidement, accompagnés de quelques graphiques interactifs, conçu avec <code>plotly</code>.</p>
+
+				<center>
+                    <img src="../pages/images/BatApp.gif" alt="BatApp" width="100%">
+                    <p class="caption">Exemple de rendu de l'application en étudiant un jeu de données d'enregistrements passifs.</p>
+                </center>
+
 				<h3>Fonctions proposées</h3>
 				<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de pouvoir <b>traiter avec exactitude les différentes métriques de leurs relevés</b>. À ce jour, six fonctions assurent chacune un rôle particulier.</p>
 				<p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
