@@ -22,7 +22,7 @@
                     <img class="img-circle" src="images/profile-pic.png" alt="Profile Picture">
                 </a>
                 <span class="title">Alexandre LANGLAIS</span>
-                <span class="tagline">Analytics Data Scientist | AI & Statistics<br>
+                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
                     <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
             </h1>
         </div>
@@ -101,142 +101,105 @@
         <!-- /Mastery -->
 
         <!-- PersonalProjects -->
-        <div class="row section recentworks topspace">
-            <h2 class="section-title"><span>Projets récents</span></h2><br>
-            <div class="thumbnails recentworks row">
+        <div class="row section recentworks topspace personal-projects">
+            <h2 class="section-title"><span>Projets récents</span></h2>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/rss_auto.html">
-                        <span class="img">
-                            <img src="images/projet-12-preview.png" alt="rss">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🗞️</h3>
-                        <span class="title">Veille informative automatique via scraping de flux RSS</span>
-                    </a>
+            <div class="proj-tabs" role="tablist" aria-label="Sections de projets">
+                <input type="radio" name="projtabs" id="tab-stat"  class="tab-input" checked>
+                <label for="tab-stat"  class="tab-label">Statistiques</label>
+
+                <input type="radio" name="projtabs" id="tab-ds" class="tab-input">
+                <label for="tab-ds" class="tab-label">Data Science</label>
+
+                <!-- <input type="radio" name="projtabs" id="tab-hard" class="tab-input">
+                <label for="tab-hard" class="tab-label">Hardware</label> -->
+            </div>
+
+            <div class="thumbnails recentworks">
+
+                <!-- ONGLET STATISTIQUES -->
+                <a class="thumbnail cat-stat" href="pages/dashboard_cmr.html" aria-label="Étude des trajectoires de chauves-souris via CMR">
+                <span class="img">
+                    <img src="images/projet-3-preview.png" alt="Aperçu du dashboard capture-marquage-recapture">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">📡 Étude des trajectoires de chauves-souris via Capture-Marquage-Recapture</span>
+                    <p class="desc">Analyses démographique et spatiale des populations de cinq espèces de chauves-souris cavernicoles marquées depuis 2018 dans le cadre d'un projet Capture-Marquage-Recapture d'envergure (> 3M de données). Modèle CMR, taux de recapture, calcul des trajectoires spatio-temporelles et réalisation d'un tableau de bord interactif pour visualiser les résultats.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/rag_chatbot.html">
-                        <span class="img">
-                            <img src="images/projet-10-preview.png" alt="chatbot">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🤖</h3>
-                        <span class="title">Chatbot RAG Langchain pour l'exploration de PDF</span>
-                    </a>
+                <a class="thumbnail cat-stat" href="pages/diag_covid.html" aria-label="Diagnostic automatique COVID-19 sur radiographies">
+                <span class="img">
+                    <img src="images/projet-1-preview.png" alt="Aperçu du projet de diagnostic COVID-19 par imagerie">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">⚕️ Diagnostic automatique à partir de radiographies pulmonaires COVID-19</span>
+                    <p class="desc">Entrainement d'un modèle de classification d’images thoraciques par Deep Learning et Computer Vision (CNN) à partir d'un jeu d'un important jeu de données open-source et réalisation d'une application en ligne pour faciliter l'usage du modèle via importation d'images. L'application permet par ailleurs d'afficher les GRAD-CAM, permettant d'appréhender la pertinence des zones détectées.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/dashboard_cmr.html">
-                        <span class="img">
-                            <img src="images/projet-3-preview.png" alt="dashboard_cmr">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">📡</h3>
-                        <span class="title">Etude des trajectoires de chauves-souris via Capture-Marquage-Recapture</span>
-                    </a>
+                <a class="thumbnail cat-stat" href="pages/calcul_bridages.html" aria-label="Estimation des seuils de bridage éolien">
+                <span class="img">
+                    <img src="images/projet-5-preview.png" alt="Aperçu de l’estimation des seuils de bridage éolien">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">🍃 Estimation des seuils de bridage éolien</span>
+                    <p class="desc">Analyses multivariées à partir de données d'activité biologique et environnementales afin de modéliser les seuils de bridage éolien optimaux, dans l'objectif de limiter les risques de collisions. Usage de régressions logistiques et représentation de la distribution de l'activité en fonction des variables abiotiques.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/diag_covid.html">
-                        <span class="img">
-                            <img src="images/projet-1-preview.png" alt="radio_covid">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">⚕️</h3>
-                        <span class="title">Diagnostic automatique à partir de radiographies pulmonaires COVID-19</span>
-                    </a>
+                <a class="thumbnail cat-stat" href="pages/dna_sequencing.html" aria-label="Séquençage du code génétique avec ML">
+                <span class="img">
+                    <img src="images/projet-6-preview.png" alt="Aperçu du séquençage du code génétique par ML">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">🧬 Séquençage du code génétique avec le Machine Learning</span>
+                    <p class="desc">Classification des séquences d'ADN de différentes espèces via l'application de technique de traitement du langage naturel (NLP). Après conversion des séquences d'acides aminés en représentations numériques, le modèle MultinomialNB est entrainé sur les données.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/dashboard_pbi.html">
-                        <span class="img">
-                            <img src="images/projet-11-preview.png" alt="powerbi">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">📊</h3>
-                        <span class="title">Dashboard analytique avec Power BI</span>
-                    </a>
+                <!-- ONGLET DATA SCIENCE -->
+                <a class="thumbnail cat-ds" href="pages/bat_toolbox.html" aria-label="Package R pour chiroptérologues">
+                <span class="img">
+                    <img src="images/projet-2-preview.png" alt="Aperçu du package R pour l’étude des chauves-souris">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">🦇 Package de fonctions R pour les chiroptérologues</span>
+                    <p class="desc">Ensemble d'outils standardisés afin d'améliorer l'analyse des données chiroptérologiques. Les fonctions permettent de calculer des indicateurs d'activités comparables entre les sites d'études. Une application Shiny déployée en ligne permet aux utilisateurs d'importer leurs données, visualiser et exporter les résultats de manière ergonomique, même sans connaissances du langage R.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/process_opti.html">
-                        <span class="img">
-                            <img src="images/projet-4-preview.png" alt="opti_process">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">⏲️</h3>
-                        <span class="title">Optimisation des process de terrain</span>
-                    </a>
+                <a class="thumbnail cat-ds" href="pages/rss_auto.html" aria-label="Veille informative automatique via scraping de flux RSS">
+                <span class="img">
+                    <img src="images/projet-12-preview.png" alt="Aperçu du projet de veille RSS automatisée">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">🗞️ Veille informative automatique via scraping de flux RSS</span>
+                    <p class="desc">Outil automatisable de collecte et synthèse d'informations à partir de flux RSS. Le programme extrait les nouveaux articles de sites webs cibles, les synthétise et réalise un rapport de veille simple, envoyé par mail ou stocké directement sur serveur privé.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/bat_toolbox.html">
-                        <span class="img">
-                            <img src="images/projet-2-preview.png" alt="toolbox_bat">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🦇</h3>
-                        <span class="title">Package de fonctions R pour les chiroptérologues</span>
-                    </a>
+                <a class="thumbnail cat-ds" href="pages/rag_chatbot.html" aria-label="Chatbot RAG Langchain pour l'exploration de PDF">
+                <span class="img">
+                    <img src="images/projet-10-preview.png" alt="Aperçu du chatbot RAG Langchain pour PDF">
+                    <span class="cover"><span class="more">Voir plus &rarr;</span></span>
+                </span>
+                <div class="thumb-body">
+                    <span class="title">🤖 Chatbot RAG Langchain pour l'exploration de PDF</span>
+                    <p class="desc">Interface simple d'une application de recherche sémantique dans des documents PDF, utilisant un pipeline RAG pour l'indexation et la citation de sources. Un modèle de langage open-source est utilisé pour comprendre les requêtes, extraire les informations pertinentes des documents et échanger avec l'utilisateur grâce au langage naturel.</p>
                 </div>
+                </a>
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/calcul_bridages.html">
-                        <span class="img">
-                            <img src="images/projet-5-preview.png" alt="seuils_eolien">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🍃</h3>
-                        <span class="title">Estimation des seuils de bridage éolien</span>
-                    </a>
-                </div>
+                <!-- ONGLET HARDWARE -->
+                <!-- <a class="thumbnail cat-hard" href="pages/projet-xyz.html" aria-label="Projet XYZ">
 
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/predict_customer_churn.html">
-                        <span class="img">
-                            <img src="images/projet-7-preview.png" alt="predict_customer_churn">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">❌</h3>
-                        <span class="title">Prédiction du churn client en entreprise</span>
-                    </a>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/stack_tags_network.html">
-                        <span class="img">
-                            <img src="images/projet-8-preview.png" alt="stack_tags_network">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🏷️</h3>
-                        <span class="title">Analyse des mots-clés les plus utilisés avec la théorie des graphes</span>
-                    </a>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/time_series_forecasting.html">
-                        <span class="img">
-                            <img src="images/projet-9-preview.png" alt="time_series_forecasting">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🕑</h3>
-                        <span class="title">Prédiction d'évènements à partir d'une série temporelle</span>
-                    </a>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-                    <a class="thumbnail" href="pages/dna_sequencing.html">
-                        <span class="img">
-                            <img src="images/projet-6-preview.png" alt="DNA_sequencing">
-                            <span class="cover"><span class="more">Voir plus &rarr;</span></span>
-                        </span>
-                        <h3 class="emoji">🧬</h3>
-                        <span class="title">Séquençage du code génétique avec le Machine Learning</span>
-                    </a>
-                </div>
-
+                </a> -->
             </div>
         </div>
         <!-- /PersonalProjects -->
@@ -246,7 +209,7 @@
             <div class="panel panel-cta">
                 <div class="panel-body">
                     <div class="col-lg-8">
-                        <p>Mon profil vous intéresse ? Vous souhaiteriez en savoir un peu plus ? N'hésitez pas à <b>télécharger mon CV</b> pour garder mes coordonnées sous la main et me contacter !</p>
+                        <p>Vous souhaiteriez en savoir un peu plus ? N'hésitez pas à <b>télécharger mon CV</b> pour garder mes coordonnées sous la main et me contacter !</p>
                     </div>
                     <div class="col-lg-4 text-right">
                         <a href="files/ALanglais_CV_GitHub.pdf" download="ALanglais_CV_GitHub" class="btn btn-primary btn-lg">Télécharger mon CV</a>
