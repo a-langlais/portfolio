@@ -21,6 +21,8 @@ portfolio/
 ├── assets/                   # Fichier CSS pour la mise en forme et le design
 ├── files/                    # Dossier contenant les fichiers disponibles en téléchargement sur le site
 ├── images/                   # Dossier contenant les images affichées sur le site
+├── pages/                    # Dossier contenant les pages des projets
+    └── images/               # Dossier contenant les images utilisées dans les fiches projets
 ├── index.html                # Page principale du portfolio
 ├── LICENSE                   # Licence MIT, détails sur l'utilisation et la distribution
 └── README.md                 # Ce fichier, contenant des informations sur le projet
@@ -38,17 +40,18 @@ portfolio/
 Pour cloner et exécuter ce projet en local sur votre machine, suivez les étapes ci-dessous :
 
 1. Clonez le dépôt en utilisant Git :
+   
    ```bash
    git clone https://github.com/a-langlais/portfolio.git
    ```
 
 2. Accéder au répertoire du projet :
-    ```bash
-    cd portfolio
-    ```
+   
+   ```bash
+   cd portfolio
+   ```
 
 3. Ouvrez le fichier `index.html` dans votre navigateur préféré pour voir le site en local.
-
 
 ## Remerciements
 
@@ -58,7 +61,6 @@ Le code original a été une inspiration précieuse et a permis de gagner énorm
 Merci à Sergey pour son travail et vive l'open-source !
 
 Si vous êtes intéressé par l'original, vous pouvez consulter son dépôt GitHub ici : [Initio Template by Sergey 'pozh' Pozhilov](https://github.com/pozh/Initio).
-
 
 ## Licence
 
