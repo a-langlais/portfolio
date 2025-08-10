@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <a href="../index.html">
+                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
+                </a>
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<!-- Keywords -->
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">Python</span>
+							<span class="tag">SIG</span>
+                            <span class="tag">Canopy Height Model</span>
+							<span class="tag">Raster</span>
+						</div>
+					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://inpn.mnhn.fr/zone/znieff/540014418">
+								<i class="fa-solid fa-globe"></i> Lien national du site
+							</a>
+						</p>
+					</div>
+				</div>
+				<!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Analyse de la morphologie d'un espace naturel à l'aide de données LiDAR</h1>
+				</header>
+				<p>Les Landes de l'Hôpiteau (<a href="https://inpn.mnhn.fr/zone/znieff/540014418" target="_blank" rel="noopener noreferrer">ZNIEFF 540014418</a>) constituent un site naturel présent en Deux-Sèvres (79) géré par le Conservatoire d'Espaces Naturels de Nouvelle-Aquitaine. Ce site est notamment reconnu pour ses enjeux liés son important réseau de zones humides, ainsi qu'à son entomofaune patrimoniale. Le site, constitué de brandes de différents âges, présente une morphologie complexe, difficile d'accès pour une prospection humaine due à la densité des habitats. La combinaison de la densité des habitats et des enjeux liés aux zones humides rend l'intervention de gestion mécanique incertaine. Cette étude vise donc à :</p>
+                    <ul>
+                        <li>Identifier le réseau de micro-habitats humides à l'échelle du site ;</li>
+                        <li>Mettre en évidence les hauteurs de brandes pour identifier les secteurs prioritaires d'intervention de gestion ;</li>
+                        <li>Evaluer le potentiel de mécanisation pour la gestion du site et les impacts potentiellement liés ;</li>
+                    </ul>
+				
+                <h3>Méthodologie</h3>
+                <p>Dans un premier temps, des données LiDAR ont été acquises pour le site à une précision de 50 cm via les données disponibles par l'IGN. Après traitement et découpage spatiale pour correspondre au périmètre du site, <b>une modélisation en trois dimensions (X, Y et Z)</b> a été réalisée, permettant d'apprécier visuellement et facilement la morphologie du terrain. Cette modélisation a été réalisée en Python, afin de faciliter la création de modèles de hauteur de canopée à posteriori.</p>
+                <p>La catégorisation des données a permis d'identifier différentes strates grossières de végétation. Les habitats humides (en eau), présente la particularité de ne pas avoir de points (du fait d'une mauvaise réflexion des lasers de télédéction LiDAR). Ainsi, les patchs blancs sans points de mesure représentent majoritairement des surfaces humides et permettent de visualiser le réseau par géoréférencement superposé.</p>
+
+                    <iframe src="../pages/images/nuage_interactif.html" style="width:100%;height:500px;border:1px solid #ccc;display:block"></iframe>
+                    <p class="caption">Modélisation LiDAR intéractive, volontairement simplifiée (sans lissage polygonial ni EYE) pour un chargement plus rapide et une visualisation plus fluide.
+                    <br>Clic gauche pour intéragir ; MAJ + Clic gauche pour déplacer ; CTRL + Clic gauche pour tourner.</p>
+
+                <p>Dans un second temps, la mise en évidence de hauteur des brandes a été réalisé par l'application d'un <b>modèle de hauteur de canopée (CHM)</b>. Ce modèle a permis d'estimer la hauteur de la végétation en utilisant les points de mesure disponibles, offrant ainsi une représentation précise de la structure verticale du paysage.</p>
+
+                <h3>Résultats</h3>
+                <p>Le site présente une structure topographique relativement plane, avec des altitudes comprises entre 152,7 m et 178,8 m et une moyenne de 161,2 m. La densité de points (13 points/m²) et l’espacement moyen estimé (0,28 m) garantissent une bonne résolution pour caractériser la végétation et le sol.</p>
+				<p>Un peu plus d’un tiers des points (38 %) correspondent au sol nu ou à la surface topographique (classe 2), le reste se répartissant majoritairement entre la végétation ligneuse basse, moyenne et haute. La forte proportion de points en classes 3, 4 et 5 (environ 4,8 millions de points cumulés) indique une couverture arborée bien développée et structurée, avec plusieurs strates verticales.</p>
+				<p>Les caractéristiques des retours laser (environ 64 % de premiers retours et une proportion similaire de derniers retours, mais seulement 36,7 % de retours uniques) suggèrent un couvert relativement dense mais hétérogène, permettant à une partie du signal de pénétrer jusqu’au sol. Cette configuration est typique de milieux boisés mixtes, où la canopée présente à la fois des zones fermées et des trouées.</p>
+				<p>Ces éléments laissent penser à un milieu présentant une mosaïque d’habitats forestiers, intéressant pour la biodiversité : présence potentielle de strates arbustives et arborées diversifiées, et zones ouvertes et potentiellement humides, favorables à certaines espèces. L’exploitation de ces données pour dériver un modèle de hauteur de canopée (CHM) et cartographier les structures verticales a permis de cibler les zones à fort intérêt écologique, d’identifier les secteurs en régénération, et d’appuyer la planification d’actions de gestion comme l’entretien de clairières ou la préservation d’îlots de vieux bois.</p>
+				<p>Les résultats ont été partagés avec les gestionnaires du site pour accompagner leurs décisions de gestion, notamment à l'aide de cartes géoréférencées, des résultats du modèle CHM ainsi qu'avec des rasters géoréférencés (GeoTIFF) contenant les valeurs calculées.</p>
+                <center>
+					<img src="../pages/images/lidar_CHM.png" alt="lidar chm" width="100%">
+                    <p class="caption">Sortie du modèle de hauteur de canopée sur le site.</p>
+				</center>
+			</article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
