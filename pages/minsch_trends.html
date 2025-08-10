@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <a href="../index.html">
+                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
+                </a>
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<!-- Keywords -->
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">R</span>
+							<span class="tag">Python</span>
+							<span class="tag">TRIM</span>
+                            <span class="tag">GLMM</span>
+							<span class="tag">Bayésien</span>
+						</div>
+					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="">
+								<i class="fa-solid fa-book"></i> Rapport de l'étude (bientôt publié)
+							</a><br>
+							<a href="">
+								<i class="fa-solid fa-file-lines"></i> Article scientifique issue de l'étude (bientôt publié)
+							</a>
+						</p>
+					</div>
+				</div>
+				<!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Analyse hiérarchique des tendances populationnelles d'une espèce de chauve-souris en France (1995-2024)</h1>
+				</header>
+				<p>Le Minioptère de Screibers (<i>Miniopterus schreibersii</i>), chauve-souris cavernicole protégée et classée « Vulnérable » sur la liste rouge nationale de l’UICN, est suivi depuis près de 30 ans par un réseau coordonné par la Société Française d’Étude et de Protection des Mammifères (SFEPM). L’espèce est recensée en période estivale dans les colonies de reproduction et en hiver dans les gîtes d’hibernation, sur plus de 400 sites répartis dans cinq grandes régions de France. L’étude vise à :</p>
+                    <ul>
+                        <li>Quantifier la tendance temporelle des effectifs adultes entre 1995 et 2024 ;</li>
+                        <li>Identifier les différences régionales et saisonnières ;</li>
+                        <li>Évaluer la probabilité de déclin à partir d’analyses probabilistes robustes ;</li>
+                    </ul>
+				
+                <h3>Méthodologie itérative</h3>
+                <p>Un pipeline de nettoyage et filtrage a permis d’harmoniser les données issues de multiples structures locales : standardisation des formats, catégorisation des variables, élimination des doublons, gestion des valeurs manquantes et application de seuils minimaux d’effectif, de fréquence de suivi et de fiabilité. Une analyse de sensibilité a permis de mettre en évidence les meilleurs paramètres de filtrage, inspiré par d'autres travaux. L’analyse repose sur trois approches complémentaires :</p>
+                <p>Usage d'un <b>modèle TRIM</b> (régression log-linéaire de Poisson) pour réaliser une première estimation de référence grâce à sa gestion des données manquantes par imputation et sa correction de la surdispersion.</p>
+                <p>Construction de modèles <b>linéaires généralisés mixtes</b> (GLMM) pour prendre en compte la structure hiérarchique des données (sites, régions, années, etc.) et exploiter des contrastes régionaux via des interactions.</p>
+                <p>Enfin, réaliser des estimations probabilistes à l'aide de <b>modèles bayésiens hiérarchiques</b> (négative binomiale) pour obtenir des pentes spécifiques par site et par région. Cette démarche permet alors d'intégrer explicitement les incertitiudes et les effets croisés.</p>
+			    <p>Les métriques clés calculées incluent la pente annuelle (β), la variation cumulée sur la période, la probabilité postérieure de déclin (P(β<0)), les intervalles de crédibilité (IC95 %) et la proportion de variance expliquée (R²).</p>
+
+                <h3>Résultats</h3>
+                <p>En été, la tendance nationale indique une probabilité de déclin élevée (P ≈ 92,6 %) avec des signaux robustes en Occitanie (–73,8 %, P = 98,9 %), Bourgogne-Franche-Comté (–66,3 %, P = 97,2 %) et Corse (–69,8 %, P = 97,6 %). En hiver, les résultats affichent des déclins locaux marqués : Bourgogne-Franche-Comté (–85,6 %, P = 99,6 %) et Corse (–92,8 %, P = 98 %).</p>
+                <p>Les analyses révèlent une forte hétérogénéité spatiale et saisonnière, confirmant que les colonies estivales, composées majoritairement de femelles reproductrices, sont particulièrement vulnérables. La variabilité interannuelle et les contrastes régionaux mettent en évidence l’intérêt des approches hiérarchiques pour distinguer signaux écologiques réels et fluctuations liées aux comptages annuels.</p>
+                <p>Afin de faciliter la communication des résultats auprès du grand public, des graphiques sont présentés sous forme de courbes tendancielles traçant l'abondance relative annuelle observée. Un ensemble de graphiques en haute définition ont été fournis pour chaque période et région.</p>
+                <center>
+					<img src="../pages/images/winter_trends_minsch.png" alt="witer trends" width="100%">
+                    <p class="caption">Représentation de la tendance nationale (hors PACA) du Minioptère de Schreibers sur la période hivernale de 1995-2024. Les points représentent les effectifs moyens annuels, normalisés sur l’ensemble de la période. Les courbes violettes correspondent aux différentes trajectoires linéaires simulées par le modèle bayésien hiérarchique ; elles reflètent l’incertitude autour de la direction générale de la tendance. La courbe bleue est un GLM simple fournissant une lecture descriptive indépendante du modèle, mettant en évidence les variations temporelles brutes.</p>
+				</center>
+			</article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
