@@ -22,7 +22,7 @@ portfolio/
 ├── files/                    # Dossier contenant les fichiers disponibles en téléchargement sur le site
 ├── images/                   # Dossier contenant les images affichées sur le site
 ├── pages/                    # Dossier contenant les pages des projets
-    └── images/               # Dossier contenant les images utilisées dans les fiches projets
+|   └── images/               # Dossier contenant les images utilisées dans les fiches projets
 ├── index.html                # Page principale du portfolio
 ├── LICENSE                   # Licence MIT, détails sur l'utilisation et la distribution
 └── README.md                 # Ce fichier, contenant des informations sur le projet
