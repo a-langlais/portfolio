@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <a href="../index.html">
+                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
+                </a>
+                <span class="title">Alexandre LANGLAIS</span>
+                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
+                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<!-- Keywords -->
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+							<span class="tag">R</span>
+							<span class="tag">régression logistique</span>
+                            <span class="tag">odds ratios</span>
+                            <span class="tag">conservation</span>
+							<span class="tag">biodiversité</span>
+						</div>
+					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://inpn.mnhn.fr/espece/cd_nom/65133">
+								<i class="fa-solid fa-globe"></i> Lien national de l'espèce
+							</a>
+						</p>
+					</div>
+				</div>
+				<!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Influence des mesures de gestion et de l'environnement sur la présence d'une espèce patrimoniale</h1>
+				</header>
+				<p>L'Agrion de Mercure (<i>Coenagrion mercuriale</i>) est une espèce de libellule patrimoniale, indicatrice de la qualité des milieux humides. Cette étude vise à comprendre comment les pratiques de gestion et les facteurs environnementaux influencent sa présence ou son absence sur un échantillon de 124 sites favorables en Deux-Sèvres (79). Les problématiques sont :</p>
+                    <ul>
+                        <li>Identifier les facteurs influençant la présence de l'Agrion de Mercure ;</li>
+                        <li>Mettre en évidence les mesures de gestion favorables à l'épanouissement de l'espèce ;</li>
+                    </ul>
+				
+                <h3>Méthodologie</h3>
+                <p>Les données brutes issues des relevés de l'espèce et de la caractérisation des habitats ont d'abord été fusionnées et nettoyées pour constituer un jeu de données complet et interopérable. Une variable binaire de présence/Absence a ensuite été créée à partir des effectifs observés.</p>
+                <p>En raison de l'écart important entre le nombre de données et le nombre de variables explicatives (124 données pour 21 variables), un premier filtrage a été réalisé par l'étude des corrélations ente les variables quantitatives, afin de limiter aussi le risque de multicolinéarité. La sélection des variables les plus informatives a ensuite été affinée grâce à une régression régularisée de type Lasso (L1), qui permet d'identifier automatiquement les prédicteurs les plus influents en pénalisant ceux qui aportent peu d'information.</p>
+                <p>Sur cette base, différents modèles de régressions logistiques (GLM binomial) ont été testés, en simplifiant progressivement la liste des variables afin d'optimiser le compromis entre la capacité explicative et la complexité.</p>
+                <p>Les performances finales du modèle retenu ont été évaluées à l'aide de la courbe ROC et de l'aire sous la courbe (AUC), indicateur synthétique de la qualité prédictive.</p>
+
+                <h3>Résultats</h3>
+                <p>Le modèle final retient quatre variables prédictives : présence d’hydrophytes, morphologie de la rive droite, fauche et ombrage. </p>
+                <p>Les effets estimés montrent que la présence d’hydrophytes multiplie par 10,28 les chances de détecter l’espèce (IC95 % : 2,57–54,62 ; p < 0,01). Une fauche de type 2 accroît également les probabilités de présence (OR = 7,03 ; IC95 % : 1,50–41,96 ; p = 0,012), tandis qu’un ombrage fort (modalité 3) réduit ces chances d’environ 95,5 % (OR = 0,045 ; IC95 % : 0,002–0,49 ; p = 0,018). Certaines configurations de morphologie de rive droite, notamment la modalité 4, diminuent significativement la probabilité de présence (OR = 0,17 ; IC95 % : 0,03–0,70 ; p = 0,013).</p>
+                <p>Le modèle présente une bonne performance prédictive, avec une aire sous la courbe ROC (AUC) de 0,862, indiquant une capacité élevée à discriminer les situations de présence et d’absence.</p>
+                <p>Les résultats de cette étude ont été partagés sous forme de facteurs multiplicatifs (odds ratios), faciles à interpréter et partager. Un forest plot récapitulatif des modalités significatives et de leurs impacts permet d'identifier rapidement les facteurs clés influençant la présence (ou l'absence) de l'Agrion de Mercure.</p>
+                <center>
+					<img src="../pages/images/agrion_fp.jpeg" alt="agrion results" width="90%">
+                    <p class="caption">Odds ratios du modèle retenu de régression logistique</p>
+				</center>
+			</article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2025, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
