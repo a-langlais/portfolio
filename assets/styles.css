@@ -488,11 +488,13 @@ img {
 .personal-projects:has(#tab-stat:checked) .thumbnails .cat-stat  { display: flex; }
 .personal-projects:has(#tab-ds:checked)   .thumbnails .cat-ds    { display: flex; }
 .personal-projects:has(#tab-hard:checked) .thumbnails .cat-hard  { display: flex; }
+.personal-projects:has(#tab-nat:checked)  .thumbnails .cat-nat   { display: flex; }
 
 /* --- Onglet visuellement actif --- */
 .personal-projects:has(#tab-stat:checked) .tab-label[for="tab-stat"],
 .personal-projects:has(#tab-ds:checked)   .tab-label[for="tab-ds"],
-.personal-projects:has(#tab-hard:checked) .tab-label[for="tab-hard"] {
+.personal-projects:has(#tab-hard:checked) .tab-label[for="tab-hard"],
+.personal-projects:has(#tab-nat:checked)  .tab-label[for="tab-nat"] {
   background: #fff;
   border-bottom: 2px solid #fff;
 }
