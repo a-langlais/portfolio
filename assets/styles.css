@@ -173,12 +173,12 @@ a:hover {
 
 /* Styles pour la ligne de tag dans l'en-tête */
 #head .tagline {
-  display: block;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.2em;
-  color: #7C7C7C;
-  margin: 5px 0 0;
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 12px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Styles pour le texte en gras dans la ligne de tag */
@@ -332,6 +332,16 @@ img {
 /* Styles pour le corps du panneau d'appel à l'action */
 .panel-cta .panel-body {
   padding: 35px;
+}
+
+/* Surlignage fin */
+.highlight {
+    background-image: linear-gradient(to bottom,
+        transparent 0%,
+        transparent 45%,
+        #a98bde56 25%,
+        #a98bde56 100%
+    );
 }
 
 /*********************************************************************
@@ -606,10 +616,30 @@ img {
   }
 }
 
-
 /*********************************************************************
                                 POST NAVIGATION
 **********************************************************************/
+
+/* Styles pour le bouton de retour */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: white;
+    background: #9cafcc;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: all 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #744ce6;
+    color: white;
+    text-decoration: none;
+}
 
 /* Navigation des articles */
 #nav-below {

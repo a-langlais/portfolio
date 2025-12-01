@@ -21,9 +21,8 @@
                 <a href="../index.html">
                     <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
                 </a>
-                <span class="title">Alexandre LANGLAIS</span>
-                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
-                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+                <span class="title">Alexandre LANGLAIS<br></span>
+                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
             </h1>
         </div>
     </header>
@@ -72,24 +71,15 @@
 				</div>
 				<!-- /Links -->
 
-				<!-- Screenshots -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Screenshots</h4>
-						<img src="../pages/images/dashboard_screen1.png" alt="Screen1" width="100%">
-						<p class="caption">Onglet de visualisation des trajectoires</p>
-						<img src="../pages/images/dashboard_screen2.png" alt="Screen2" width="100%">
-						<p class="caption">Onglet des statistiques descriptives interactives</p>
-					</div>
-				</div>
-				<!-- /Screenshots -->
-
 			</aside>
 			<!-- /Sidebar -->
 
 			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
+					<a href="../index.html" class="back-button">
+						<i class="fas fa-arrow-left"></i>
+					</a>
 					<h1 class="page-title">Etude démographique et analyse spatio-temporelle dans le cadre d'un suivi Capture-Marquage-Recapture</h1>
 				</header>
                 <p>Les associations ayant des moyens limités pour des causes justes, j'interviens bénévolement dans le déploiement d'une plateforme de visualisation de l'important jeu de données (>3M) généré par le programme Chiroptères Cavernicoles Prioritaires de Nouvelle-Aquitaine porté par France Nature Environnement Nouvelle-Aquitaine. Un défi alliant série temporelle, données géographiques et trajectoires d'individus déployé par conteneurisation avec Docker sur la plateforme Hugging-Face.</p>
@@ -102,14 +92,25 @@
                         <li>L’<b>épidémiologie</b>, ou l’étude de la circulation des virus, permet de mettre en lumière d’éventuels risques d’exposition pour ces dernières comme de comprendre des mécanismes de circulation couplés au paysage ou à leurs mœurs ;</li>
                         <li>Les <b>déplacements</b>, avec la pose de puces sous-cutanées, RFID ou Pit-tag, inertes avec un identifiant unique chez les Grands Rhinolophes, Murin à oreilles échancrées et le Minioptère de Schreibers. Les contrôles d’individus marqués permettent de retracer leurs déplacements. À terme, ces données pourraient permettre d’établir des taux de survie et de comprendre comment les individus utilisent les différents connus au cours de leur vie.</li>
                     </ul>
-                    <p>Pour ce dernier point, plus d’une quarantaine de sites sur l’ensemble de la région est équipé d’une antenne automatique permettant de détecter 24/7 le passage d’un individu marqué, générant un nombre très important de données jusqu’à aujourd’hui (> 3M). Sans compter de nombreux sites supplémentaires qui sont suivis avec une antenne éphémère à différents moments de l’année.</p>
-                    <p>Les associations ayant des ressources limitées pour l’analyse de ces jeux de données complexes, <b>je réalise bénévolement les études de ce projet afin de permettre aux associations protectrices de la nature et de l’environnement (APNE) d’améliorer leurs connaissances sur ces espèces protégées et permettre de prendre les meilleures décision pour leur conservation</b>.</p>
+                <p>Pour ce dernier point, plus d’une quarantaine de sites sur l’ensemble de la région est équipé d’une antenne automatique permettant de détecter 24/7 le passage d’un individu marqué, générant un nombre très important de données jusqu’à aujourd’hui (>3M). Sans compter de nombreux sites supplémentaires qui sont suivis avec une antenne éphémère à différents moments de l’année.</p>
+                <p>Les associations ayant des ressources limitées pour l’analyse de ces jeux de données complexes, <b>je réalise bénévolement les études de ce projet afin de permettre aux associations protectrices de la nature et de l’environnement (APNE) d’améliorer leurs connaissances sur ces espèces protégées et permettre de prendre les meilleures décision pour leur conservation</b>.</p>
 				
 				<h3>Etude démographique et spatio-temporelle</h3>
 				<p>L'analyse repose donc sur l'exploitation des données de marquage et de recapture. Les <b>modèles Cormack-Jolly-Seber</b> ont été mobilisés pour estimer simultanément deux indicateurs fondamentaux : le taux de survie apparent (Φ), qui traduit la probabilité qu’un individu marqué soit encore présent l’année suivante, et le taux de recapture (p), indicateur de la probabilité de détecter un individu survivant. </p>
 				<p>Ces estimations reposent sur un jeu de données soigneusement harmonisé afin de réduire les biais, notamment en uniformisant la définition des classes d’âge, en standardisant la codification des espèces et en garantissant la cohérence temporelle et spatiale des données.</p>
 				<p>La mise en place de métriques complémentaires, telles que le <b>nombre moyen de passages</b> et le <b>temps de résidence</b>, permet d’aller au-delà des simples estimations démographiques. Ces mesures offrent un aperçu de l’intensité d’utilisation des gîtes, de la mobilité intra-saisonnière et de la variation interannuelle des comportements. Elles constituent ainsi une base solide pour relier les dynamiques observées.</p>
+
+				<center>
+					<img src="../pages/images/dashboard_cmr_panels.png" alt="cmr map" width="100%">
+                    <p class="caption">Extrait de l'onglet "Statistiques" qui donne un aperçu des métriques descriptives disponibles dans le tableau de bord.</p>
+				</center>
+
 				<p>En complément, une analyse spatio-temporelle a permis de caractériser les trajectoires individuelles à partir des séquences de recaptures. Les distances inter-sites ont été calculées en utilisant la <b>distance euclidienne</b> entre les coordonnées GPS des sites de départ et d’arrivée. Les trajectoires ont été agrégées par espèce, sexe et classe d’âge afin de détecter des patterns migratoires ou saisonniers, et de mesurer l’ampleur des déplacements. Par ailleurs, la <b>fidélité aux sites</b> a été estimée en calculant la proportion d’individus revenant sur un site donné d’une année à l’autre, permettant d’évaluer la stabilité des colonies et la connectivité entre gîtes.</p>
+
+				<center>
+					<img src="../pages/images/dashboard_cmr_map.png" alt="cmr map" width="80%">
+                    <p class="caption">Carte des trajectoires générée par l'application avec un filtre spécifique sur le Grand rhinolophe et le Murin à oreilles échancrées.</p>
+				</center>
 
 				<h3>Accessibilité aux acteurs-décideurs</h3>
 				<p>Afin que les APNE puissent explorer leurs données pour communiquer, et prendre des décisions de conservation importantes, j’ai travaillé sur un <b>tableau de bord interactif</b> en ligne pour traiter géographiquement et statistiquement l’ensemble des données d’antennes, permettant de visualiser rapidement les métriques de monitoring des individus, les trajectoires entre les sites et les connexions entre les sites. </p>

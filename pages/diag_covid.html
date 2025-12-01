@@ -21,9 +21,8 @@
                 <a href="../index.html">
                     <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
                 </a>
-                <span class="title">Alexandre LANGLAIS</span>
-                <span class="tagline">Ecological Data Scientist & Biostatistician<br>
-                    <a href="mailto:langlais.alexandre03@gmail.com">langlais.alexandre03@gmail.com</a></span>
+                <span class="title">Alexandre LANGLAIS<br></span>
+                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
             </h1>
         </div>
     </header>
@@ -75,6 +74,9 @@
 			<!-- PageContent -->
 			<article class="col-sm-8 maincontent">
 				<header class="page-header">
+					<a href="../index.html" class="back-button">
+						<i class="fas fa-arrow-left"></i>
+					</a>
 					<h1 class="page-title">Diagnostic automatique à partir de radiographies pulmonaires COVID-19</h1>
 				</header>
                 <p>Dans le cadre d'une de mes formations, j'ai pu réaliser, en groupe, un projet de Computer Vision utilisant un jeu de données >20k de radiographies pulmonaires brutes afin d'identifier trois pathologies (dont le COVID) ainsi que les patients sains. Pour ce faire, j'ai réalisé un nettoyage complet des images grâce à une fonction personnalisée permettant de générer de la standardisation dans les tests puis automatiser les transformations nécessaires. Une fois l'étape de data cleaning réalisée, le data processing a consisté à normaliser les images et de les redimensionner pour qu'elles correspondent toutes au format du jeu d'entrainement. Ensuite, en partant d'un modèle baseline simple, divers tests de GridSearching a permis de déterminer les paramètres optimaux. Ensuite, nous nous sommes partagés une dizaine de modèles existants pour réaliser du fine-tuning sur nos données d'entrainement en utilisant la puissance computationnelle des GPU. Au final, notre projet s'est arrêté sur deux modèles aux résultats prometteurs : DenseNet et VGG16. En effet, dans la limite des deux mois qui nous a été imposée, nous avons réussi à obtenir 0.96 de précision et de F1-Score sur la pathologie COVID, et plus de 0.91 sur les autres catégories.</p>
