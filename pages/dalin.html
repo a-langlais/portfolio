@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <!-- Header -->
+    <head>
+        <meta charset="utf-8">	
+        <!-- Bootstrap v3 -->
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+        <!-- FontAwesome v6 -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+        <!-- Custom CSS styles -->
+        <link rel="stylesheet" href="../assets/styles.css">
+    </head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <a href="../index.html">
+                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
+                </a>
+                <span class="title">Alexandre LANGLAIS<br></span>
+                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+<main id="main">
+	<div class="container">
+		<div class="row topspace">
+			
+			<!-- Sidebar -->
+			<aside class="col-md-4 sidebar sidebar-left">
+				<div class="row widget">
+					<!-- Keywords -->
+					<div class="col-xs-12">
+						<h4>Mots clés</h4>
+						<div class="keywords">
+                            <span class="tag">Méthodologie</span>
+							<span class="tag">Entomologie</span>
+                            <span class="tag">Ingénierie R&D</span>
+						</div>
+					</div>
+					<!-- /Keywords -->
+
+				<!-- Links -->
+				</div>
+				<div class="row widget">
+					<div class="col-xs-12">
+						<h4>Liens</h4>
+						<p class="repo-icons">
+							<a href="https://www.gunnarbrehm.de/en/lepi-led">
+								<i class="fa-solid fa-globe"></i> LepiLED (Gunnar Brehm)
+							</a>
+						</p>
+                        <h4>Références</h4>
+                        <p class="repo-icons" style="line-height: 1.6;">
+                            <a href="https://doi.org/10.1038/s41467-024-44785-3" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
+                                <i class="fa-solid fa-file-lines"></i> Fabian et al. (2024) - Why flying insects gather at artificial light
+                            </a><br>
+
+                            <a href="https://www.mdpi.com/2075-4450/12/5/427" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
+                                <i class="fa-solid fa-file-lines"></i> Justice & Justice (2023) - Response of Different Insect Groups to Various Wavelengths of Light under Field Conditions 
+                            </a><br>
+
+                            <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-ento-061720-071644" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
+                                <i class="fa-solid fa-file-lines"></i> Van der Kooi et al. (2021) - Evolution and plasticity of insect color vision
+                            </a>
+
+                            <a href="https://doi.org/10.3897/nl.40.11887" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
+                                <i class="fa-solid fa-file-lines"></i> Brehm (2017) - A new LED lamp for the collection of nocturnal Lepidoptera and a spectral comparison of light-trapping lamps
+                            </a><br>
+                        </p>
+						</p>
+					</div>
+				</div>
+				<!-- /Links -->
+
+			</aside>
+			<!-- /Sidebar -->
+
+			<!-- PageContent -->
+			<article class="col-sm-8 maincontent">
+				<header class="page-header">
+					<a href="../index.html" class="back-button">
+						<i class="fas fa-arrow-left"></i>
+					</a>
+					<h1 class="page-title">Dispositif d'Attraction Lumineux pour les Insectes Nocturnes (DALIN)</h1>
+				</header>
+
+                <h3>Contexte et contraintes</h3>
+                <p>Les inventaires lumineux nocturnes ont longtemps rimé avec groupe électrogène, carburant, lampe à vapeur de mercure... Impliquant un transport lourd, une installation contraignante et un fonctionnement bruyant.</p>
+                <p>La <a href="https://www.gunnarbrehm.de/en/lepi-led">LepiLED</a>, présentée par Gunnar Brehm en 2017, a montré <b>qu'un autre modèle était possible</b> : compact, efficace, et pensé pour l'ergonomie terrain. Elle est devenue une référence dans les inventaires entomologiques depuis.</p>
+                <p>Son principal frein reste l'investissement, justifié cependant par la qualité de conception (radiateur aluminium usiné sur mesure, intégration propre des LEDs et compacité).</p>
+                <p>En m'inspirant de ses qualités, j'ai décidé de <b>concevoir et fabriquer mon propre outil de terrain</b> pour conserver la logique biologique pratique, tout en <b>réduisant les coûts et en améliorant considérablement le potentiel de réparabilité</b>.</p>
+                <p>L'idée n'est pas de réinventer un outil existant, mais de contribuer à démocratiser des pratiques d'inventaire nocturne plus légères et plus faciles à reproduire sur le terrain.</p>
+
+                <h3>Conception et prototypage</h3>
+                <p> Le premier objectif était de concevoir un dispositif <b>compact, léger et suffisamment équilibré</b> pour permettre d'utiliser le plein potentiel des LEDs sans nuire à sa durabilité.</p>
+                <p> Pour cela, j'ai modélisé un prototype en 3D, composé de <b>six objets assemblables facilement et solidement via des inserts filetés</b>. Les parties sont facilement imprimables en 3D, en privilégiant le PETG ou l'ABS, pour une tenue solide et une résistance efficace à la montée en chaleur des LEDs au bout de plusieurs heures d'utilisation. L'idée est d'allier l'efficacité avec une finition propre.</p>
+
+                <center>
+					<img src="../pages/images/DALIN_animation.gif" alt="anim DALIN" width="100%">
+                    <p class="caption">Structure du DALIN (v1) conçue sur-mesure</p>
+				</center>
+
+                <p>Le dispositif est pensé pour exploiter 8 LEDs de 1 W dont <b>la composition spectrale est optimisée pour correspondre aux pics de photosensibilité</b> des insectes nocturnes identifiés dans la littérature :</p>
+
+                <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; font-family: sans-serif;">
+                <thead>
+                    <tr style="background-color: #f2f2f2; border-bottom: 2px solid #ddd;">
+                    <th style="padding: 12px; text-align: left;">Composant</th>
+                    <th style="padding: 12px; text-align: center;">Qté</th>
+                    <th style="padding: 12px; text-align: left; white-space: nowrap;">Spectre/Temp.</th>
+                    <th style="padding: 12px; text-align: left;">Cible biologique</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 12px; white-space: nowrap;">🟣 LED Ultra-Violet</td>
+                    <td style="padding: 12px; text-align: center;">4</td>
+                    <td style="padding: 12px; text-align: center; white-space: nowrap;">395 - 400 nm</td>
+                    <td style="padding: 12px;">Pic d'attraction majeur en stimulant les opsines UV responsables de l'orientation et de la navigation chez de nombreux insectes nocturnes (Lépidoptères et Coléoptères notamment).</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee; background-color: #fafafa;">
+                    <td style="padding: 12px; white-space: nowrap;">🔵 LED Bleue</td>
+                    <td style="padding: 12px; text-align: center;">2</td>
+                    <td style="padding: 12px; text-align: center; white-space: nowrap;">460 nm</td>
+                    <td style="padding: 12px;">Complément spectre court, particulièrement efficace pour les Diptères et renforce l'attractivité des hétérocères.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                    <td style="padding: 12px; white-space: nowrap;">🟢 LED Verte</td>
+                    <td style="padding: 12px; text-align: center;">1</td>
+                    <td style="padding: 12px; text-align: center; white-space: nowrap;">520 nm</td>
+                    <td style="padding: 12px;">Stimule le récépteur longue longueur d'onde (LWS), essentiel pour attirer les espèces ne réagisant pas uniquement aux UV/bleu.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee; background-color: #fafafa;">
+                    <td style="padding: 12px; white-space: nowrap;">⚪ LED Blanche</td>
+                    <td style="padding: 12px; text-align: center;">1</td>
+                    <td style="padding: 12px; text-align: center; white-space: nowrap;">6500 K</td>
+                    <td style="padding: 12px;">Spectre large "Cool White" riche en longueurs d'onde courtes qui assure un contraste visuel et aide au maintien des insectes sur le support de capture (généralement un drap blanc).</td>
+                    </tr>
+                </tbody>
+                </table>
+
+                <p>Bien que la LepiLED originale utilise du 368 nm, le choix du 395 nm offre <b>un meilleur rendement énergétique et une plus grande disponibilité des composants</b>, tout en restant dans la zone de forte réponse des opsines UV des insectes (van der Kooi et al., 2021 ; Justice et al., 2021). L'efficacité du dispositif repose par ailleurs sur <b>sa nature multi-chromatique</b> : un mélange de longueurs d'onde (UV, Bleu, Vert) est systématiquement plus performant qu'une source monochromatique pour un inventaire généraliste (Brehm, 2017). Par ailleurs, l'étude de Fabian et al. (2024) confirme que cette source lumineuse capture les insectes en perturbant leur réponse à la lumière dorsale, provoquant un vol orbital autour du dispositif.</p>
+
+                <p>Côté structure du dispositif, le choix a été porté sur un <b>cylindre en verre</b> pour protéger les LEDs de l'environnement extérieur et éviter les insectes de rentrer en contact avec les zones chaudes. L'avantage du verre est qu'il est extrêmement durable d'une part, et laisse passer l'intégralité du spectre lumineux qui nous intéresse d'autre part, là où le plexiglass aurait filtré une grosse partie des ultra-violet, tout en s'opacifiant avec le temps.</p>
+                <p>Concernant le refroidissement, un <b>profilé radiateur</b> permet de dissiper efficacement la chaleur produite par les LEDs via convexion thermique naturelle au travers d'un puit d'air passant par des grilles d'aération. Cette disposition permet par ailleurs de protéger l'utilisateur d'éventuels risques de brulure.</p>
+                <p>Aussi, <b>une poignée et un oeillet de levage</b> permet de porter facilement le dispositif, et le suspendre à un support fixe.</p>
+                <p>Pour faciliter au maximum son utilisation, le dispositif possède un <b>cable USB-A de 2 mètres</b>, permettant de brancher n'importe quel powerbank délivrant <b>au minimum du 5V/2.1A</b> et un interrupteur pour le couper rapidement et de manière sécurisée sans débrancher la source d'alimentation.</p>
+                <p>Selon la qualité des composants choisis, le montant de revient est <b>inférieur à 100 €</b>, le plus cher étant la cylindre en verre et le profilé radiateur, pour lesquels il est indispensable de prendre de la qualité pour garantir une bonne durabilité du dispositif.</p>
+
+                <h3>Usage sur le terrain</h3>
+                <p>Pour un poids de 440 g et une dimension de 120 mm de diamètre par 185 mm de hauteur, le dispositif est solide et facile à transporter. Il est conçu pour être utilisé dans des conditions extérieures variées, sans risque de dégradation ni de dommage mécanique.</p>
+                <p>Le montage consomme environ 1840 mAh, avec une légère augmentation dans le temps liée à la montée en température des résistances. Il fonctionne plus de 4h en continue avec une petite powerbank d'entrée de gamme de 12000 mA en 5 V.</p>
+                <p>Des tests de comparaison standardisés avec le LepiLED sont prévus ce printemps 2026, résultats à venir.</p>
+
+                <center>
+					<img src="../pages/images/DALIN_DIY.png" alt="pres DALIN" width="100%">
+                    <p class="caption">Image du rendu final du DALIN v1 assemblé et en fonctionnement</p>
+				</center>
+			</article>
+			<!-- /PageContent -->
+
+		</div>
+	</div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Contact</h3>
+				<div class="widget-body">
+					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+						Niort, France
+					</p>	
+				</div>
+			</div>
+
+			<div class="col-md-3 widget">
+				<h3 class="widget-title">Mes réseaux</h3>
+				<div class="widget-body">
+					<p class="follow-me-icons">
+						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<h3 class="widget-title">A propos du site</h3>
+				<div class="widget-body">
+                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
+                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+
+<footer id="underfooter">
+	<div class="container">
+		<div class="row">
+			
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p>Niort, France </p>
+				</div>
+			</div>
+
+			<div class="col-md-6 widget">
+				<div class="widget-body">
+					<p class="text-right">
+						Copyright &copy; 2026, Alexandre LANGLAIS<br></p>
+				</div>
+			</div>
+
+		</div> <!-- /row of widgets -->
+	</div>
+</footer>
+<!-- /Footer -->
+
+</body>
+</html>
