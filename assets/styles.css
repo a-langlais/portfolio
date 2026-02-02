@@ -173,22 +173,28 @@ a:hover {
 
 /* Styles pour la ligne de tag dans l'en-tête */
 #head .tagline {
-  display: inline-block;
-  padding: 6px 14px;
-  border: 1px solid rgba(255,255,255,0.4);
-  border-radius: 12px;
-  font-weight: 600;
-  background-color: rgba(255, 255, 255, 0.3);
+  font-family: Alice, Georgia, serif;
+  color: #333333;
+  font-size: 3.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 20px;
 }
-
-/* Styles pour le texte en gras dans la ligne de tag */
-#head .tagline b {
-  font-weight: normal;
+#head .tagline::before,
+#head .tagline::after {
+  content: "";
+  height: 2px;
+  flex: 0 0 100px;
 }
-
-/* Styles pour les liens dans la ligne de tag */
-#head .tagline a {
-  color: #5E5E5E;
+#head .tagline::before {
+  background: linear-gradient(to right, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
+}
+#head .tagline::after {
+  background: linear-gradient(to left, rgba(51, 51, 51, 0), rgba(51, 51, 51, 1));
 }
 
 /* Styles pour l'en-tête sur la page d'accueil */
