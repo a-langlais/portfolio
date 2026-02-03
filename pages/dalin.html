@@ -219,14 +219,18 @@
 			<div class="col-md-6 widget">
 				<div class="widget-body">
 					<p class="text-right">
-						Copyright &copy; 2026, Alexandre LANGLAIS<br></p>
+						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
 				</div>
 			</div>
 
-		</div> <!-- /row of widgets -->
+		</div>
 	</div>
 </footer>
 <!-- /Footer -->
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
