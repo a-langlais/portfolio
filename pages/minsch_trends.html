@@ -55,10 +55,10 @@
 						<h4>Liens</h4>
 						<p class="repo-icons">
 							<a href="">
-								<i class="fa-solid fa-book"></i> Rapport de l'étude (bientôt publié)
+								<i class="fa-solid fa-book"></i> <a href="https://www.observatoire-mammiferes.fr/static/docs/2025-1.3-SFEPM-Tendances_populationnelles_MINSCH.pdf">Rapport de l'étude</a>
 							</a><br>
 							<a href="">
-								<i class="fa-solid fa-file-lines"></i> Article scientifique issue de l'étude (bientôt publié)
+								<i class="fa-solid fa-book"></i> <a href="https://www.observatoire-mammiferes.fr/static/docs/2025-12_Note_technique-Miniopt%C3%A8re_de_Schreibers.pdf">Addenum : Note technique</a>
 							</a>
 						</p>
 					</div>
@@ -76,7 +76,7 @@
 					</a>
 					<h1 class="page-title">Analyse hiérarchique des tendances populationnelles d'une espèce de chauve-souris en France (1995-2024)</h1>
 				</header>
-				<p>Le Minioptère de Screibers (<i>Miniopterus schreibersii</i>), chauve-souris cavernicole protégée et classée « Vulnérable » sur la liste rouge nationale de l’UICN, est suivi depuis près de 30 ans par un réseau coordonné par la Société Française d’Étude et de Protection des Mammifères (SFEPM). L’espèce est recensée en période estivale dans les colonies de reproduction et en hiver dans les gîtes d’hibernation, sur plus de 400 sites répartis dans cinq grandes régions de France. L’étude vise à :</p>
+				<p>Le Minioptère de Schreibers (<i>Miniopterus schreibersii</i>), chauve-souris cavernicole protégée et classée « Vulnérable » sur la liste rouge nationale de l’UICN, est suivi depuis près de 30 ans par un réseau coordonné par la Société Française pour l’Étude et la Protection des Mammifères (SFEPM). L’espèce est recensée en période estivale dans les colonies de reproduction et en hiver dans les gîtes d’hibernation, sur plus de 400 sites répartis dans cinq grandes régions de France. L’étude vise à :</p>
                     <ul>
                         <li>Quantifier la tendance temporelle des effectifs adultes entre 1995 et 2024 ;</li>
                         <li>Identifier les différences régionales et saisonnières ;</li>
@@ -84,20 +84,167 @@
                     </ul>
 				
                 <h3>Méthodologie itérative</h3>
+				<p>Le jeu de données final repose sur 62 sites estivaux et 60 sites hivernaux sélectionnés selon des critères de régularité et d'abondance (minimum 5 années de suivi dont 3 consécutives).</p>
+				<p><b>L'analyse intègre désormais les données complémentaires de la région Provence-Alpes-Côte d'Azur (cf. Note technique) qui n'avaient pas pu être utilisées lors de l'étude (cf. Rapport de l'étude)</b>.</p>
                 <p>Un pipeline de nettoyage et filtrage a permis d’harmoniser les données issues de multiples structures locales : standardisation des formats, catégorisation des variables, élimination des doublons, gestion des valeurs manquantes et application de seuils minimaux d’effectif, de fréquence de suivi et de fiabilité. Une analyse de sensibilité a permis de mettre en évidence les meilleurs paramètres de filtrage, inspiré par d'autres travaux. L’analyse repose sur trois approches complémentaires :</p>
                 <p>Usage d'un <b>modèle TRIM</b> (régression log-linéaire de Poisson) pour réaliser une première estimation de référence grâce à sa gestion des données manquantes par imputation et sa correction de la surdispersion.</p>
                 <p>Construction de modèles <b>linéaires généralisés mixtes</b> (GLMM) pour prendre en compte la structure hiérarchique des données (sites, régions, années, etc.) et exploiter des contrastes régionaux via des interactions.</p>
-                <p>Enfin, réaliser des estimations probabilistes à l'aide de <b>modèles bayésiens hiérarchiques</b> (négative binomiale) pour obtenir des pentes spécifiques par site et par région. Cette démarche permet alors d'intégrer explicitement les incertitiudes et les effets croisés.</p>
+                <p>Enfin, réaliser des estimations probabilistes à l'aide de <b>modèles bayésiens hiérarchiques</b> (négative binomiale) pour obtenir des pentes spécifiques par site et par région. Cette démarche permet alors d'intégrer explicitement les incertitudes et les effets croisés.</p>
 			    <p>Les métriques clés calculées incluent la pente annuelle (β), la variation cumulée sur la période, la probabilité postérieure de déclin (P(β<0)), les intervalles de crédibilité (IC95 %) et la proportion de variance expliquée (R²).</p>
 
                 <h3>Résultats</h3>
-                <p>En été, la tendance nationale indique une probabilité de déclin élevée (P ≈ 92,6 %) avec des signaux robustes en Occitanie (–73,8 %, P = 98,9 %), Bourgogne-Franche-Comté (–66,3 %, P = 97,2 %) et Corse (–69,8 %, P = 97,6 %). En hiver, les résultats affichent des déclins locaux marqués : Bourgogne-Franche-Comté (–85,6 %, P = 99,6 %) et Corse (–92,8 %, P = 98 %).</p>
-                <p>Les analyses révèlent une forte hétérogénéité spatiale et saisonnière, confirmant que les colonies estivales, composées majoritairement de femelles reproductrices, sont particulièrement vulnérables. La variabilité interannuelle et les contrastes régionaux mettent en évidence l’intérêt des approches hiérarchiques pour distinguer signaux écologiques réels et fluctuations liées aux comptages annuels.</p>
-                <p>Afin de faciliter la communication des résultats auprès du grand public, des graphiques sont présentés sous forme de courbes tendancielles traçant l'abondance relative annuelle observée. Un ensemble de graphiques en haute définition ont été fournis pour chaque période et région.</p>
-                <center>
-					<img src="../pages/images/winter_trends_minsch.png" alt="witer trends" width="100%">
-                    <p class="caption">Représentation de la tendance nationale (hors PACA) du Minioptère de Schreibers sur la période hivernale de 1995-2024. Les points représentent les effectifs moyens annuels, normalisés sur l’ensemble de la période. Les courbes violettes correspondent aux différentes trajectoires linéaires simulées par le modèle bayésien hiérarchique ; elles reflètent l’incertitude autour de la direction générale de la tendance. La courbe bleue est un GLM simple fournissant une lecture descriptive indépendante du modèle, mettant en évidence les variations temporelles brutes.</p>
+				<p>Les résultats mettent en évidence une tendance nationale nette au déclin, plus marquée en période estivale qu’hivernale.</p>
+                <p>En <b>été</b>, la tendance nationale indique une probabilité de déclin quasi certaine (<span style="white-space: nowrap;">P(β < 0) = 0,966</span>) avec une baisse estimée à <span style="white-space: nowrap;">–68,2 %</span>, portée par des signaux robustes en Bourgogne-Franche-Comté (<span style="white-space: nowrap;">–77,9 %</span>, <span style="white-space: nowrap;">P = 0,993</span>), en Occitanie (<span style="white-space: nowrap;">–67,1 %</span>, <span style="white-space: nowrap;">P = 0,987</span>) et en Corse  (<span style="white-space: nowrap;">–84,6 %</span>, <span style="white-space: nowrap;">P = 0,995</span>).</p>
+
+				<style>
+				.bat-container { font-family: sans-serif; margin-bottom: 30px; }
+				.bat-table {
+					width: 100%;
+					border-collapse: collapse;
+					font-size: 0.9em;
+					margin-top: 10px;
+				}
+				.bat-table th, .bat-table td {
+					border: 1px solid #ddd;
+					padding: 10px;
+					text-align: center;
+				}
+				.bat-table th { background-color: #f8f9fa; color: #333; }
+				.bat-table .region { text-align: left; font-weight: 500; }
+				.bat-table .nowrap { white-space: nowrap; }
+				</style>
+
+				<div class="bat-container">
+				<table class="bat-table">
+					<thead>
+					<tr>
+						<th>Région</th>
+						<th>P(β < 0)</th>
+						<th>β (log)</th>
+						<th>Variation (30 ans)</th>
+						<th>IC95 % (Variation)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="region">Auvergne-Rhône-Alpes</td>
+						<td>0,9360</td>
+						<td>-0,0356</td>
+						<td class="nowrap"><strong>-65,6 %</strong></td>
+						<td class="nowrap">[-91,3 % ; 53,9 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Bourgogne-Franche-Comté</td>
+						<td>0,9935</td>
+						<td>-0,0503</td>
+						<td class="nowrap"><strong>-77,9 %</strong></td>
+						<td class="nowrap">[-95,2 % ; -27,5 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Corse</td>
+						<td>0,9953</td>
+						<td>-0,0624</td>
+						<td class="nowrap"><strong>-84,6 %</strong></td>
+						<td class="nowrap">[-95,9 % ; -41,9 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Nouvelle-Aquitaine</td>
+						<td>0,9475</td>
+						<td>-0,0321</td>
+						<td class="nowrap"><strong>-61,9 %</strong></td>
+						<td class="nowrap">[-86,6 % ; 31,6 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Occitanie</td>
+						<td>0,9878</td>
+						<td>-0,0370</td>
+						<td class="nowrap"><strong>-67,1 %</strong></td>
+						<td class="nowrap">[-87,3 % ; -14,5 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Provence-Alpes-Côte d'Azur</td>
+						<td>0,9205</td>
+						<td>-0,0347</td>
+						<td class="nowrap"><strong>-64,7 %</strong></td>
+						<td class="nowrap">[-91,7 % ; 101,4 %]</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+
+				<center>
+					<img src="../pages/images/EteNational_minsch.png" alt="summer trends" width="100%">
+                    <p class="caption">Représentation de la tendance nationale du Minioptère de Schreibers sur la période estivale de 1995-2024. Les points représentent les effectifs moyens annuels, normalisés sur l’ensemble de la période. Les courbes violettes correspondent aux différentes trajectoires linéaires simulées par le modèle bayésien hiérarchique ; elles reflètent l’incertitude autour de la direction générale de la tendance. La courbe principale est un GLM simple fournissant une lecture descriptive indépendante du modèle, mettant en évidence les variations temporelles brutes.</p>
 				</center>
+
+				<p>En <b>hiver</b>, bien que l'incertitude soit plus marquée, le déclin reste majoritaire à l'échelle nationale (<span style="white-space: nowrap;">–37,6 %</span>, <span style="white-space: nowrap;">P = 0,83</span>) et se confirme localement, notamment en Corse (<span style="white-space: nowrap;">–58,7 %</span>, <span style="white-space: nowrap;">P = 0,957</span>) et en Bourgogne-Franche-Comté (<span style="white-space: nowrap;">–50,5 %</span>, <span style="white-space: nowrap;">P = 0,899</span>).</p>
+
+				<div class="bat-container">
+				<table class="bat-table">
+					<thead>
+					<tr>
+						<th>Région</th>
+						<th>P(β < 0)</th>
+						<th>β (log)</th>
+						<th>Variation (30 ans)</th>
+						<th>IC95 % (Variation)</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td class="region">Auvergne-Rhône-Alpes</td>
+						<td>0,7294</td>
+						<td>-0,0105</td>
+						<td class="nowrap"><strong>-27,1 %</strong></td>
+						<td class="nowrap">[-78,1 % ; 256,2 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Bourgogne-Franche-Comté</td>
+						<td>0,8991</td>
+						<td>-0,0234</td>
+						<td class="nowrap"><strong>-50,5 %</strong></td>
+						<td class="nowrap">[-85,1 % ; 48,8 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Corse</td>
+						<td>0,9573</td>
+						<td>-0,0295</td>
+						<td class="nowrap"><strong>-58,7 %</strong></td>
+						<td class="nowrap">[-85,2 % ; 13,0 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Nouvelle-Aquitaine</td>
+						<td>0,8350</td>
+						<td>-0,0164</td>
+						<td class="nowrap"><strong>-38,8 %</strong></td>
+						<td class="nowrap">[-79,2 % ; 73,9 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Occitanie</td>
+						<td>0,7793</td>
+						<td>-0,0139</td>
+						<td class="nowrap"><strong>-34,0 %</strong></td>
+						<td class="nowrap">[-78,6 % ; 118,3 %]</td>
+					</tr>
+					<tr>
+						<td class="region">Provence-Alpes-Côte d'Azur</td>
+						<td>0,7441</td>
+						<td>-0,0125</td>
+						<td class="nowrap"><strong>-31,2 %</strong></td>
+						<td class="nowrap">[-85,6 % ; 315,5 %]</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+
+				<center>
+					<img src="../pages/images/HiverNational_minsch.png" alt="winter trends" width="100%">
+                    <p class="caption">Représentation de la tendance nationale du Minioptère de Schreibers sur la période hivernale de 1995-2024. Les points représentent les effectifs moyens annuels, normalisés sur l’ensemble de la période. Les courbes violettes correspondent aux différentes trajectoires linéaires simulées par le modèle bayésien hiérarchique ; elles reflètent l’incertitude autour de la direction générale de la tendance. La courbe principale est un GLM simple fournissant une lecture descriptive indépendante du modèle, mettant en évidence les variations temporelles brutes.</p>
+				</center>
+
+				<p>Les analyses révèlent une forte hétérogénéité spatiale et saisonnière, confirmant que les colonies estivales, composées majoritairement de femelles reproductrices, sont particulièrement vulnérables. La variabilité interannuelle et les contrastes régionaux mettent en évidence l’intérêt des approches hiérarchiques pour distinguer signaux écologiques réels et fluctuations liées aux comptages annuels.</p>
+				<p>L'analyse souligne que si les effectifs bruts cumulés semblent augmenter, la modélisation des trajectoires individuelles des sites montre une dégradation réelle des populations. Cette hétérogénéité confirme la vulnérabilité des colonies, particulièrement en période de reproduction.</p>
+				<p>Une analyse focalisée sur les dix dernières années est envisagée pour évaluer plus finement l'impact des protocoles standardisés et de la coordination nationale sur les dynamiques récentes de l'espèce.</p>
 			</article>
 			<!-- /PageContent -->
 
