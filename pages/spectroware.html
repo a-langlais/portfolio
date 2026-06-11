@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Header -->
+
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap v3 -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <!-- FontAwesome v6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="home">
+    <header id="header">
+        <div id="head" class="parallax" parallax-speed="2">
+            <h1 id="logo" class="text-center">
+                <a href="../index.html">
+                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
+                </a>
+                <span class="title">Alexandre LANGLAIS<br></span>
+                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
+            </h1>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <main id="main">
+        <div class="container">
+            <div class="row topspace">
+
+                <!-- Sidebar -->
+                <aside class="col-md-4 sidebar sidebar-left">
+                    <div class="row widget">
+                        <!-- Keywords -->
+                        <div class="col-xs-12">
+                            <h4>Mots clés</h4>
+                            <div class="keywords">
+                                <span class="tag">Logiciel</span>
+                                <span class="tag">Bioacoustique</span>
+                                <span class="tag">Traitement du signal</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Multiplateforme</span>
+                            </div>
+                        </div>
+                        <!-- /Keywords -->
+
+                        <!-- Links -->
+                    </div>
+                    <div class="row widget">
+                        <div class="col-xs-12">
+                            <h4>Liens</h4>
+                            <p class="repo-icons">
+                                <a href="">
+                                    <i class="fa-solid fa-globe"></i> Lien vers le site web (à venir)
+                                </a><br>
+                                <a href="">
+                                    <i class="fa-solid fa-book"></i> Documentation (à venir)
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /Links -->
+
+                </aside>
+                <!-- /Sidebar -->
+
+                <!-- PageContent -->
+                <article class="col-sm-8 maincontent">
+                    <header class="page-header">
+                        <a href="../index.html" class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h1 class="page-title">Spectroware : logiciel pour la visualisation, l'écoute
+                            et la mesure de signaux acoustiques</h1>
+                    </header>
+
+                    <center>
+                        <img src="../pages/images/spectroware_logo.png" alt="Logo Spectroware" width="40%">
+                        <br>
+                        <br>
+                        <strong>Sortie prévue courant 2026 !</strong>
+                    </center>
+
+                    <br>
+                    <p>
+                        <b>Spectroware</b> est un logiciel local de visualisation, d'écoute, d'édition et de mesure
+                        bioacoustique, conçu pour accompagner le travail d'analyse manuelle des signaux acoustiques et
+                        ultrasonores. Initialement développé pour l'étude acoustique des chiroptères, il est
+                        suffisamment polyvalent pour être utilisé sur les vocalises de mammifères, les chants d'oiseaux
+                        ou d'amphibiens, les stridulations d'orthoptères et, plus largement, tout signal sonore
+                        nécessitant une analyse précise.
+                    </p>
+                    <br>
+
+                    <center>
+                        <img src="../pages/images/spectroware_interface.png" alt="Interface du logiciel Spectroware"
+                            width="90%">
+                        <p class="caption">Interface principale de Spectroware avec affichage d'un spectrogramme.</p>
+                    </center>
+
+                    <h3>Contexte du projet</h3>
+                    <p>
+                        En bioacoustique naturaliste, l'analyse des signaux repose encore très souvent sur des outils
+                        généralistes, parfois anciens, peu ergonomiques ou mal adaptés aux flux de travail sur de grands
+                        volumes de fichiers. L'objectif de Spectroware était donc de développer un outil spécialisé,
+                        et fluide, capable de réunir dans une seule interface les principales étapes de
+                        l'analyse acoustique : ouvrir, écouter, visualiser, sélectionner, mesurer, éditer et documenter
+                        les signaux.
+                    </p>
+                    <p>
+                        Le logiciel a été conçu autour d'un besoin métier concret, c'est-à-dire faciliter l'analyse manuelle de
+                        séquences issues de protocoles naturalistes, de campagnes d'enregistrement ou de fichiers de
+                        pré-classification. Il s'adresse aussi bien aux naturalistes réalisant des vérifications
+                        ponctuelles qu'aux bioacousticiens manipulant de grands ensembles de données.
+                    </p>
+                    <p>
+                        Développé entièrement en autodidacte, Spectroware représente l'un de mes projets logiciels les
+                        plus ambitieux. Il combine traitement du signal, bioacoustique, mathématiques appliquées et
+                        développement d'une application multiplateforme afin de proposer un outil spécifiquement pensé
+                        pour les besoins des naturalistes.
+                    </p>
+
+                    <h3>Visualisation et métrologie acoustique</h3>
+                    <p>
+                        Spectroware permet d'afficher simultanément plusieurs représentations complémentaires du signal
+                        : le <b>spectrogramme</b>, qui représente l'énergie fréquentielle au cours du temps,
+                        l'<b>oscillogramme</b>, qui décrit l'amplitude du signal, et le <b>Power Spectrum</b>, qui
+                        permet d'étudier la distribution fréquentielle d'une sélection.
+                    </p>
+                    <p>
+                        L'analyse repose sur deux outils principaux : un curseur de sélection, utilisé pour isoler une
+                        portion du signal, et un curseur de mesure, permettant de relever des coordonnées temporelles et
+                        fréquentielles précises. Ces outils permettent de mesurer les durées, les fréquences, les écarts
+                        temporels et les largeurs de bande, informations essentielles dans l'identification
+                        bioacoustique.
+                    </p>
+
+                    <center>
+                        <img src="../pages/images/spectroware_graphics.png" alt="Graphiques dans Spectroware"
+                            width="100%">
+                        <p class="caption">Représentations du spectrogramme, de l'oscillogramme et du Power Spectrum
+                            dans Spectroware.</p>
+                    </center>
+
+                    <h3>Un outil pensé pour les bioacousticiens</h3>
+                    <p>
+                        Le logiciel intègre nativement plusieurs fonctionnalités utiles pour l'analyse acoustique des
+                        chauves-souris. Les fichiers issus d'expansion temporelle peuvent être interprétés avec un
+                        facteur de correction, afin que les axes temporels et fréquentiels correspondent aux valeurs
+                        réelles du signal original.
+                    </p>
+                    <p>
+                        Spectroware propose également un <b>mode hétérodyne virtuel</b>, qui simule le fonctionnement
+                        d'un détecteur de chauves-souris. L'utilisateur peut ajuster une fréquence de référence et
+                        écouter la bande ultrasonore correspondante tout en conservant l'affichage visuel du
+                        spectrogramme. Cette approche permet de relier plus directement l'écoute naturaliste et
+                        l'analyse graphique.
+                    </p>
+
+                    <center>
+                        <img src="../pages/images/spectroware_heterodyne.png" alt="Mode hétérodyne dans Spectroware"
+                            width="80%">
+                        <p class="caption">Mode hétérodyne virtuel avec fréquence de battement ajustable.</p>
+                    </center>
+
+                    <h3>Analyse de grands volumes de fichiers</h3>
+                    <p>
+                        Une des fonctionnalités importantes de Spectroware est son <b>module tableur intégré</b>. Il
+                        permet d'importer un fichier CSV issu d'un logiciel de pré-classification ou d'un tableau
+                        d'analyse, puis de le synchroniser avec un répertoire contenant les fichiers audio.
+                    </p>
+                    <p>
+                        Lorsqu'une colonne contient les noms de fichiers, Spectroware détecte automatiquement les
+                        correspondances avec le répertoire ouvert. Il devient alors possible de charger directement une
+                        séquence depuis une ligne du tableau, ce qui fluidifie fortement les étapes de vérification, de
+                        correction et d'identification.
+                    </p>
+
+                    <center>
+                        <img src="../pages/images/spectroware_table.png" alt="Module tableur de Spectroware"
+                            width="100%">
+                        <p class="caption">Module tableur permettant de relier un tableau d'analyse aux fichiers audio
+                            du répertoire de travail.</p>
+                    </center>
+
+                    <h3>Fonctionnalités principales</h3>
+                    <ul>
+                        <li><b>Visualisation synchronisée</b> du spectrogramme, de l'oscillogramme et du spectre de
+                            puissance ;</li>
+                        <li><b>Mesures temporelles et fréquentielles</b> à l'aide de curseurs dédiés ;</li>
+                        <li><b>Gestion des fichiers WAV</b> mono ou stéréo, avec profondeurs de bits usuelles ;</li>
+                        <li><b>Correction de l'expansion temporelle</b> pour les fichiers ultrasonores ralentis ;</li>
+                        <li><b>Mode hétérodyne virtuel</b> pour l'écoute ciblée des signaux ultrasonores ;</li>
+                        <li><b>Module CSV intégré</b> pour relier des tableaux de pré-classification aux fichiers audio
+                            ;</li>
+                        <li><b>Outils d'édition</b> : couper, copier, coller, supprimer, appliquer du silence, ajuster
+                            le gain et filtrer une sélection ;</li>
+                        <li><b>Export graphique</b> en PNG, JPEG ou SVG pour produire des figures de rapport ou de
+                            présentation.</li>
+                    </ul>
+
+                    <h3>Développement logiciel</h3>
+                    <p>
+                        Spectroware est une application desktop autonome, que je développe seul avec une architecture
+                        moderne combinant une interface web réactive et des traitements locaux. L'application fonctionne
+                        hors ligne après activation et vise une compatibilité avec les principaux systèmes
+                        d'exploitation : Windows, macOS et Linux.
+                    </p>
+                    <p>
+                        Ce projet m'a permis de mobiliser à la fois mes compétences naturalistes, mon expérience en
+                        bioacoustique, mes connaissances en traitement du signal et mes compétences de développement
+                        logiciel. L'enjeu n'était pas seulement de produire un outil fonctionnel, mais de concevoir une
+                        interface adaptée aux gestes réels de l'analyse acoustique : naviguer rapidement entre les
+                        fichiers, comparer les signaux, mesurer précisément et réduire les manipulations répétitives.
+                    </p>
+
+                </article>
+                <!-- /PageContent -->
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Contact</h3>
+                    <div class="widget-body">
+                        <p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
+                            Niort, France
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 widget">
+                    <h3 class="widget-title">Mes réseaux</h3>
+                    <div class="widget-body">
+                        <p class="follow-me-icons">
+                            <a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
+                            <a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                    <h3 class="widget-title">A propos du site</h3>
+                    <div class="widget-body">
+                        <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
+                        <p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact
+                            environnemental minimal 🌳</p>
+                        <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite.
+                            Hebergé et déployé sur mon GitHub en public 😁</p>
+                    </div>
+                </div>
+
+            </div> <!-- /row of widgets -->
+        </div>
+    </footer>
+
+    <footer id="underfooter">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p>Niort, France </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 widget">
+                    <div class="widget-body">
+                        <p class="text-right">
+                            Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
