@@ -1,210 +1,169 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- Header -->
-    <head>
-        <meta charset="utf-8">	
-        <!-- Bootstrap v3 -->
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <!-- FontAwesome v6 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
-        <!-- Custom CSS styles -->
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<!-- Header -->
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<head>
+	<meta charset="utf-8">
+	<!-- Bootstrap v3 -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- FontAwesome v6 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+	<!-- Custom CSS styles -->
+	<link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
 
-<main id="main">
-	<div class="container">
+</head>
 
-		<!-- Sidebar -->
-		<div class="row topspace">
-			<aside class="col-md-4 sidebar sidebar-left">
-				<!-- Keywords -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Mots clés</h4>
-						<div class="keywords">
-							<span class="tag">Python</span>
-							<span class="tag">Software</span>
-							<span class="tag">Open-Source</span>
+<body class="home project-page">
+	<site-header></site-header>
+
+	<main id="main">
+		<div class="container">
+
+			<!-- Sidebar -->
+			<div class="row topspace">
+				<aside class="col-md-4 sidebar sidebar-left">
+					<!-- Keywords -->
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Mots clés</h4>
+							<div class="keywords">
+								<span class="tag">Python</span>
+								<span class="tag">Software</span>
+								<span class="tag">Open-Source</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- /Keywords -->
+					<!-- /Keywords -->
 
-				<!-- Links -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Liens</h4>
-						<p class="repo-icons">
-							<a href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor">
-								<i class="fab fa-github fa-2"></i> TR Profiles Editor
-							</a><br>
-                            <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders">
-								<i class="fab fa-github fa-2"></i> TeensyRecorders
-							</a><br>
-							<a href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor/blob/main/README.md">
-								<i class="fa-solid fa-book"></i> Documentation
-							</a>
-						</p>
+					<!-- Links -->
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Liens</h4>
+							<p class="repo-icons">
+								<a href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor">
+									<i class="fab fa-github fa-2"></i> TR Profiles Editor
+								</a><br>
+								<a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders">
+									<i class="fab fa-github fa-2"></i> TeensyRecorders
+								</a><br>
+								<a
+									href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor/blob/main/README.md">
+									<i class="fa-solid fa-book"></i> Documentation
+								</a>
+							</p>
+						</div>
 					</div>
-				</div>
-				<!-- /Links -->
+					<!-- /Links -->
 
-				<!-- Screenshots -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Screenshots</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
+					<!-- Screenshots -->
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Screenshots</h4>
+							<p><img src="assets/images/s1.jpg" alt=""></p>
+						</div>
 					</div>
-				</div>
-				<!-- /Screenshots -->
+					<!-- /Screenshots -->
 
-			</aside>
-			<!-- /Sidebar -->
+				</aside>
+				<!-- /Sidebar -->
 
-			<!-- PageContent -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<a href="../index.html" class="back-button">
-						<i class="fas fa-arrow-left"></i>
-					</a>
-					<h1 class="page-title">TeensyRecorder Profiles Editor : logiciel de configuration pour détecteurs open-source</h1>
-				</header>
-				<p>Les <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders" target="_blank" rel="noopener noreferrer">TeensyRecorders</a> sont des enregistreurs acoustiques open-source (conçu par Jean-Dominique VRIGNAULT) développés à partir des cartes de développement Teensy.</p>
-                <p>Pensés pour les suivis bioacoustiques (chauves-souris, oiseaux, orthoptères, etc.), ils offrent une grande flexibilité de paramétrage, une excellente qualité de capture et une consommation réduite, ce qui en fait des outils de choix pour les protocoles de terrain longue durée.</p>
-                <p>Leur développement est très actif au sein de la communauté francophone, avec de nombreuses améliorations matérielles et logicielles issues de retours d’expérience sur le terrain : qualité de l’alimentation, horodatage, gestion multi-profils, options d’enregistrement, déclencheurs automatiques, etc.</p>
-                <p>Etant très investi dans ce projet sur des volets d'organisation d'ateliers de fabrication annuel, de tests, de conception d'accessoires et de développement logiciel, j'ai souhaité créer un outil facilitant la configuration des appareils.</p>
+				<!-- PageContent -->
+				<article class="col-sm-8 maincontent">
+					<header class="page-header">
+						<a href="../index.html" class="back-button">
+							<i class="fas fa-arrow-left"></i>
+						</a>
+						<h1 class="page-title">TeensyRecorder Profiles Editor : logiciel de configuration pour
+							détecteurs open-source</h1>
+					</header>
+					<p>Les <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders" target="_blank"
+							rel="noopener noreferrer">TeensyRecorders</a> sont des enregistreurs acoustiques open-source
+						(conçu par Jean-Dominique VRIGNAULT) développés à partir des cartes de développement Teensy.</p>
+					<p>Pensés pour les suivis bioacoustiques (chauves-souris, oiseaux, orthoptères, etc.), ils offrent
+						une grande flexibilité de paramétrage, une excellente qualité de capture et une consommation
+						réduite, ce qui en fait des outils de choix pour les protocoles de terrain longue durée.</p>
+					<p>Leur développement est très actif au sein de la communauté francophone, avec de nombreuses
+						améliorations matérielles et logicielles issues de retours d'expérience sur le terrain : qualité
+						de l'alimentation, horodatage, gestion multi-profils, options d'enregistrement, déclencheurs
+						automatiques, etc.</p>
+					<p>Etant très investi dans ce projet sur des volets d'organisation d'ateliers de fabrication annuel,
+						de tests, de conception d'accessoires et de développement logiciel, j'ai souhaité créer un outil
+						facilitant la configuration des appareils.</p>
 
-                <div style="text-align: center;">
-                <img src="../pages/images/PRS.JPG" alt="PRS" style="width:45%; display:inline-block; margin: 0 5px;">
-                <img src="../pages/images/AR.JPG" alt="AR" style="width:45%; display:inline-block; margin: 0 5px;">
-                <p class="caption">PassiveRecorder (version stéréo) à gauche, et ActiveRecorder à droite</p>
-                </div>
-				
-				<h3>Objectifs</h3>
-				<p>À force d’utiliser intensivement les TeensyRecorders dans des protocoles expérimentaux, une contrainte est apparue : la configuration manuelle des nombreux paramètres via l’écran intégré (20 px de large) devenait fastidieuse.</p>
-				<p>Au fil des mises à jour, la liste des options s’est allongée (fréquences, gains, déclencheurs, durées, formats, seuils, etc.) rendant la navigation dans les menus moins fluide, surtout lors de tests successifs.</p>
-                <p>Les appareils utilisent un fichier de configuration <code>.ini</code>, qui regroupe jusqu’à cinq profils indépendants, commutables directement sur le terrain.</p>
-                <p>L’idée a donc été de concevoir une application desktop ergonomique, permettant de :</p>
-                <ul>
-                    <li>Programmer facilement les profils de configuration</li>
-                    <li>Gérer, renommer et versionner ses profils</li>
-                    <li>Exporter automatiquement les fichiers <code>.ini</code> prêts à être transférés sur l’appareil</li>
-                </ul>
-                <p>Cette approche permet ainsi un gain de temps considérable pour les acteurs de terrain, tout en garantissant la traçabilité des configurations utilisées dans les études.</p>
+					<div style="text-align: center;">
+						<img src="../pages/images/PRS.JPG" alt="PRS"
+							style="width:45%; display:inline-block; margin: 0 5px;">
+						<img src="../pages/images/AR.JPG" alt="AR"
+							style="width:45%; display:inline-block; margin: 0 5px;">
+						<p class="caption">PassiveRecorder (version stéréo) à gauche, et ActiveRecorder à droite</p>
+					</div>
 
-				<h3>Ergonomie et conception</h3>
-				<p>Développée en Python (<code>PyQt6</code>), l’application propose une interface claire et segmentée en plusieurs onglets thématiques (général, déclencheurs, enregistrement, etc.) pour faciliter la navigation.</p>
-                <p>Chaque paramètre dispose :</p>
-				<ul>
-					<li>d’un champ adapté à son type (booléen, numérique, texte limité, liste de choix, etc.)</li>
-					<li>d’une validation automatique pour éviter les erreurs de format</li>
-					<li>d’une sauvegarde en cache avant export</li>
-                    <li>d'un accès à la documentation officielle des appareils</li>
-				</ul>
-                <p>Un menu déroulant permet de sélectionner et renommer les profils, afin de les retrouver facilement sur l’appareil.</p>
-                <p>L’application évolue en parallèle des mises à jour du firmware TeensyRecorders, assurant une compatibilité continue avec les nouvelles variables ajoutées.</p>
-                <p>L’exécutable compilé fonctionne actuellement sous Windows, mais le code source reste multi-plateforme : il peut être exécuté sur Linux ou macOS depuis Python.</p>
+					<h3>Objectifs</h3>
+					<p>À force d'utiliser intensivement les TeensyRecorders dans des protocoles expérimentaux, une
+						contrainte est apparue : la configuration manuelle des nombreux paramètres via l'écran intégré
+						(20 px de large) devenait fastidieuse.</p>
+					<p>Au fil des mises à jour, la liste des options s'est allongée (fréquences, gains, déclencheurs,
+						durées, formats, seuils, etc.) rendant la navigation dans les menus moins fluide, surtout lors
+						de tests successifs.</p>
+					<p>Les appareils utilisent un fichier de configuration <code>.ini</code>, qui regroupe jusqu'à cinq
+						profils indépendants, commutables directement sur le terrain.</p>
+					<p>L'idée a donc été de concevoir une application desktop ergonomique, permettant de :</p>
+					<ul>
+						<li>Programmer facilement les profils de configuration</li>
+						<li>Gérer, renommer et versionner ses profils</li>
+						<li>Exporter automatiquement les fichiers <code>.ini</code> prêts à être transférés sur
+							l'appareil</li>
+					</ul>
+					<p>Cette approche permet ainsi un gain de temps considérable pour les acteurs de terrain, tout en
+						garantissant la traçabilité des configurations utilisées dans les études.</p>
 
-                <center>
-                    <img src="../pages/images/TRprofiler.gif" alt="TRprofiler" width="60%">
-                    <p class="caption">Rendu de l'application desktop</p>
-                </center>
+					<h3>Ergonomie et conception</h3>
+					<p>Développée en Python (<code>PyQt6</code>), l'application propose une interface claire et
+						segmentée en plusieurs onglets thématiques (général, déclencheurs, enregistrement, etc.) pour
+						faciliter la navigation.</p>
+					<p>Chaque paramètre dispose :</p>
+					<ul>
+						<li>d'un champ adapté à son type (booléen, numérique, texte limité, liste de choix, etc.)</li>
+						<li>d'une validation automatique pour éviter les erreurs de format</li>
+						<li>d'une sauvegarde en cache avant export</li>
+						<li>d'un accès à la documentation officielle des appareils</li>
+					</ul>
+					<p>Un menu déroulant permet de sélectionner et renommer les profils, afin de les retrouver
+						facilement sur l'appareil.</p>
+					<p>L'application évolue en parallèle des mises à jour du firmware TeensyRecorders, assurant une
+						compatibilité continue avec les nouvelles variables ajoutées.</p>
+					<p>L'exécutable compilé fonctionne actuellement sous Windows, mais le code source reste
+						multi-plateforme : il peut être exécuté sur Linux ou macOS depuis Python.</p>
 
-				<h3>Fonctionnement de l'importation sur le détecteur</h3>
-                <p>La procédure est simple et en 4 étapes :</p>
-                <ol>
-                    <li>Générer votre fichier <code>Profiles.ini</code> via l’application.</li>
-                    <li>Copier le fichier sur la carte SD du détecteur.</li>
-                    <li>Sur le TeensyRecorder : accéder au menu <code>Modif. des profils</code>, puis, sélectionner <code>Lect. fic. Profiles</code> pour charger le fichier.</li>
-                    <li>De retour sur le menu principal, choisir le profil souhaité via la section <code>Profil</code>.</li>
-                </ol>
-                <p>L’appareil chargera automatiquement les valeurs associées au profil choisi.</p>
+					<center>
+						<img src="../pages/images/TRprofiler.gif" alt="TRprofiler" width="60%">
+						<p class="caption">Rendu de l'application desktop</p>
+					</center>
 
-			</article>
-			<!-- /PageContent -->
+					<h3>Fonctionnement de l'importation sur le détecteur</h3>
+					<p>La procédure est simple et en 4 étapes :</p>
+					<ol>
+						<li>Générer votre fichier <code>Profiles.ini</code> via l'application.</li>
+						<li>Copier le fichier sur la carte SD du détecteur.</li>
+						<li>Sur le TeensyRecorder : accéder au menu <code>Modif. des profils</code>, puis, sélectionner
+							<code>Lect. fic. Profiles</code> pour charger le fichier.</li>
+						<li>De retour sur le menu principal, choisir le profil souhaité via la section
+							<code>Profil</code>.</li>
+					</ol>
+					<p>L'appareil chargera automatiquement les valeurs associées au profil choisi.</p>
 
+				</article>
+				<!-- /PageContent -->
+
+			</div>
 		</div>
-	</div>
-</main>
+	</main>
 
-<!-- Footer -->
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-						Niort, France
-					</p>	
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Mes réseaux</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<h3 class="widget-title">A propos du site</h3>
-				<div class="widget-body">
-                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
-                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Niort, France </p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+	<site-footer></site-footer>
 </body>
+
 </html>

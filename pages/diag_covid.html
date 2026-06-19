@@ -1,180 +1,160 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- Header -->
-    <head>
-        <meta charset="utf-8">	
-        <!-- Bootstrap v3 -->
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <!-- FontAwesome v6 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
-        <!-- Custom CSS styles -->
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<!-- Header -->
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<head>
+	<meta charset="utf-8">
+	<!-- Bootstrap v3 -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- FontAwesome v6 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+	<!-- Custom CSS styles -->
+	<link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
 
-<main id="main">
-	<div class="container">
-		<div class="row topspace">
+</head>
 
-			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
-				<div class="row widget">
-					<!-- Keywords -->
-					<div class="col-xs-12">
-						<h4>Mots clés</h4>
-						<div class="keywords">
-							<span class="tag">Python</span>
-							<span class="tag">Deep Learning</span>
-							<span class="tag">Computer Vision</span>
-							<span class="tag">Tensorflow</span>
-							<span class="tag">Keras</span>
+<body class="home project-page">
+	<site-header></site-header>
+
+	<main id="main">
+		<div class="container">
+			<div class="row topspace">
+
+				<!-- Sidebar -->
+				<aside class="col-md-4 sidebar sidebar-left">
+					<div class="row widget">
+						<!-- Keywords -->
+						<div class="col-xs-12">
+							<h4>Mots clés</h4>
+							<div class="keywords">
+								<span class="tag">Python</span>
+								<span class="tag">Deep Learning</span>
+								<span class="tag">Computer Vision</span>
+								<span class="tag">Tensorflow</span>
+								<span class="tag">Keras</span>
+							</div>
+						</div>
+						<!-- /Keywords -->
+
+						<!-- Links -->
+					</div>
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Liens</h4>
+							<p class="repo-icons">
+								<a href="https://github.com/a-langlais/DL_COVID_chest_radio">
+									<i class="fab fa-github fa-2"></i> GitHub
+								</a><br>
+								<a href="https://github.com/a-langlais/DL_COVID_chest_radio/blob/main/README.md">
+									<i class="fa-solid fa-book"></i> Documentation
+								</a><br>
+								<a href="https://huggingface.co/spaces/a-langlais/streamlit_chest_radiography_DL">
+									<i class="fa-solid fa-gear"></i> Application web
+								</a>
+							</p>
 						</div>
 					</div>
-					<!-- /Keywords -->
-				
-				<!-- Links -->
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Liens</h4>
-						<p class="repo-icons">
-							<a href="https://github.com/a-langlais/DL_COVID_chest_radio">
-								<i class="fab fa-github fa-2"></i> GitHub
-							</a><br>
-							<a href="https://github.com/a-langlais/DL_COVID_chest_radio/blob/main/README.md">
-								<i class="fa-solid fa-book"></i> Documentation
-							</a><br>
-							<a href="https://huggingface.co/spaces/a-langlais/streamlit_chest_radiography_DL">
-								<i class="fa-solid fa-gear"></i> Application web
-							</a>
-						</p>
-					</div>
-				</div>
-				<!-- /Links -->
+					<!-- /Links -->
 
-			</aside>
-			<!-- /Sidebar -->
+				</aside>
+				<!-- /Sidebar -->
 
-			<!-- PageContent -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<a href="../index.html" class="back-button">
-						<i class="fas fa-arrow-left"></i>
-					</a>
-					<h1 class="page-title">Diagnostic automatique à partir de radiographies pulmonaires COVID-19</h1>
-				</header>
-                <p>Dans le cadre d'une de mes formations, j'ai pu réaliser, en groupe, un projet de Computer Vision utilisant un jeu de données >20k de radiographies pulmonaires brutes afin d'identifier trois pathologies (dont le COVID) ainsi que les patients sains. Pour ce faire, j'ai réalisé un nettoyage complet des images grâce à une fonction personnalisée permettant de générer de la standardisation dans les tests puis automatiser les transformations nécessaires. Une fois l'étape de data cleaning réalisée, le data processing a consisté à normaliser les images et de les redimensionner pour qu'elles correspondent toutes au format du jeu d'entrainement. Ensuite, en partant d'un modèle baseline simple, divers tests de GridSearching a permis de déterminer les paramètres optimaux. Ensuite, nous nous sommes partagés une dizaine de modèles existants pour réaliser du fine-tuning sur nos données d'entrainement en utilisant la puissance computationnelle des GPU. Au final, notre projet s'est arrêté sur deux modèles aux résultats prometteurs : DenseNet et VGG16. En effet, dans la limite des deux mois qui nous a été imposée, nous avons réussi à obtenir 0.96 de précision et de F1-Score sur la pathologie COVID, et plus de 0.91 sur les autres catégories.</p>
-				
-				<h3>Logique du projet</h3>
-				<p>La radiographie est une technique d'imagerie médicale couramment utilisée pour visualiser les structures internes du corps. En particulier, les radiographies pulmonaires sont essentielles pour le diagnostic et la surveillance de diverses pathologies, y compris la COVID-19. Cette maladie, causée par le coronavirus SARS-CoV-2, peut induire des anomalies spécifiques dans les poumons visibles sur les radiographies, telles que les opacités en verre dépoli. Face à la pandémie mondiale, il était crucial de disposer d'outils permettant un diagnostic rapide et précis pour améliorer la prise en charge des patients.</p>
-                <center>
-                    <img src="../pages/images/radio_samples.png" alt="radio samples" width="100%">
-                    <p class="caption">Echantillon de radiographies du dataset</p>
-				</center>
-                <p>La première étape a été de préparer un dataset de 21 165 radiographies et masques issus de plusieurs sources. Ce travail préliminaire comprenait <b>l'exploration des métadonnées, la normalisation des images, et leur redimensionnement pour uniformiser les entrées pour les modèles de convolution (CNN)</b>.</p>
-                <p>Après avoir sélectionné les modèles les plus performants lors des phases de <b>benchmarking</b>, nous avons procédé à des ajustements fins (fine-tuning). Ceci a inclus le <b>dégèlement de couches spécifiques des modèles préentraînés</b> et l'<b>optimisation des hyperparamètres pour maximiser la précision et le F1 Score</b> sur nos données de validation.</p>
-                <center>
-					<img src="../pages/images/conf_matrix.png" alt="radio samples" width="100%">
-                    <p class="caption">Matrice de confusion du modèle VGG16 finetuned et courbes d’apprentissage sur l’ensemble de validation</p>
-				</center>
-				<p>Les modèles finaux ont été évalués en termes de précision, sensibilité, spécificité, et d'autres métriques cliniquement pertinentes. L'interprétabilité des résultats a été améliorée grâce à des techniques comme les <b>GRAD-CAM</b> et l'analyse des caractéristiques les plus importantes influençant les prédictions des modèles.</p>
-				
-				<h3>Process d'optimisation</h3>
-				<center>
-					<img src="../pages/images/grad_cam.png" alt="Grad-CAM" width="100%">
-					<p class="caption">Illustration par GRAD-CAM des zones pertinentes ayant été exploitées par le réseau de neurones pour donner la prédiction</p>
-				</center>
-				<p>Sur la prédiction réussie (image de gauche), il est intéressant de constater que le modèle s’est largement appuyé sur une vision des poumons. Il est aussi constatable que sa vision semble avoir été un peu influencée par l’annotation ‘R’ présente sur la radiographie. Ceci est d’autant plus visible sur la prédiction faussée (image de droite), où le modèle a tout de même pris des informations sur les poumons, mais s’est surtout concentré sur un artefact présent sur l’épaule gauche du patient.</p>
-				<p>Le modèle VGG16 ajusté a atteint une <b>précision de validation et un F1 Score impressionnants de 0.96 pour la détection de la COVID-19, et de 0.91 pour les cas normaux</b>. Ces résultats démontrent l'efficacité des approches de Deep Learning dans le domaine de l'imagerie médicale et leur potentiel pour améliorer le diagnostic rapide et précis des pathologies pulmonaires. Le modèle a été <b>déployé via une application web Streamlit</b> afin de permettre une utilisation simple et intuitive.</p>
-				<p>Cependant, aucun modèle n’est parfait et il est toujours possible de pousser les performances plus loin. En effet, il serait possible d’enrichir le dataset par des techniques d’augmentation de données pour améliorer la robustesse du modèle à des variations non vues pendant l’entraînement, par exemple. De plus, approfondir l’optimisation des hyperparamètres pour maximiser les performances est toujours possible tout en explorant des architectures hybrides qui combinent les points forts de plusieurs modèles pré-entraînés pour améliorer la généralisation.</p><br>
-				<center>
-					<img src="../pages/images/covid_gif_screen.gif" alt="GIF preview" width="100%">
-					<p class="caption">Exemple d'utilisation du modèle déployé sur une application Streamlit via Hugging-Face</p>
-				</center>
-			</article>
-			<!-- /PageContent -->
+				<!-- PageContent -->
+				<article class="col-sm-8 maincontent">
+					<header class="page-header">
+						<a href="../index.html" class="back-button">
+							<i class="fas fa-arrow-left"></i>
+						</a>
+						<h1 class="page-title">Diagnostic automatique à partir de radiographies pulmonaires COVID-19
+						</h1>
+					</header>
+					<p>Dans le cadre d'une de mes formations, j'ai pu réaliser, en groupe, un projet de Computer Vision
+						utilisant un jeu de données >20k de radiographies pulmonaires brutes afin d'identifier trois
+						pathologies (dont le COVID) ainsi que les patients sains. Pour ce faire, j'ai réalisé un
+						nettoyage complet des images grâce à une fonction personnalisée permettant de générer de la
+						standardisation dans les tests puis automatiser les transformations nécessaires. Une fois
+						l'étape de data cleaning réalisée, le data processing a consisté à normaliser les images et de
+						les redimensionner pour qu'elles correspondent toutes au format du jeu d'entrainement. Ensuite,
+						en partant d'un modèle baseline simple, divers tests de GridSearching a permis de déterminer les
+						paramètres optimaux. Ensuite, nous nous sommes partagés une dizaine de modèles existants pour
+						réaliser du fine-tuning sur nos données d'entrainement en utilisant la puissance
+						computationnelle des GPU. Au final, notre projet s'est arrêté sur deux modèles aux résultats
+						prometteurs : DenseNet et VGG16. En effet, dans la limite des deux mois qui nous a été imposée,
+						nous avons réussi à obtenir 0.96 de précision et de F1-Score sur la pathologie COVID, et plus de
+						0.91 sur les autres catégories.</p>
 
+					<h3>Logique du projet</h3>
+					<p>La radiographie est une technique d'imagerie médicale couramment utilisée pour visualiser les
+						structures internes du corps. En particulier, les radiographies pulmonaires sont essentielles
+						pour le diagnostic et la surveillance de diverses pathologies, y compris la COVID-19. Cette
+						maladie, causée par le coronavirus SARS-CoV-2, peut induire des anomalies spécifiques dans les
+						poumons visibles sur les radiographies, telles que les opacités en verre dépoli. Face à la
+						pandémie mondiale, il était crucial de disposer d'outils permettant un diagnostic rapide et
+						précis pour améliorer la prise en charge des patients.</p>
+					<center>
+						<img src="../pages/images/radio_samples.png" alt="radio samples" width="100%">
+						<p class="caption">Echantillon de radiographies du dataset</p>
+					</center>
+					<p>La première étape a été de préparer un dataset de 21 165 radiographies et masques issus de
+						plusieurs sources. Ce travail préliminaire comprenait <b>l'exploration des métadonnées, la
+							normalisation des images, et leur redimensionnement pour uniformiser les entrées pour les
+							modèles de convolution (CNN)</b>.</p>
+					<p>Après avoir sélectionné les modèles les plus performants lors des phases de <b>benchmarking</b>,
+						nous avons procédé à des ajustements fins (fine-tuning). Ceci a inclus le <b>dégèlement de
+							couches spécifiques des modèles préentraînés</b> et l'<b>optimisation des hyperparamètres
+							pour maximiser la précision et le F1 Score</b> sur nos données de validation.</p>
+					<center>
+						<img src="../pages/images/conf_matrix.png" alt="radio samples" width="100%">
+						<p class="caption">Matrice de confusion du modèle VGG16 finetuned et courbes d'apprentissage sur
+							l'ensemble de validation</p>
+					</center>
+					<p>Les modèles finaux ont été évalués en termes de précision, sensibilité, spécificité, et d'autres
+						métriques cliniquement pertinentes. L'interprétabilité des résultats a été améliorée grâce à des
+						techniques comme les <b>GRAD-CAM</b> et l'analyse des caractéristiques les plus importantes
+						influençant les prédictions des modèles.</p>
+
+					<h3>Process d'optimisation</h3>
+					<center>
+						<img src="../pages/images/grad_cam.png" alt="Grad-CAM" width="100%">
+						<p class="caption">Illustration par GRAD-CAM des zones pertinentes ayant été exploitées par le
+							réseau de neurones pour donner la prédiction</p>
+					</center>
+					<p>Sur la prédiction réussie (image de gauche), il est intéressant de constater que le modèle s'est
+						largement appuyé sur une vision des poumons. Il est aussi constatable que sa vision semble avoir
+						été un peu influencée par l'annotation ‘R' présente sur la radiographie. Ceci est d'autant plus
+						visible sur la prédiction faussée (image de droite), où le modèle a tout de même pris des
+						informations sur les poumons, mais s'est surtout concentré sur un artefact présent sur l'épaule
+						gauche du patient.</p>
+					<p>Le modèle VGG16 ajusté a atteint une <b>précision de validation et un F1 Score impressionnants de
+							0.96 pour la détection de la COVID-19, et de 0.91 pour les cas normaux</b>. Ces résultats
+						démontrent l'efficacité des approches de Deep Learning dans le domaine de l'imagerie médicale et
+						leur potentiel pour améliorer le diagnostic rapide et précis des pathologies pulmonaires. Le
+						modèle a été <b>déployé via une application web Streamlit</b> afin de permettre une utilisation
+						simple et intuitive.</p>
+					<p>Cependant, aucun modèle n'est parfait et il est toujours possible de pousser les performances
+						plus loin. En effet, il serait possible d'enrichir le dataset par des techniques d'augmentation
+						de données pour améliorer la robustesse du modèle à des variations non vues pendant
+						l'entraînement, par exemple. De plus, approfondir l'optimisation des hyperparamètres pour
+						maximiser les performances est toujours possible tout en explorant des architectures hybrides
+						qui combinent les points forts de plusieurs modèles pré-entraînés pour améliorer la
+						généralisation.</p><br>
+					<center>
+						<img src="../pages/images/covid_gif_screen.gif" alt="GIF preview" width="100%">
+						<p class="caption">Exemple d'utilisation du modèle déployé sur une application Streamlit via
+							Hugging-Face</p>
+					</center>
+				</article>
+				<!-- /PageContent -->
+
+			</div>
 		</div>
-	</div>
-</main>
+	</main>
 
-<!-- Footer -->
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-						Niort, France
-					</p>	
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Mes réseaux</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<h3 class="widget-title">A propos du site</h3>
-				<div class="widget-body">
-                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
-                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Niort, France </p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+	<site-footer></site-footer>
 </body>
+
 </html>

@@ -1,274 +1,242 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- Header -->
-    <head>
-        <meta charset="utf-8">	
-        <!-- Bootstrap v3 -->
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <!-- FontAwesome v6 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
-        <!-- Custom CSS styles -->
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<!-- Header -->
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap v3 -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <!-- FontAwesome v6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
 
-<main id="main">
-	<div class="container">
-		<div class="row topspace">
-			
-			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
-				<div class="row widget">
-					<!-- Keywords -->
-					<div class="col-xs-12">
-						<h4>Mots clés</h4>
-						<div class="keywords">
-                            <span class="tag">Méthodologie</span>
-                            <span class="tag">Bioacoustique</span>
-							<span class="tag">Chiroptérologie</span>
-                            <span class="tag">Ingénierie R&D</span>
-						</div>
-					</div>
-					<!-- /Keywords -->
+</head>
 
-				<!-- Links -->
-				</div>
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Liens</h4>
-						<p class="repo-icons">
-                            <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders">
-								<i class="fab fa-github fa-2"></i> Repo du projet TeensyRecorders
-							</a><br>
-                            <a href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor">
-								<i class="fab fa-github fa-2"></i> Repo de TR Profiles Editor
-							</a>
-                        <h4>Documentation</h4>
-                        <p class="repo-icons">
-                            <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders/-/blob/master/TestsMicros/Test%20micros_AMM-ICS+protections_M-Barataud_2025-05.pdf?ref_type=heads" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
-								<i class="fa-solid fa-file-lines"></i> Michel Barataud - Comparaison de trois microphones MEMS avec protections
-							</a><br>
-                        <p class="repo-icons">
-                            <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders/-/blob/master/TestsMicros/TestsAcoustiques.pdf?ref_type=heads" target="_blank" rel="noopener noreferrer" style="font-size: 1.1em;">
-								<i class="fa-solid fa-file-lines"></i> Jean-Do. Vrignault - Tests acoustiques des micros TeensyRecorders
-							</a>
-						</p>
-						</p>
-					</div>
-				</div>
-				<!-- /Links -->
+<body class="home project-page">
+    <site-header></site-header>
 
-			</aside>
-			<!-- /Sidebar -->
+    <main id="main">
+        <div class="container">
+            <div class="row topspace">
 
-			<!-- PageContent -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<a href="../index.html" class="back-button">
-						<i class="fas fa-arrow-left"></i>
-					</a>
-					<h1 class="page-title">Enregistreurs acoustiques autonomes TeensyRecorders</h1>
-				</header>
+                <!-- Sidebar -->
+                <aside class="col-md-4 sidebar sidebar-left">
+                    <div class="row widget">
+                        <!-- Keywords -->
+                        <div class="col-xs-12">
+                            <h4>Mots clés</h4>
+                            <div class="keywords">
+                                <span class="tag">Méthodologie</span>
+                                <span class="tag">Bioacoustique</span>
+                                <span class="tag">Chiroptérologie</span>
+                                <span class="tag">Ingénierie R&D</span>
+                            </div>
+                        </div>
+                        <!-- /Keywords -->
 
-                <h3>Contexte et acteurs du projet</h3>
-                <p>La technologie bioacoustique a subi une explosion de popularité à partir des premières innovations fin des années 1990. Les principaux constructeurs ont donc proposé des enregistreurs de plus en plus performants, mais aussi de plus en plus chers, rendant l'accès à cette technologie difficile pour les non-professionnels et petites structures.</p>
-
-                </p> C'est dans ce contexte qu'a vu le jour en 2018 <b>le projet open-source de TeensyRecorders</b>, développé par Jean-Dominique Vrignault dans les Pays-de-la-Loire, visant à concevoir des enregistreurs acoustiques autonomes à bas coût, basés sur carte de développement Teensy.</p>
-                <p>Aujourd'hui, ce projet, c'est <b>une dizaine d'organisateurs d'ateliers bénévoles, un petit relais de réparation national, et une communauté ouverte très active</b> autour de son utilisation et de son développement.</p>
-                <p>Les TeensyRecorders sont aujourd'hui très utilisés autant dans un contexte amateur que professionnel. Le projet commence à rayonner à l'échelle européenne pour sa fiabilité, son efficacité et son coût largement réduit par rapport au marché.</p>
-
-                <center>
-                    <div style="text-align: center;">
-                    <img src="../pages/images/PRS.JPG" alt="PRS" style="width:45%; display:inline-block; margin: 0 5px;">
-                    <img src="../pages/images/AR.JPG" alt="AR" style="width:45%; display:inline-block; margin: 0 5px;">
-                    <p class="caption">PassiveRecorderStereo à gauche, et ActiveRecorder à droite</p>
+                        <!-- Links -->
                     </div>
-                </center>
+                    <div class="row widget">
+                        <div class="col-xs-12">
+                            <h4>Liens</h4>
+                            <p class="repo-icons">
+                                <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders">
+                                    <i class="fab fa-github fa-2"></i> Repo du projet TeensyRecorders
+                                </a><br>
+                                <a href="https://github.com/a-langlais/TeensyRecorders_ProfilesEditor">
+                                    <i class="fab fa-github fa-2"></i> Repo de TR Profiles Editor
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /Links -->
 
-                <p>Le projet comprend trois types d'enregistreurs :</p>
+                    <!-- Documentation -->
+                    <div class="row widget documentation-widget">
+                        <div class="col-xs-12">
+                            <h4>Documentation</h4>
+                            <p class="repo-icons reference-icons">
+                                <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders/-/blob/master/TestsMicros/Test%20micros_AMM-ICS+protections_M-Barataud_2025-05.pdf?ref_type=heads"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-solid fa-file-lines"></i> Michel Barataud - Comparaison de trois
+                                    microphones MEMS avec protections
+                                </a><br>
+                                <a href="https://framagit.org/PiBatRecorderPojects/TeensyRecorders/-/blob/master/TestsMicros/TestsAcoustiques.pdf?ref_type=heads"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-solid fa-file-lines"></i> Jean-Do. Vrignault - Tests acoustiques des
+                                    micros TeensyRecorders
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /Documentation -->
 
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Modèles</th>
-                            <th>PR</th>
-                            <th>PRS</th>
-                            <th>AR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Micro MEMS déportable (> 100m)</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Canaux (1 mono, 2 stéréo)</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>Test micro</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Fréq. échantillonnage (jusqu'à 384kHz)</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Fréq. échantillonnage 500kHz</td>
-                            <td>Oui</td>
-                            <td>Non</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Enregistrement passif automatique</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Hétérodyne à 384kHz (casque)</td>
-                            <td>Non</td>
-                            <td>Non</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Lecture fichier wav (X1, X10, Hétérodyne)</td>
-                            <td>Non</td>
-                            <td>Non</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Écran + boutons (terrain)</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                        </tr>
-                        <tr>
-                            <td>Batteries internes Li-Ion</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td>Alimentation externe</td>
-                            <td>12V</td>
-                            <td>12V</td>
-                            <td>5V</td>
-                        </tr>
-                        <tr>
-                            <td>Boîtier étanche</td>
-                            <td>Oui</td>
-                            <td>Oui</td>
-                            <td>Non</td>
-                        </tr>
-                        <tr>
-                            <td>Carte micro SD 16-512 Go</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-                </table>
+                </aside>
+                <!-- /Sidebar -->
 
-                <h3>Investissement personnel sur le projet</h3>
-                <p>Complètement en accord avec le projet et ses valeurs, je m'implique dans le projet depuis son lancement.</p>
-                <p>Bénévole de la première heure, <b>j'organise chaque année des ateliers de fabrication locaux</b> pour accompagner les nouveaux utilisateurs. J'assure également un <b>rôle de relais local de réparation</b>, prolongeant la durée de vie des appareils et réparant les éventuelles erreurs de fabrication, ou problèmes issus de l'usure normale.</p>
-                <p>Pour optimiser l'expérience utilisateur, <b>je développe un logiciel spécifique destiné à faciliter la programmation des enregistreurs</b> (<a href="https://a-langlais.github.io/portfolio/pages/tr_profiler.html">TR Profiles Editor</a>). Ma participation sur les mises à jour système permet aussi de <b>contribuer à l'intégration continuelle de nouvelles fonctionnalités</b> et d'améliorer la stabilité des dispositifs.</p>
-                <p>Je contribue activement à l'ingénierie matérielle des enregistreurs via la conception de modèles 3D. En particulier concernant la <b>création d'accessoires optimisés et le prototypage de solutions matérielles</b> pour répondre aux contraintes du terrain des utilisateurs.</p>
-                <br>
+                <!-- PageContent -->
+                <article class="col-sm-8 maincontent">
+                    <header class="page-header">
+                        <a href="../index.html" class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h1 class="page-title">Enregistreurs acoustiques autonomes TeensyRecorders</h1>
+                    </header>
 
-			</article>
-			<!-- /PageContent -->
+                    <h3>Contexte et acteurs du projet</h3>
+                    <p>La technologie bioacoustique a subi une explosion de popularité à partir des premières
+                        innovations fin des années 1990. Les principaux constructeurs ont donc proposé des enregistreurs
+                        de plus en plus performants, mais aussi de plus en plus chers, rendant l'accès à cette
+                        technologie difficile pour les non-professionnels et petites structures.</p>
 
-		</div>
-	</div>
-</main>
+                    </p> C'est dans ce contexte qu'a vu le jour en 2018 <b>le projet open-source de TeensyRecorders</b>,
+                    développé par Jean-Dominique Vrignault dans les Pays-de-la-Loire, visant à concevoir des
+                    enregistreurs acoustiques autonomes à bas coût, basés sur carte de développement Teensy.</p>
+                    <p>Aujourd'hui, ce projet, c'est <b>une dizaine d'organisateurs d'ateliers bénévoles, un petit
+                            relais de réparation national, et une communauté ouverte très active</b> autour de son
+                        utilisation et de son développement.</p>
+                    <p>Les TeensyRecorders sont aujourd'hui très utilisés autant dans un contexte amateur que
+                        professionnel. Le projet commence à rayonner à l'échelle européenne pour sa fiabilité, son
+                        efficacité et son coût largement réduit par rapport au marché.</p>
 
-<!-- Footer -->
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-						Niort, France
-					</p>	
-				</div>
-			</div>
+                    <center>
+                        <div style="text-align: center;">
+                            <img src="../pages/images/PRS.JPG" alt="PRS"
+                                style="width:45%; display:inline-block; margin: 0 5px;">
+                            <img src="../pages/images/AR.JPG" alt="AR"
+                                style="width:45%; display:inline-block; margin: 0 5px;">
+                            <p class="caption">PassiveRecorderStereo à gauche, et ActiveRecorder à droite</p>
+                        </div>
+                    </center>
 
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Mes réseaux</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-					</p>
-				</div>
-			</div>
+                    <p>Le projet comprend trois types d'enregistreurs :</p>
 
-			<div class="col-md-6 widget">
-				<h3 class="widget-title">A propos du site</h3>
-				<div class="widget-body">
-                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
-                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
-				</div>
-			</div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Modèles</th>
+                                <th>PR</th>
+                                <th>PRS</th>
+                                <th>AR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Micro MEMS déportable (> 100m)</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Canaux (1 mono, 2 stéréo)</td>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Test micro</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Fréq. échantillonnage (jusqu'à 384kHz)</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Fréq. échantillonnage 500kHz</td>
+                                <td>Oui</td>
+                                <td>Non</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Enregistrement passif automatique</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Hétérodyne à 384kHz (casque)</td>
+                                <td>Non</td>
+                                <td>Non</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Lecture fichier wav (X1, X10, Hétérodyne)</td>
+                                <td>Non</td>
+                                <td>Non</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Écran + boutons (terrain)</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                            </tr>
+                            <tr>
+                                <td>Batteries internes Li-Ion</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Alimentation externe</td>
+                                <td>12V</td>
+                                <td>12V</td>
+                                <td>5V</td>
+                            </tr>
+                            <tr>
+                                <td>Boîtier étanche</td>
+                                <td>Oui</td>
+                                <td>Oui</td>
+                                <td>Non</td>
+                            </tr>
+                            <tr>
+                                <td>Carte micro SD 16-512 Go</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-		</div> <!-- /row of widgets -->
-	</div>
-</footer>
+                    <h3>Investissement personnel sur le projet</h3>
+                    <p>Complètement en accord avec le projet et ses valeurs, je m'implique dans le projet depuis son
+                        lancement.</p>
+                    <p>En 2026, l'association "Atelier Pour l'Ecoute de la Faune Sauvage" (APEFS) a vu le jour pour
+                        faciliter la coordination de la communauté autour du projet de l'organisation des ateliers à la
+                        gestion du SAV communautaire. Dès sa création, <b>j'ai intégré son Conseil d'Administration</b> afin de
+                        continuer mon investissement dans ce pojet.</p>
+                    <p>Bénévole de la première heure, <b>j'organise chaque année des ateliers de fabrication locaux</b>
+                        pour accompagner les nouveaux utilisateurs. J'assure également un <b>rôle de relais local de
+                            réparation</b>, prolongeant la durée de vie des appareils et réparant les éventuelles
+                        erreurs de fabrication, ou problèmes issus de l'usure normale.</p>
+                    <p>Pour optimiser l'expérience utilisateur, <b>je développe un logiciel spécifique destiné à
+                            faciliter la programmation des enregistreurs</b> (<a
+                            href="https://a-langlais.github.io/portfolio/pages/tr_profiler.html">TR Profiles
+                            Editor</a>). Ma participation sur les mises à jour système permet aussi de <b>contribuer à
+                            l'intégration continuelle de nouvelles fonctionnalités</b> et d'améliorer la stabilité des
+                        dispositifs.</p>
+                    <p>Je contribue activement à l'ingénierie matérielle des enregistreurs via la conception de modèles
+                        3D. En particulier concernant la <b>création d'accessoires optimisés et le prototypage de
+                            solutions matérielles</b> pour répondre aux contraintes du terrain des utilisateurs.</p>
+                    <br>
 
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Niort, France </p>
-				</div>
-			</div>
+                </article>
+                <!-- /PageContent -->
 
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-				</div>
-			</div>
+            </div>
+        </div>
+    </main>
 
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    <site-footer></site-footer>
 </body>
+
 </html>

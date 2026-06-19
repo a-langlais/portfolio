@@ -13,21 +13,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
     <!-- Custom CSS styles -->
     <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/layout.js" data-base=""></script>
+
 </head>
 
 <body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="index.html">
-                    <img class="img-circle" src="images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+    <site-header></site-header>
 
     <main id="main">
         <div class="container">
@@ -91,7 +82,8 @@
                             populations, les interactions espèces-habitats et l'effet des pressions environnementales.
                             Les modèles empiriques et mécanistes me permettent d'interpréter les tendances, quantifier
                             les réponses écologiques et <b>orienter les mesures de gestion</b> en prenant en compte
-                            <b>l'incertitude environnementale</b>.</p>
+                            <b>l'incertitude environnementale</b>.
+                        </p>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div style="text-align: center;">
@@ -101,7 +93,8 @@
                         <p><span class="highlight">Naturaliste expérimenté</span>, j'associe l'observation de terrain à
                             une lecture scientifique des phénomènes écologiques. Cette approche me permet d'avoir une
                             <b>vision pré-analytique</b> lors de la conception des plans d'échantillonnage, et de
-                            concevoir des <b>protocoles spécialement adaptées aux contextes locaux</b>.</p>
+                            concevoir des <b>protocoles spécialement adaptées aux contextes locaux</b>.
+                        </p>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div style="text-align: center;">
@@ -112,7 +105,8 @@
                             <code>R</code>, <code>Python</code> et <code>Julia</code> pour explorer, structurer et
                             analyser des données complexes. Mon approche mobilise autant <b>l'inférence que la
                                 prédiction, jusqu'aux modélisations temporelles et géospatiales</b>, avec une attention
-                            particulière portée à la qualité du traitement et à la robustesse des analyses.</p>
+                            particulière portée à la qualité du traitement et à la robustesse des analyses.
+                        </p>
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <div style="text-align: center;">
@@ -123,7 +117,8 @@
                             <b>outils directement déployables et opérationnels</b> pour répondre aux mieux aux
                             problématiques de terrain, avec leurs contraintes logistiques. L'objectif étant de <b>rendre
                                 les analyses reproductibles, accessibles et pérennes</b> pour les équipes et
-                            partenaires.</p>
+                            partenaires.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -135,16 +130,28 @@
 
                 <div class="proj-tabs" role="tablist" aria-label="Sections de projets">
                     <input type="radio" name="projtabs" id="tab-stat" class="tab-input" checked>
-                    <label for="tab-stat" class="tab-label">Statistiques</label>
+                    <label for="tab-stat" class="tab-label">
+                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <span>Statistiques</span>
+                    </label>
 
                     <input type="radio" name="projtabs" id="tab-ds" class="tab-input">
-                    <label for="tab-ds" class="tab-label">Data Science</label>
+                    <label for="tab-ds" class="tab-label">
+                        <i class="fa-solid fa-database" aria-hidden="true"></i>
+                        <span>Data Science</span>
+                    </label>
 
                     <input type="radio" name="projtabs" id="tab-hard" class="tab-input">
-                    <label for="tab-hard" class="tab-label">Hardware</label>
+                    <label for="tab-hard" class="tab-label">
+                        <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                        <span>Hardware</span>
+                    </label>
 
                     <input type="radio" name="projtabs" id="tab-nat" class="tab-input">
-                    <label for="tab-nat" class="tab-label">Naturalisme</label>
+                    <label for="tab-nat" class="tab-label">
+                        <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+                        <span>Naturalisme</span>
+                    </label>
                 </div>
 
                 <div class="thumbnails recentworks">
@@ -157,7 +164,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">📈 Analyse hiérarchique des tendances populationnelles d'une espèce de
+                            <span class="title">Analyse hiérarchique des tendances populationnelles d'une espèce de
                                 chauve-souris en France (1995-2024)</span>
                             <p class="desc">Réalisation d'une analyse hiérarchique des tendances populationnelles d'une
                                 espèce de chauve-souris en France sur la période 1995-2024 (30 ans de suivi).
@@ -173,7 +180,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🗺️ Modélisation de la morphologie d'un espace naturel à l'aide de
+                            <span class="title">Modélisation de la morphologie d'un espace naturel à l'aide de
                                 données LiDAR</span>
                             <p class="desc">Utilisation de données spatiale LiDAR (TLS) pour modéliser un espace
                                 naturel, permettant une meilleure compréhension de la morphologie locale en facilitant
@@ -189,7 +196,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">📡 Étude démographique et analyse spatio-temporelle via
+                            <span class="title">Étude démographique et analyse spatio-temporelle via
                                 Capture-Marquage-Recapture</span>
                             <p class="desc">Analyses démographique et spatiale des populations de cinq espèces de
                                 chauves-souris cavernicoles marquées depuis 2018 dans le cadre d'un projet
@@ -205,7 +212,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🏞️ Influence des mesures de gestion et de l'environnement sur la
+                            <span class="title">Influence des mesures de gestion et de l'environnement sur la
                                 présence d'une espèce patrimoniale</span>
                             <p class="desc">Analyses multivariées à partir de données d'inventaire et de caractérisation
                                 des habitats et des mesures de gestion. Après une analyse complète des facteurs
@@ -223,7 +230,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🍃 Estimation des seuils de bridage éolien</span>
+                            <span class="title">Estimation des seuils de bridage éolien</span>
                             <p class="desc">Analyses multivariées à partir de données d'activité biologique et
                                 environnementales afin de modéliser les seuils de bridage éolien optimaux, dans
                                 l'objectif de limiter les risques de collisions. Usage de régressions logistiques et
@@ -239,7 +246,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🎧 Spectroware : logiciel de mesure bioacoustique</span>
+                            <span class="title">Spectroware : logiciel de mesure bioacoustique</span>
                             <p class="desc">Logiciel de traitement et d'analyse acoustique dédié aux naturalistes et
                                 bioacousticiens. Permet la visualisation, la manipulation et l'analyse de séquences
                                 audio complexes via des mesures spectrographiques précises.</p>
@@ -254,7 +261,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🦇 Package de fonctions R pour les chiroptérologues</span>
+                            <span class="title">Package de fonctions R pour les chiroptérologues</span>
                             <p class="desc">Ensemble d'outils standardisés afin d'améliorer l'analyse des données
                                 chiroptérologiques. Les fonctions permettent de calculer des indicateurs d'activités
                                 comparables entre les sites d'études. Une application Shiny déployée en ligne permet aux
@@ -270,7 +277,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🗒️ TeensyRecorders Profiles Editor</span>
+                            <span class="title">TeensyRecorders Profiles Editor</span>
                             <p class="desc">Application desktop de configuration pour les enregistreurs acoustiques
                                 open-source TeensyRecorders. Permet de gérer facilement les profils de configuration,
                                 d'exporter et versionner les différents profils de configurations.</p>
@@ -285,7 +292,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">⚕️ Diagnostic automatique à partir de radiographies pulmonaires
+                            <span class="title">Diagnostic automatique à partir de radiographies pulmonaires
                                 COVID-19</span>
                             <p class="desc">Entrainement d'un modèle de classification d'images thoraciques par Deep
                                 Learning et Computer Vision (CNN) à partir d'un jeu d'un important jeu de données
@@ -302,7 +309,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🦋 Dispositif d'Attraction Lumineux pour les Insectes Nocturnes
+                            <span class="title">Dispositif d'Attraction Lumineux pour les Insectes Nocturnes
                                 (DALIN)</span>
                             <p class="desc">Dispositif lumineux compact et économique inspiré de la LepiLED. Il optimise
                                 plusieurs spectres (UV, bleu, vert, blanc) pour garantir une attractivité optimale tout
@@ -317,7 +324,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🔊 Enregistreurs acoustiques autonomes TeensyRecorders</span>
+                            <span class="title">Enregistreurs acoustiques autonomes TeensyRecorders</span>
                             <p class="desc">Fort investissement dans le projet TeensyRecorders en tant qu'organisateur
                                 d'atelier, relais réparation et contributeur. Il s'agit de détecteurs autonomes de
                                 conception française (origine Angevine), développés par et pour les bioacousticiens,
@@ -332,7 +339,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🌳 Projet de Réserve Naturelle Régionale Ermitage-Escampeaux
+                            <span class="title">Projet de Réserve Naturelle Régionale Ermitage-Escampeaux
                                 (Villes-sur-Auzon, 84)</span>
                             <p class="desc">Inventaire exhaustif de la biodiversité d'un écosystème patrimonial atypique
                                 mêlant falaises, zones escaprées et chênaies vertes au pied du Mont Ventoux dans le
@@ -348,7 +355,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🦗 Etablissement d'un suivi des populations d'orthoptères pour la
+                            <span class="title">Etablissement d'un suivi des populations d'orthoptères pour la
                                 conservation de l'avifaune de plaine en zone NATURA2000 (Champeigne Tourangelle,
                                 37)</span>
                             <p class="desc">Création et mise en pratique expérimentale d'un protocole novateur de suivi
@@ -364,7 +371,7 @@
                             <span class="cover"><span class="more">Voir plus &rarr;</span></span>
                         </span>
                         <div class="thumb-body">
-                            <span class="title">🐁 Réalisation d'un inventaire des petits mammifères sur une réserve
+                            <span class="title">Réalisation d'un inventaire des petits mammifères sur une réserve
                                 naturelle régionale (Bocage des Antonins, 79)</span>
                             <p class="desc">Mise-en-place d'un inventaire semi-exhaustif des petits mammifères à
                                 l'échelle d'une réserve naturelle régionale en combinant une méthodologie de capture
@@ -375,6 +382,10 @@
                 </div>
             </div>
             <!-- /PersonalProjects -->
+
+            <!-- ProjectSeparator -->
+            <div class="row home-project-separator" aria-hidden="true"></div>
+            <!-- /ProjectSeparator -->
 
             <!-- CallMeMaybe -->
             <div class="row section topspace">
@@ -393,73 +404,30 @@
             </div>
             <!-- /CallMeMaybe -->
 
+            <!-- Biocena -->
+            <!-- <div class="row section biocena-callout">
+                <div class="panel panel-cta panel-biocena">
+                    <div class="panel-body">
+                        <div class="col-lg-8 biocena-copy">
+                            <img class="biocena-logo" src="images/biocena-logo.svg" alt="Biocena">
+                            <p>En tant qu'indépendant, j'accompagne tous les acteurs dans leurs projets pour la
+                                conservation de la biodiversité. Venez échanger pour donner vie à vos projets.</p>
+                        </div>
+                        <div class="col-lg-4 text-right biocena-actions">
+                            <a href="https://www.biocena.org/" class="btn btn-primary btn-lg" target="_blank"
+                                rel="noopener">Site internet</a>
+                            <a href="mailto:alexandre.langlais@biocena.org"
+                                class="btn btn-primary btn-lg biocena-mail-button">Mail professionnel</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- /Biocena -->
+
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 widget">
-                    <h3 class="widget-title">Contact</h3>
-                    <div class="widget-body">
-                        <p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-                            Niort, France
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 widget">
-                    <h3 class="widget-title">Mes réseaux</h3>
-                    <div class="widget-body">
-                        <p class="follow-me-icons">
-                            <a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-                            <a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 widget">
-                    <h3 class="widget-title">A propos du site</h3>
-                    <div class="widget-body">
-                        <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-                        <p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact
-                            environnemental minimal 🌳</p>
-                        <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite.
-                            Hebergé et déployé sur mon GitHub en public 😁</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-
-    <footer id="underfooter">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-6 widget">
-                    <div class="widget-body">
-                        <p>Niort, France </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 widget">
-                    <div class="widget-body">
-                        <p class="text-right">
-                            Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-    <!-- /Footer -->
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+    <site-footer></site-footer>
 </body>
 
 </html>

@@ -1,160 +1,143 @@
 <html lang="fr">
-    <!-- Header -->
-    <head>
-        <meta charset="utf-8">	
-        <!-- Bootstrap v3 -->
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <!-- FontAwesome v6 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
-        <!-- Custom CSS styles -->
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<!-- Header -->
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<head>
+    <meta charset="utf-8">
+    <!-- Bootstrap v3 -->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <!-- FontAwesome v6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+    <!-- Custom CSS styles -->
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
 
-<main id="main">
-	<div class="container">
-		<div class="row topspace">
-			
-			<!-- Sidebar -->
-			<aside class="col-md-4 sidebar sidebar-left">
-				<!-- Keywords -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Mots clés</h4>
-						<div class="keywords">
-							<span class="tag">R</span>
-							<span class="tag">Machine Learning</span>
-							<span class="tag">Regression Logistique</span>
-						</div>
-					</div>
-				</div>
-				<!-- /Keywords -->
+</head>
 
-			</aside>
-			<!-- /Sidebar -->
+<body class="home project-page">
+    <site-header></site-header>
 
-			<!-- PageContent -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<a href="../index.html" class="back-button">
-						<i class="fas fa-arrow-left"></i>
-					</a>
-					<h1 class="page-title">Estimation des seuils de bridage éolien selon l’activité chiroptérologique et les données météorologiques</h1>
-				</header>
-                <p>Un des principaux enjeux dans le développement d’un parc éolien est les mesures liées à l’évitement de l’activité chiroptérologique. Après une collecte d’une année (couvrant le cycle entier de vie d’une chauve-souris), les données d’activité sur point fixe au sol et en hauteur sont étudiées pour estimer les seuils des données abiotiques à prendre en compte pour assurer un bridage permettant de conserver 95% de l’activité des chauves-souris hors risque de mortalité. Cette analyse utilise une régression logistique pour l’analyse multivariée et le calcul des percentiles pour la détermination des seuils.</p>
-				
-				<h3>Contexte et objectifs</h3>
-				<p>L’étude longue durée des chauves-souris sur les éoliennes en fonctionnement ou les mâts de mesures génère un important jeu de données qu’il est pertinent d’analyser pour proposer les mesures de bridage les plus adaptées.</p>
-                <p>Dans un premier temps, chaque donnée d’activité est affichée sur un graphique représentant la <b>phénologie temporelle</b> sur l’année d’étude. L’activité des chauves-souris étant liée à la période nocturne, les éphémérides du coucher et du lever du soleil sont rajoutés au graphique pour une meilleure appréhension des durées de nuit.</p>
-                <center>
-                    <img src="../pages/images/Pheno_temp.png" alt="Pheno_temp" width="70%">
-                    <p class="caption">Phénologie temporelle de l’activité des chauves-souris (toutes espèces confondues) sur une année d’enregistrement en fonction de l’heure. La courbe bleu représente l’heure civile du levée du jour et la courbe orange représente l’heure civile du coucher du soleil.</p>
-                </center>
+    <main id="main">
+        <div class="container">
+            <div class="row topspace">
+
+                <!-- Sidebar -->
+                <aside class="col-md-4 sidebar sidebar-left">
+                    <!-- Keywords -->
+                    <div class="row widget">
+                        <div class="col-xs-12">
+                            <h4>Mots clés</h4>
+                            <div class="keywords">
+                                <span class="tag">R</span>
+                                <span class="tag">Machine Learning</span>
+                                <span class="tag">Regression Logistique</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Keywords -->
+
+                </aside>
+                <!-- /Sidebar -->
+
+                <!-- PageContent -->
+                <article class="col-sm-8 maincontent">
+                    <header class="page-header">
+                        <a href="../index.html" class="back-button">
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <h1 class="page-title">Estimation des seuils de bridage éolien selon l'activité
+                            chiroptérologique et les données météorologiques</h1>
+                    </header>
+                    <p>Un des principaux enjeux dans le développement d'un parc éolien est les mesures liées à
+                        l'évitement de l'activité chiroptérologique. Après une collecte d'une année (couvrant le cycle
+                        entier de vie d'une chauve-souris), les données d'activité sur point fixe au sol et en hauteur
+                        sont étudiées pour estimer les seuils des données abiotiques à prendre en compte pour assurer un
+                        bridage permettant de conserver 95% de l'activité des chauves-souris hors risque de mortalité.
+                        Cette analyse utilise une régression logistique pour l'analyse multivariée et le calcul des
+                        percentiles pour la détermination des seuils.</p>
+
+                    <h3>Contexte et objectifs</h3>
+                    <p>L'étude longue durée des chauves-souris sur les éoliennes en fonctionnement ou les mâts de
+                        mesures génère un important jeu de données qu'il est pertinent d'analyser pour proposer les
+                        mesures de bridage les plus adaptées.</p>
+                    <p>Dans un premier temps, chaque donnée d'activité est affichée sur un graphique représentant la
+                        <b>phénologie temporelle</b> sur l'année d'étude. L'activité des chauves-souris étant liée à la
+                        période nocturne, les éphémérides du coucher et du lever du soleil sont rajoutés au graphique
+                        pour une meilleure appréhension des durées de nuit.</p>
+                    <center>
+                        <img src="../pages/images/Pheno_temp.png" alt="Pheno_temp" width="70%">
+                        <p class="caption">Phénologie temporelle de l'activité des chauves-souris (toutes espèces
+                            confondues) sur une année d'enregistrement en fonction de l'heure. La courbe bleu représente
+                            l'heure civile du levée du jour et la courbe orange représente l'heure civile du coucher du
+                            soleil.</p>
+                    </center>
                     <div class="text-box">
-                    <p>Ce graphique est très intéressant, car il permet d’observer un grand nombre d’informations pertinentes en même temps. Il est flagrant de constater que <b>l’activité chiroptérologique est toujours contenue la nuit</b> (avec une part plus importante en début de nuit), les deux courbes représentant les éphémérides permettent d’illustrer <b>la concentration de l’activité et visuellement, d’appréhender la variation de la nuit au fur et à mesure de l’année</b>. Quelques points apparaissent tout de même en dehors de ces lignes, car certaines espèces sortent lors de l’aube et/ou du crépuscule, quand la lumière est encore un peu présente. Nous pouvons aussi constater que l’activité est radicalement différente, si ce n’est presque inexistante lors de l’hiver, période de léthargie et d’hibernation des individus. Quelques individus peuvent tout de même sortir de léthargie lors des redoux pour aller se nourrir avant de repartir en hibernation. Les périodes qui apparaissent très clairement comme les plus importantes en densité de contacts sont l’été (période de mise-bas et d’émancipation des jeunes) et l’automne (passage d’individus en transit migratoire). Accessoirement, <b>nous pouvons aussi constater un “décalage” de l’activité entre mars et juin, correspondant très probablement à une erreur de décalage horaire</b>. En effet, il aurait été plus pertinent de travailler en UTC, surtout sur des données phénologiques, ce problème est cependant très facile à rattraper.</p>
-                </div>
-				<p>Dans un second temps, les données d’activité sont mises en relation avec les données environnementales, au moins la vitesse du vent et la température (qui sont les variables pouvant être ajustées sur les dispositifs de bridage). Grâce à un modèle de <b>régression logistique</b> prenant les variables abiotiques comme variables descriptives et la présence/absence de contact en variable cible, l’influence de ces éléments est étudiée sur une période sélectionnée (généralement, la période printanière, puis la période estivale et enfin la période automnale).</p>
-                <div class="two-columns-flex">
-                <div class="column">
-                    <img src="../pages/images/contacts~Speed.png" alt="Pheno_tempo_speed" width="100%">
-                    <p class="caption">Courbe de la régression logistique pour la variable Vitesse du vent, montrant une probabilité de contact descendante avec l’augmentation de la variable.</p>
-                </div>
-                <div class="column">
-                    <img src="../pages/images/contacts~Temperature.png" alt="Pheno_tempo_temp" width="100%">
-                    <p class="caption">Courbe de la régression logistique pour la variable Temperature, montrant une probabilité de contact ascendante avec l’augmentation de la variable.</p>
-                </div>
-                </div>
-                <p>Pour bien comprendre la répartition des données, il peut aussi être pertinent d’afficher les <b>densités de probabilité de contacts</b> en utilisant l’estimation de noyau de kernel.</p>
-                <div class="column">
-                <center>
-                    <img src="../pages/images/kernel.png" alt="kernel" width="70%">
-                    <p class="caption">Représentation de la densité de contacts des chauves-souris (toutes espèces confondues) en fonction des valeurs abiotiques mesurées. Le cadre bleu montre les contacts évités grâce à la mesure de bridage et les axes rouges montrent les seuils optimaux</p>
-                </center>
-                    <p>Représenter l’activité enregistrée en fonction des variables abiotiques utilisées pour le bridage, à savoir 'Temperature' et 'Vitesse du vent', permet de <b>savoir très précisément les seuils offrant un évitement (selon les données recueillies) d’au moins 95% de l’activité chiroptérologique enregistrée</b>. Couplée à une analyse précise de la période d’envol et du pourcentage de nuit avec le plus d’activité, il est possible de justifier des seuils de bridage très efficaces pour les aménagements éoliens et ainsi cohabiter durablement avec la biodiversité locale. Ici, un bridage de nuit en période estivale lorsque la température est supérieure à 16°C et lorsque la vitesse du vent est inférieure à 8 m/s est optimale.</p>
+                        <p>Ce graphique est très intéressant, car il permet d'observer un grand nombre d'informations
+                            pertinentes en même temps. Il est flagrant de constater que <b>l'activité chiroptérologique
+                                est toujours contenue la nuit</b> (avec une part plus importante en début de nuit), les
+                            deux courbes représentant les éphémérides permettent d'illustrer <b>la concentration de
+                                l'activité et visuellement, d'appréhender la variation de la nuit au fur et à mesure de
+                                l'année</b>. Quelques points apparaissent tout de même en dehors de ces lignes, car
+                            certaines espèces sortent lors de l'aube et/ou du crépuscule, quand la lumière est encore un
+                            peu présente. Nous pouvons aussi constater que l'activité est radicalement différente, si ce
+                            n'est presque inexistante lors de l'hiver, période de léthargie et d'hibernation des
+                            individus. Quelques individus peuvent tout de même sortir de léthargie lors des redoux pour
+                            aller se nourrir avant de repartir en hibernation. Les périodes qui apparaissent très
+                            clairement comme les plus importantes en densité de contacts sont l'été (période de mise-bas
+                            et d'émancipation des jeunes) et l'automne (passage d'individus en transit migratoire).
+                            Accessoirement, <b>nous pouvons aussi constater un “décalage” de l'activité entre mars et
+                                juin, correspondant très probablement à une erreur de décalage horaire</b>. En effet, il
+                            aurait été plus pertinent de travailler en UTC, surtout sur des données phénologiques, ce
+                            problème est cependant très facile à rattraper.</p>
+                    </div>
+                    <p>Dans un second temps, les données d'activité sont mises en relation avec les données
+                        environnementales, au moins la vitesse du vent et la température (qui sont les variables pouvant
+                        être ajustées sur les dispositifs de bridage). Grâce à un modèle de <b>régression logistique</b>
+                        prenant les variables abiotiques comme variables descriptives et la présence/absence de contact
+                        en variable cible, l'influence de ces éléments est étudiée sur une période sélectionnée
+                        (généralement, la période printanière, puis la période estivale et enfin la période automnale).
+                    </p>
+                    <div class="two-columns-flex">
+                        <div class="column">
+                            <img src="../pages/images/contacts~Speed.png" alt="Pheno_tempo_speed" width="100%">
+                            <p class="caption">Courbe de la régression logistique pour la variable Vitesse du vent,
+                                montrant une probabilité de contact descendante avec l'augmentation de la variable.</p>
+                        </div>
+                        <div class="column">
+                            <img src="../pages/images/contacts~Temperature.png" alt="Pheno_tempo_temp" width="100%">
+                            <p class="caption">Courbe de la régression logistique pour la variable Temperature, montrant
+                                une probabilité de contact ascendante avec l'augmentation de la variable.</p>
+                        </div>
+                    </div>
+                    <p>Pour bien comprendre la répartition des données, il peut aussi être pertinent d'afficher les
+                        <b>densités de probabilité de contacts</b> en utilisant l'estimation de noyau de kernel.</p>
+                    <div class="column">
+                        <center>
+                            <img src="../pages/images/kernel.png" alt="kernel" width="70%">
+                            <p class="caption">Représentation de la densité de contacts des chauves-souris (toutes
+                                espèces confondues) en fonction des valeurs abiotiques mesurées. Le cadre bleu montre
+                                les contacts évités grâce à la mesure de bridage et les axes rouges montrent les seuils
+                                optimaux</p>
+                        </center>
+                        <p>Représenter l'activité enregistrée en fonction des variables abiotiques utilisées pour le
+                            bridage, à savoir 'Temperature' et 'Vitesse du vent', permet de <b>savoir très précisément
+                                les seuils offrant un évitement (selon les données recueillies) d'au moins 95% de
+                                l'activité chiroptérologique enregistrée</b>. Couplée à une analyse précise de la
+                            période d'envol et du pourcentage de nuit avec le plus d'activité, il est possible de
+                            justifier des seuils de bridage très efficaces pour les aménagements éoliens et ainsi
+                            cohabiter durablement avec la biodiversité locale. Ici, un bridage de nuit en période
+                            estivale lorsque la température est supérieure à 16°C et lorsque la vitesse du vent est
+                            inférieure à 8 m/s est optimale.</p>
+                    </div>
+                    <!-- /PageContent -->
+
             </div>
-			<!-- /PageContent -->
+        </div>
+    </main>
 
-		</div>
-	</div>
-</main>
-
-<!-- Footer -->
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-						Niort, France
-					</p>	
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Mes réseaux</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<h3 class="widget-title">A propos du site</h3>
-				<div class="widget-body">
-                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
-                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Niort, France </p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+    <site-footer></site-footer>
 </body>
+
 </html>

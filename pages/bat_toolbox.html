@@ -1,218 +1,179 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- Header -->
-    <head>
-        <meta charset="utf-8">	
-        <!-- Bootstrap v3 -->
-        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
-        <!-- FontAwesome v6 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
-        <!-- Custom CSS styles -->
-        <link rel="stylesheet" href="../assets/styles.css">
-    </head>
+<!-- Header -->
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<head>
+	<meta charset="utf-8">
+	<!-- Bootstrap v3 -->
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<!-- FontAwesome v6 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
+	<!-- Custom CSS styles -->
+	<link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
 
-<main id="main">
-	<div class="container">
+</head>
 
-		<!-- Sidebar -->
-		<div class="row topspace">
-			<aside class="col-md-4 sidebar sidebar-left">
-				<!-- Keywords -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Mots clés</h4>
-						<div class="keywords">
-							<span class="tag">R</span>
-							<span class="tag">Shiny</span>
-							<span class="tag">Biostatistiques</span>
-							<span class="tag">Open-Source</span>
+<body class="home project-page">
+	<site-header></site-header>
+
+	<main id="main">
+		<div class="container">
+
+			<!-- Sidebar -->
+			<div class="row topspace">
+				<aside class="col-md-4 sidebar sidebar-left">
+					<!-- Keywords -->
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Mots clés</h4>
+							<div class="keywords">
+								<span class="tag">R</span>
+								<span class="tag">Shiny</span>
+								<span class="tag">Biostatistiques</span>
+								<span class="tag">Open-Source</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- /Keywords -->
+					<!-- /Keywords -->
 
-				<!-- Links -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Liens</h4>
-						<p class="repo-icons">
-							<a href="https://github.com/a-langlais/bat_activity">
-								<i class="fab fa-github fa-2"></i> GitHub
-							</a><br>
-							<a href="https://github.com/a-langlais/bat_activity/blob/main/README.md">
-								<i class="fa-solid fa-book"></i> Documentation
-							</a><br>
-							<a href="https://a-langlais.shinyapps.io/bat_activity/">
-								<i class="fa-solid fa-gear"></i> Application web
-							</a>
-						</p>
+					<!-- Links -->
+					<div class="row widget">
+						<div class="col-xs-12">
+							<h4>Liens</h4>
+							<p class="repo-icons">
+								<a href="https://github.com/a-langlais/bat_activity">
+									<i class="fab fa-github fa-2"></i> GitHub
+								</a><br>
+								<a href="https://github.com/a-langlais/bat_activity/blob/main/README.md">
+									<i class="fa-solid fa-book"></i> Documentation
+								</a><br>
+								<a href="https://a-langlais.shinyapps.io/bat_activity/">
+									<i class="fa-solid fa-gear"></i> Application web
+								</a>
+							</p>
+						</div>
 					</div>
-				</div>
-				<!-- /Links -->
+					<!-- /Links -->
 
-				<!-- Screenshots -->
-				<div class="row widget">
-					<div class="col-xs-12">
-						<h4>Screenshots</h4>
-						<p><img src="assets/images/s1.jpg" alt=""></p>
-					</div>
-				</div>
-				<!-- /Screenshots -->
+				</aside>
+				<!-- /Sidebar -->
 
-			</aside>
-			<!-- /Sidebar -->
+				<!-- PageContent -->
+				<article class="col-sm-8 maincontent">
+					<header class="page-header">
+						<a href="../index.html" class="back-button">
+							<i class="fas fa-arrow-left"></i>
+						</a>
+						<h1 class="page-title">BatActivity : un package R pour l'analyse des données chiroptérologiques
+						</h1>
+					</header>
+					<p>Durant mes études sur les chauves-souris, j'ai toujours mis un point d'honneur à analyser
+						rigoureusement mes données recueillies sur le terrain. Dès le début, j'avais commencé à faire
+						des scripts ici et là pour m'aider à automatiser mes analyses et surtout standardiser la forme
+						et les calculs. Avec le temps, j'ai pu améliorer mes fonctions selon mes besoins et les
+						problèmes qui pouvaient subvenir. Aujourd'hui, je souhaite partager ce qui est maintenant devenu
+						un projet personnel pour la standardisation et l'analyse des données d'activité
+						chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et
+						passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
 
-			<!-- PageContent -->
-			<article class="col-sm-8 maincontent">
-				<header class="page-header">
-					<a href="../index.html" class="back-button">
-						<i class="fas fa-arrow-left"></i>
-					</a>
-					<h1 class="page-title">BatActivity : un package R pour l'analyse des données chiroptérologiques</h1>
-				</header>
-				<p>Durant mes études sur les chauves-souris, j’ai toujours mis un point d’honneur à analyser rigoureusement mes données recueillies sur le terrain. Dès le début, j’avais commencé à faire des scripts ici et là pour m’aider à automatiser mes analyses et surtout standardiser la forme et les calculs. Avec le temps, j’ai pu améliorer mes fonctions selon mes besoins et les problèmes qui pouvaient subvenir. Aujourd’hui, je souhaite partager ce qui est maintenant devenu un projet personnel pour la standardisation et l'analyse des données d’activité chiroptérologiques. Ces fonctions sont conçues sur R pour traiter les données d'écoute active et passive, simplifiant l'analyse avec une proposition de format standard de tableau.</p>
-				
-				<h3>Objectifs</h3>
-				<p>Ce projet regroupe un certain nombre de fonctions utiles pour <b>l'analyse des données chiroptérologiques obtenues par protocole d'écoute active</b> (hétérodyne) ou <b>passive</b> (via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins et des problèmes rencontrés. De plus, il est ouvert à la contribution, <b>c'est un projet 100% open-source</b>.</p>
-				<p>Il propose par ailleurs un format standard de tableau à utiliser pour les données chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce format standard pour le bon fonctionnement des fonctions.</p>
-				<p>Les fonctions calculent le <b>nombre de contacts</b>, le <b>nombre de minutes positives</b>, d'<b>heures positives</b> et les différents paramètres des <b>contacts par heure</b> (CPH) et <b>contacts par nuit</b> (CPN). Concernant les données actives, la fonction montre le <b>nombre de CPH estimé</b> (calculé sur une heure) et les <b>proportions des trois comportements qualifiés</b> ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement de chasse et 'Social' pour un cri à caractère social).</p>
-				<p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction <code>TableFormatage()</code>.</p>
-				<p> Une application <code>shiny</code> permet d'exploiter facilement les données aux noms de colonnes atypiques, et rend accessibles les fonctions d'analyse pour les utilisateurs les moins expérimentés ou familiers avec R. Cette application se lance en un script et permet directement d'interagir de manière conviviale avec ses données. Les résultats apparaissent très rapidement, accompagnés de quelques graphiques interactifs, conçu avec <code>plotly</code>.</p>
+					<h3>Objectifs</h3>
+					<p>Ce projet regroupe un certain nombre de fonctions utiles pour <b>l'analyse des données
+							chiroptérologiques obtenues par protocole d'écoute active</b> (hétérodyne) ou <b>passive</b>
+						(via enregistreurs automatiques). Il est en constante évolution au fur et à mesure des besoins
+						et des problèmes rencontrés. De plus, il est ouvert à la contribution, <b>c'est un projet 100%
+							open-source</b>.</p>
+					<p>Il propose par ailleurs un format standard de tableau à utiliser pour les données
+						chiroptérologiques, facilitant l'analyse et les comparaisons. Il est indispensable de suivre ce
+						format standard pour le bon fonctionnement des fonctions.</p>
+					<p>Les fonctions calculent le <b>nombre de contacts</b>, le <b>nombre de minutes positives</b>,
+						d'<b>heures positives</b> et les différents paramètres des <b>contacts par heure</b> (CPH) et
+						<b>contacts par nuit</b> (CPN). Concernant les données actives, la fonction montre le <b>nombre
+							de CPH estimé</b> (calculé sur une heure) et les <b>proportions des trois comportements
+							qualifiés</b> ('Transit' pour un comportement de déplacement, 'Chasse' pour un comportement
+						de chasse et 'Social' pour un cri à caractère social).</p>
+					<p>Le format standard des tableaux est indispensable pour la bonne réalisation des fonctions et pour
+						s'assurer que les données saisies soient de bonne qualité. De plus, cela facilite la
+						concaténation si vous souhaitez réaliser une base de données. Si vous êtes passés par un
+						logiciel de clustering automatique comme Sonochiro ou la plateforme Tadarida, vous pouvez
+						utiliser la sortie de ces logiciels pour le convertir en un tableau standard avec la fonction
+						<code>TableFormatage()</code>.</p>
+					<p> Une application <code>shiny</code> permet d'exploiter facilement les données aux noms de
+						colonnes atypiques, et rend accessibles les fonctions d'analyse pour les utilisateurs les moins
+						expérimentés ou familiers avec R. Cette application se lance en un script et permet directement
+						d'interagir de manière conviviale avec ses données. Les résultats apparaissent très rapidement,
+						accompagnés de quelques graphiques interactifs, conçu avec <code>plotly</code>.</p>
 
-				<center>
-                    <img src="../pages/images/BatApp.gif" alt="BatApp" width="100%">
-                    <p class="caption">Exemple de rendu de l'application en étudiant un jeu de données d'enregistrements passifs.</p>
-                </center>
+					<center>
+						<img src="../pages/images/BatApp.gif" alt="BatApp" width="100%">
+						<p class="caption">Exemple de rendu de l'application en étudiant un jeu de données
+							d'enregistrements passifs.</p>
+					</center>
 
-				<h3>Fonctions proposées</h3>
-				<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de pouvoir <b>traiter avec exactitude les différentes métriques de leurs relevés</b>. À ce jour, six fonctions assurent chacune un rôle particulier.</p>
-				<p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
-                    <table>
-                        <thread>
-                            <tr>
-                                <th>Fonctions</th>
-                                <th>Arguments</th>
-                                <th>Sorties</th>
-                            </tr>
-                            <tbody>
-                                <tr>
-                                    <td><code>TableFormatage()</code></td>
-                                    <td><code>table</code>, <code>sftw</code></td>
-                                    <td>Convertie un fichier de sortie logiciel Tadarida ou SonoChiro en un tableau standard d'analyse pour les autres fonctions.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>BatActive()</code></td>
-                                    <td><code>table</code>, <code>duration</code>, <code>npoint</code></td>
-                                    <td>Renvoie un tableau de résultats avec l'activité horaire estimée et la proportion de chaque comportement.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>SpeciesPlaceActivity()</code></td>
-                                    <td><code>data</code>, <code>nights</code>, <code>record_time</code></td>
-                                    <td>Renvoie un tableau détaillé de résultats avec les différentes métriques d'activité par espèce et par site.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>CalculateThreshold()</code></td>
-                                    <td><code>data</code>, <code>meteo</code>, <code>dates</code>, <code>var</code>, <code>percent</code>, <code>plot</code></td>
-                                    <td>Renvoie un tableau de résultat d'une régression logistique ainsi que les différents seuils pour conserver le pourcentage d'activité sélectionné. Peut aussi renvoyer les graphiques des régressions logistiques associées.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>list.renamer()</code></td>
-                                    <td><code>files</code></td>
-                                    <td>Renomme tous les fichiers sons sélectionnés avec leurs métadonnées.</td>
-                                </tr>
-                                <tr>
-                                    <td><code>print_Signal()</code></td>
-                                    <td><code>no argument</code></td>
-                                    <td>Ouvre une fenêtre de sélection de fichier pour afficher le graphique de réponse issue du fichier de test micro des TeensyRecorders.</td>
-                                </tr>
-                            </tbody>
-                        </thread>
-                    </table><br>
-			</article>
-			<!-- /PageContent -->
+					<h3>Fonctions proposées</h3>
+					<p>Ce petit ensemble de fonctions permet aux ingénieurs écologues et aux techniciens de terrain de
+						pouvoir <b>traiter avec exactitude les différentes métriques de leurs relevés</b>. À ce jour,
+						six fonctions assurent chacune un rôle particulier.</p>
+					<p class="caption">Liste des fonctions du package, leurs paramètres et outputs</p>
+					<table>
+						<thread>
+							<tr>
+								<th>Fonctions</th>
+								<th>Arguments</th>
+								<th>Sorties</th>
+							</tr>
+							<tbody>
+								<tr>
+									<td><code>TableFormatage()</code></td>
+									<td><code>table</code>, <code>sftw</code></td>
+									<td>Convertie un fichier de sortie logiciel Tadarida ou SonoChiro en un tableau
+										standard d'analyse pour les autres fonctions.</td>
+								</tr>
+								<tr>
+									<td><code>BatActive()</code></td>
+									<td><code>table</code>, <code>duration</code>, <code>npoint</code></td>
+									<td>Renvoie un tableau de résultats avec l'activité horaire estimée et la proportion
+										de chaque comportement.</td>
+								</tr>
+								<tr>
+									<td><code>SpeciesPlaceActivity()</code></td>
+									<td><code>data</code>, <code>nights</code>, <code>record_time</code></td>
+									<td>Renvoie un tableau détaillé de résultats avec les différentes métriques
+										d'activité par espèce et par site.</td>
+								</tr>
+								<tr>
+									<td><code>CalculateThreshold()</code></td>
+									<td><code>data</code>, <code>meteo</code>, <code>dates</code>, <code>var</code>,
+										<code>percent</code>, <code>plot</code></td>
+									<td>Renvoie un tableau de résultat d'une régression logistique ainsi que les
+										différents seuils pour conserver le pourcentage d'activité sélectionné. Peut
+										aussi renvoyer les graphiques des régressions logistiques associées.</td>
+								</tr>
+								<tr>
+									<td><code>list.renamer()</code></td>
+									<td><code>files</code></td>
+									<td>Renomme tous les fichiers sons sélectionnés avec leurs métadonnées.</td>
+								</tr>
+								<tr>
+									<td><code>print_Signal()</code></td>
+									<td><code>no argument</code></td>
+									<td>Ouvre une fenêtre de sélection de fichier pour afficher le graphique de réponse
+										issue du fichier de test micro des TeensyRecorders.</td>
+								</tr>
+							</tbody>
+						</thread>
+					</table><br>
+				</article>
+				<!-- /PageContent -->
 
+			</div>
 		</div>
-	</div>
-</main>
+	</main>
 
-<!-- Footer -->
-<footer id="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Contact</h3>
-				<div class="widget-body">
-					<p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-						Niort, France
-					</p>	
-				</div>
-			</div>
-
-			<div class="col-md-3 widget">
-				<h3 class="widget-title">Mes réseaux</h3>
-				<div class="widget-body">
-					<p class="follow-me-icons">
-						<a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-						<a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-					</p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<h3 class="widget-title">A propos du site</h3>
-				<div class="widget-body">
-                    <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-					<p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact environnemental minimal 🌳</p>
-                    <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite. Hebergé et déployé sur mon GitHub en public 😁</p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
-<footer id="underfooter">
-	<div class="container">
-		<div class="row">
-			
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p>Niort, France </p>
-				</div>
-			</div>
-
-			<div class="col-md-6 widget">
-				<div class="widget-body">
-					<p class="text-right">
-						Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-				</div>
-			</div>
-
-		</div>
-	</div>
-</footer>
-<!-- /Footer -->
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+	<site-footer></site-footer>
 </body>
+
 </html>

@@ -13,21 +13,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:400,300,700">
     <!-- Custom CSS styles -->
     <link rel="stylesheet" href="../assets/styles.css">
+    <script src="../assets/layout.js" data-base="../"></script>
+
 </head>
 
-<body class="home">
-    <header id="header">
-        <div id="head" class="parallax" parallax-speed="2">
-            <h1 id="logo" class="text-center">
-                <a href="../index.html">
-                    <img class="img-circle" src="../images/profile-pic.png" alt="Profile Picture">
-                </a>
-                <span class="title">Alexandre LANGLAIS<br></span>
-                <span class="tagline">Ingénieur écologue & Biostatisticien</span>
-            </h1>
-        </div>
-    </header>
-    <!-- /Header -->
+<body class="home project-page">
+    <site-header></site-header>
 
     <main id="main">
         <div class="container">
@@ -55,12 +46,12 @@
                         <div class="col-xs-12">
                             <h4>Liens</h4>
                             <p class="repo-icons">
-                                <a href="">
-                                    <i class="fa-solid fa-globe"></i> Lien vers le site web (à venir)
-                                </a><br>
-                                <a href="">
-                                    <i class="fa-solid fa-book"></i> Documentation (à venir)
-                                </a>
+                                <span class="inactive-link">
+                                    <i class="fa-solid fa-globe"></i> Site web à venir
+                                </span>
+                                <span class="inactive-link">
+                                    <i class="fa-solid fa-book"></i> Documentation à venir
+                                </span>
                             </p>
                         </div>
                     </div>
@@ -80,7 +71,8 @@
                     </header>
 
                     <center>
-                        <img src="../pages/images/spectroware_logo.png" alt="Logo Spectroware" width="40%">
+                        <img class="plain-image" src="../pages/images/spectroware_logo.png" alt="Logo Spectroware"
+                            width="40%">
                         <br>
                         <br>
                         <strong>Sortie prévue courant 2026 !</strong>
@@ -113,7 +105,8 @@
                         les signaux.
                     </p>
                     <p>
-                        Le logiciel a été conçu autour d'un besoin métier concret, c'est-à-dire faciliter l'analyse manuelle de
+                        Le logiciel a été conçu autour d'un besoin métier concret, c'est-à-dire faciliter l'analyse
+                        manuelle de
                         séquences issues de protocoles naturalistes, de campagnes d'enregistrement ou de fichiers de
                         pré-classification. Il s'adresse aussi bien aux naturalistes réalisant des vérifications
                         ponctuelles qu'aux bioacousticiens manipulant de grands ensembles de données.
@@ -226,70 +219,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 widget">
-                    <h3 class="widget-title">Contact</h3>
-                    <div class="widget-body">
-                        <p><a href="mailto:#">langlais.alexandre03@gmail.com</a><br>
-                            Niort, France
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 widget">
-                    <h3 class="widget-title">Mes réseaux</h3>
-                    <div class="widget-body">
-                        <p class="follow-me-icons">
-                            <a href="https://www.linkedin.com/in/alexlanglais/"><i class="fab fa-linkedin fa-2"></i></a>
-                            <a href="https://github.com/a-langlais"><i class="fab fa-github fa-2"></i></a>
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 widget">
-                    <h3 class="widget-title">A propos du site</h3>
-                    <div class="widget-body">
-                        <p>Site web codé à la sueur de mon front lors de froides soirées hivernales ❄️</p>
-                        <p>Site web statique (HTML/CSS only), à faible utilisation énergétique pour un impact
-                            environnemental minimal 🌳</p>
-                        <p>Modèle de site web open-source, libre de copie et modification par quiconque le souhaite.
-                            Hebergé et déployé sur mon GitHub en public 😁</p>
-                    </div>
-                </div>
-
-            </div> <!-- /row of widgets -->
-        </div>
-    </footer>
-
-    <footer id="underfooter">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-6 widget">
-                    <div class="widget-body">
-                        <p>Niort, France </p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 widget">
-                    <div class="widget-body">
-                        <p class="text-right">
-                            Copyright &copy; <span id="year"></span>, Alexandre LANGLAIS<br></p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </footer>
-    <!-- /Footer -->
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
+    <site-footer></site-footer>
 </body>
 
 </html>
